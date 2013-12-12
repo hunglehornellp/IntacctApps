@@ -1,0 +1,663 @@
+<Application id="10004" origId="132648@10004" orderNo="3" isSystem="F" version="1.6" companyNo="132648" >
+<DisplayName>Mileage Calculator</DisplayName><Description>this is to calculate the mileage expense.</Description><Props><isDeployed>1</isDeployed><menuIds>10015,10020,</menuIds><objDefIds>10006,10007,</objDefIds><stDefIds>eexpensesitem,</stDefIds></Props><DependentDefs>
+</DependentDefs>
+<DataObjectDefs>
+<DataObjectDef id="10006" origId="132648@10006" objDefName="mileage_calculator" >
+<SingularName>Mileage Calculator</SingularName><PluralName>Mileage Calculators</PluralName><Props><isAuditable>1</isAuditable><isDeployed>1</isDeployed><defProcess>10004</defProcess><objIcon>mc35</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10155" origId="132648@10155" objDef="10006" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Name</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><size>90</size></Props></DataFieldDef>
+<DataFieldDef id="10156" origId="132648@10156" objDef="10006" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10157" origId="132648@10157" objDef="10006" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10158" origId="132648@10158" objDef="10006" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10159" origId="132648@10159" objDef="10006" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10160" origId="132648@10160" objDef="10006" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10161" origId="132648@10161" objDef="10006" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10166" origId="132648@10166" objDef="10006" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="calculatespaymentformiles" >
+<DisplayLabel>CalculatesPaymentForMiles</DisplayLabel><Description>This calculates the amount to be pay.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIG1pbGUgPSB7IW1pbGVhZ2VfY2FsY3VsYXRvci5taWxlcyF9Ow0KdmFyIGFtdHBheSA9ICNGVU5DX1NVTS5yYXRlX2FkanVzdG1lbnRfZm9yX21pbGVhZ2VfY2EoIGFkanVzdGFibGVfcmF0ZXMgfCB0cnVlICk7DQoNCmlmICgjRlVOQ19DT1VOVC5yYXRlX2FkanVzdG1lbnRfZm9yX21pbGVhZ2VfY2EoIDEgfCB0cnVlICkgIT0gMSkgew0KICAgIHJldHVybiAiQ2hlY2sgeW91ciBSYXRlIEFkanVzdG1lbnQgcmVjb3JkLCB0aGVyZSBjYW4gb25seSBiZSBvbmUgUmF0ZSBBZGp1c3RtZW50IHJlY29yZC4iOw0KICAgfSBlbHNlIGlmIChhbXRwYXkgPiAjRlVOQ19TVU0ucmF0ZV9hZGp1c3RtZW50X2Zvcl9taWxlYWdlX2NhKCBhZGp1c3RhYmxlX3JhdGVzIHwgdHJ1ZSApKSB7DQogICAgcmV0dXJuICJDaGVjayB5b3VyIEFtb3VudCBSZXR1cm5lZCBQZXIgTWlsZS4iOw0KICAgfSBlbHNlIHsNCiAgICAgICAgdmFyIGFtb3VudCA9IE1hdGgucm91bmQobWlsZSAqIGFtdHBheSAqIDEwMCkvMTAwOw0KIH0NCg0KcmV0dXJuICthbW91bnQ7</ValScript></DataFieldDef>
+<DataFieldDef id="10175" origId="132648@10175" objDef="10006" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG1" fieldName="Rrate_adjustment_for_mileage_ca" >
+<DisplayLabel>Rate Adjustment for Mileage Calculator</DisplayLabel><Props><relId>10019</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10178" origId="132648@10178" objDef="10006" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="adjustable_rates" >
+<DisplayLabel>Adjustable Rates</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10019</relId><relatedId>10176</relatedId></Props></DataFieldDef>
+<DataFieldDef id="10179" origId="132648@10179" objDef="10006" dataClassName="Pt_FieldDouble" uiClassName="Pt_DecimalInput" columnName="DBL0" fieldName="miles" >
+<DisplayLabel>Miles</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><size>6</size><decimalPlaces>2</decimalPlaces></Props></DataFieldDef>
+<DataFieldDef id="10180" origId="132648@10180" objDef="10006" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG0" fieldName="REEXPENSESITEM" >
+<DisplayLabel>Employee Expense Detail</DisplayLabel><Props><relId>10020</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10188" origId="132648@10188" objDef="10006" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR0" fieldName="destination" >
+<DisplayLabel>Destination</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>99</maxLength></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10019" origId="132648@10019" relName="R10019" objDefId1="10006" objDefId2="10007" singularName1="Mileage Calculator" pluralName1="Mileage Calculators" singularName2="Rate Adjustment for Mileage Calculator" pluralName2="Rate Adjustment for Mileage Calculators" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10174</fieldId1><fieldId2>10175</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10020" origId="132648@10020" relName="R10020" objDefId1="5032" objDefId2="10006" singularName1="Employee Expense Detail" pluralName1="Employee Expense Details" singularName2="Mileage Calculator" pluralName2="Mileage Calculators" isMultiple1="F" isMultiple2="F" >
+<Props></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10180" origId="132648@10180" objDefId="10006" isSystem="F" >
+<ViewName>All Mileage Calculators</ViewName><Props><fieldId0>10158</fieldId0><opCode0>GE</opCode0><opValue0>TODAY</opValue0><fieldId1>10157</fieldId1><opCode1>IN</opCode1><opValue1>101</opValue1><joinType>1</joinType><columns>10155,10158,10157,10161,</columns><defSortCol>10158</defSortCol><defSortCol2>0</defSortCol2><defSortAsc2>1</defSortAsc2><defSortCol3>0</defSortCol3><showActions>1</showActions><groupBy>10157</groupBy><totalBy>0</totalBy><totalBy2>0</totalBy2><totalBy3>0</totalBy3><totalBy4>0</totalBy4><totalBy5>0</totalBy5><totalBy6>0</totalBy6><totalBy7>0</totalBy7><totalBy8>0</totalBy8></Props></ListView>
+</ListViews>
+<ConversionMaps>
+<ConversionMap id="10004" origId="132648@10004" mapName="Attaching rates From Adjustable Rates" destDefId="10007" srcDefId="10006" deleteSrc="F">
+<MapNodes>
+<MapNode dest="adjustable_rates" src="adjustable_rates" />
+<MapNode dest="Rmileage_calculator" src="#SOURCEOBJ" />
+<MapNode dest="name" src="name" />
+</MapNodes>
+</ConversionMap>
+</ConversionMaps>
+<Events>
+<Event id="10010" origId="132648@10010" orderNo="1" objDef="10006" configId="Pt_ChangeValueConfig" name="Update Name Record" onWhat="3" changeFieldId="10179" isDeployed="T" >
+<Condition>cmV0dXJuICckIHshbWlsZWFnZV9jYWxjdWxhdG9yLmNhbGN1bGF0ZXNwYXltZW50Zm9ybWlsZXMhfS0teyFtaWxlYWdlX2NhbGN1bGF0b3IuZGVzdGluYXRpb24hfSc7</Condition><Props><relId>0</relId><fieldId>10155</fieldId></Props></Event>
+<Event id="10011" origId="132648@10011" orderNo="2" objDef="10006" configId="Pt_CreateRelationshipConfig" name="Attaching Rates to Mileage Calculator" onWhat="3" changeFieldId="10179" isDeployed="T" >
+<Condition>I0ZVTkNfU1VNLnJhdGVfYWRqdXN0bWVudF9mb3JfbWlsZWFnZV9jYSggYWRqdXN0YWJsZV9yYXRlcyB8IHRydWUgKQ==</Condition><Props><relId>10019</relId></Props></Event>
+</Events>
+</DataObjectDef>
+<DataObjectDef id="10007" origId="132648@10007" objDefName="rate_adjustment_for_mileage_ca" >
+<SingularName>Rate Adjustment for Mileage Calculator</SingularName><PluralName>Rate Adjustment for Mileage Calculators</PluralName><Props><isDeployed>1</isDeployed><defProcess>0</defProcess><objIcon>mc36</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10167" origId="132648@10167" objDef="10007" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Rate Adjustment for Mileage Calculator</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>100</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10168" origId="132648@10168" objDef="10007" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10169" origId="132648@10169" objDef="10007" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10170" origId="132648@10170" objDef="10007" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10171" origId="132648@10171" objDef="10007" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10172" origId="132648@10172" objDef="10007" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10173" origId="132648@10173" objDef="10007" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10174" origId="132648@10174" objDef="10007" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG0" fieldName="Rmileage_calculator" >
+<DisplayLabel>Mileage Calculators</DisplayLabel><Props><relId>10019</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10176" origId="132648@10176" objDef="10007" dataClassName="Pt_FieldDouble" uiClassName="Pt_DecimalInput" columnName="DBL0" fieldName="adjustable_rates" >
+<DisplayLabel>Adjustable Rates</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><size>6</size><decimalPlaces>4</decimalPlaces></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10019" origId="132648@10019" relName="R10019" objDefId1="10006" objDefId2="10007" singularName1="Mileage Calculator" pluralName1="Mileage Calculators" singularName2="Rate Adjustment for Mileage Calculator" pluralName2="Rate Adjustment for Mileage Calculators" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10174</fieldId1><fieldId2>10175</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10181" origId="132648@10181" objDefId="10007" isSystem="T" >
+<ViewName>All Rate Adjustment for Mileage Calculators</ViewName><Props><columns>10167,10172,10171</columns><defSortCol>10172</defSortCol><showActions>1</showActions><isSystem>1</isSystem></Props></ListView>
+</ListViews>
+</DataObjectDef>
+<DataObjectDef  id="5032" origId="132648@5032" objDefName="eexpensesitem" isStandard="true" >
+<customFields>
+<customField><customFieldId>DESCRIPTION_OF_EVENT</customFieldId><type>textarea</type><ownerObject>eexpensesitem</ownerObject><label>Business Purpose of Event</label><dataDescription><textarea><rowCount>5</rowCount></textarea></dataDescription><required>false</required><description>Description of the entertainment event.</description><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>NAMES_OF_ATTENDEE</customFieldId><type>text</type><ownerObject>eexpensesitem</ownerObject><label>Name(s) of Attendee</label><dataDescription><text><length>100</length></text></dataDescription><required>false</required><description>the name of the attendees</description><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>TEST_BOX</customFieldId><type>checkbox</type><ownerObject>eexpensesitem</ownerObject><label>test box</label><dataDescription><checkbox><checked>false</checked></checkbox></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+</customFields>
+<smartLinks>
+<smartLink><smartLinkId>LOCATIONISDEPARTMENT</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.DEPARTMENTNAME!}== {!EEXPENSESITEM.LOCATIONNAME!}</condition><errorMessage>Location has to equal Department</errorMessage><errorType>error</errorType></validate></renderDetails><description>Location has to be equal to the Department</description><active>false</active></smartLink>
+<smartLink><smartLinkId>FORM1099</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.FORM1099!}=='false'</condition><errorMessage>Un-check Form 1099.</errorMessage><errorType>error</errorType></validate></renderDetails><description>Form 1099 can't be apply</description><active>false</active></smartLink>
+<smartLink><smartLinkId>ENTERTAINMENTNEEDS</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.ACCOUNTLABEL!} !== &quot;ENTERTAINMENT&quot; || ({!EEXPENSESITEM.NAMES_OF_ATTENDEE!} !== '' &amp;&amp; {!EEXPENSESITEM.DESCRIPTION_OF_EVENT!} !== '')</condition><errorMessage>NEEDS THE NAME OF ATTENDEES OR THE DESCRIPTION OF THE EVENT.</errorMessage><errorType>error</errorType></validate></renderDetails><description>If entertainment is selected, it needs the name(s) of attendee and the description of the event.</description><active>false</active></smartLink>
+<smartLink><smartLinkId>MILESFORMILEAGECAL</smartLinkId><type>w</type><ownerObject>eexpensesitem</ownerObject><events><event>approve</event></events><renderDetails><workflow><condition>{!EEXPENSESITEM.MILES!}==''</condition><action><apiAction><body>&lt;create&gt;
+  &lt;mileage_calculator&gt;
+   &lt;miles&gt;{!EEXPENSESITEM.MILES!}&lt;/miles&gt;
+  &lt;/mileage_calculator&gt;
+&lt;/create&gt;</body></apiAction></action></workflow></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>CHECKTESTBOX</smartLinkId><type>w</type><ownerObject>eexpensesitem</ownerObject><events><event>approve</event></events><renderDetails><workflow><condition>{!EEXPENSESITEM.ACCOUNTLABEL!} == &quot;MILEAGE&quot;</condition><action><apiAction><body>&lt;update&gt;
+&lt;EEXPENSESITEM&gt;
+&lt;EEXPENSESITM.TEST_BOX&gt;true&lt;/EEXPENSESITEM.TEST_BOX&gt;
+&lt;/EEXPENSESITEM&gt;
+&lt;/update&gt;</body></apiAction></action></workflow></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>MILEAGENEED</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.ACCOUNTLABEL!} !== &quot;MILEAGE&quot; || (data == 'Rmileage_calculator')</condition><errorMessage>There needs to be a Mileage Calculator. {!EEXPENSESITEM.R10020!}</errorMessage><errorType>error</errorType></validate></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>DATE_CANT_POST_EE</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.ENTRY_DATE!}&gt;'2013.10.22'</condition><errorMessage>ENTRIES CAN'T BE BEFORE OCT 22 {!EEXPENSESITEM.ENTRY_DATE!}</errorMessage><errorType>error</errorType></validate></renderDetails><description>This is for McAlisters, not to post on days before Oct 22</description><active>false</active></smartLink>
+</smartLinks>
+<DataFieldDefs>
+<DataFieldDef id="10181" origId="132648@10181" objDef="5032" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rmileage_calculator" >
+<DisplayLabel>Mileage Calculators</DisplayLabel><Props><relId>10020</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10020" origId="132648@10020" relName="R10020" objDefId1="5032" objDefId2="10006" singularName1="Employee Expense Detail" pluralName1="Employee Expense Details" singularName2="Mileage Calculator" pluralName2="Mileage Calculators" isMultiple1="F" isMultiple2="F" >
+<Props></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10025" origId="125233@10025" objDefId="5032" isSystem="F" >
+<ViewName>All Employee Expense Details</ViewName><Props><joinType>1</joinType><columns>999503200000020,999503200000021,999503200000022,999503200000001,10181,</columns><defSortCol>0</defSortCol><defSortCol2>0</defSortCol2><defSortCol3>0</defSortCol3><groupBy>0</groupBy><totalBy>0</totalBy><totalBy2>0</totalBy2><totalBy3>0</totalBy3><totalBy4>0</totalBy4><totalBy5>0</totalBy5><totalBy6>0</totalBy6><totalBy7>0</totalBy7><totalBy8>0</totalBy8></Props></ListView>
+</ListViews>
+<Templates>
+<Template type="doc" id="10005" origId="132648@10005" objDef="5032" name="Create Miles" contentType="text/xml" fileName="MILES FOR MILEAGE CALCULATOR.xml" >
+<RawData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxjcmVhdGU+DQogIDxtaWxlYWdlX2NhbGN1bGF0b3I+DQogICA8bWlsZXM+eyFFRVhQRU5TRVNJVEVNLk1JTEVTIX08L21pbGVzPg0KICA8L21pbGVhZ2VfY2FsY3VsYXRvcj4NCjwvY3JlYXRlPg0K</RawData></Template>
+</Templates>
+</DataObjectDef>
+</DataObjectDefs>
+<Menus>
+<Menu id="10015" origId="132648@10015" objDefId="10006" orderNo="1" parentId="-1" pageType="5" >
+<DisplayName>Mileage Calculators</DisplayName><Menus><Menu id="10016" origId="132648@10016" objDefId="10006" orderNo="1" parentId="10015" pageType="5" >
+<DisplayName>List</DisplayName></Menu>
+<Menu id="10017" origId="132648@10017" objDefId="10006" orderNo="2" parentId="10015" pageType="4" >
+<DisplayName>Add</DisplayName></Menu>
+<Menu id="10018" origId="132648@10018" objDefId="10006" orderNo="3" parentId="10015" pageType="11" >
+<DisplayName>Import</DisplayName><PageURL>pt_import.phtml</PageURL></Menu>
+<Menu id="10019" origId="132648@10019" objDefId="10006" orderNo="4" parentId="10015" pageType="12" >
+<DisplayName>Templates</DisplayName><PageURL>pt_templates.phtml</PageURL></Menu>
+</Menus></Menu>
+<Menu id="10020" origId="132648@10020" objDefId="10007" orderNo="1" parentId="-1" pageType="5" >
+<DisplayName>Rate Adjustment for Mileage Calculators</DisplayName><Menus><Menu id="10021" origId="132648@10021" objDefId="10007" orderNo="1" parentId="10020" pageType="5" >
+<DisplayName>List</DisplayName></Menu>
+<Menu id="10022" origId="132648@10022" objDefId="10007" orderNo="2" parentId="10020" pageType="4" >
+<DisplayName>Add</DisplayName></Menu>
+<Menu id="10023" origId="132648@10023" objDefId="10007" orderNo="3" parentId="10020" pageType="11" >
+<DisplayName>Import</DisplayName><PageURL>pt_import.phtml</PageURL></Menu>
+<Menu id="10024" origId="132648@10024" objDefId="10007" orderNo="4" parentId="10020" pageType="12" >
+<DisplayName>Templates</DisplayName><PageURL>pt_templates.phtml</PageURL></Menu>
+</Menus></Menu>
+</Menus>
+<WebPages>
+<WebPage id="10789" origId="132648@10789" objDefId="10006" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>Mileage Calculators List</PageName><PageSections>
+<PageSection id="11042" origId="132648@11042" pageId="10789" >
+<SectionTitle>All Mileage Calculators</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11140" origId="132648@11140" sectionId="11042" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIE1pbGVhZ2UgQ2FsY3VsYXRvcnM=</Text><Props><objDefId2>10006</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10790" origId="132648@10790" objDefId="10006" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Mileage Calculator</PageName><Props><columns>1</columns><numTabs>2</numTabs><enableTabs>true</enableTabs><tabName0>Mileage Calculator Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11031" origId="132648@11031" pageId="10790" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11125" origId="132648@11125" sectionId="11031" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11173" origId="132648@11173" pageId="10790" orderNo="1" >
+<SectionTitle>Mileage Calculator Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11373" origId="132648@11373" sectionId="11173" fieldId="10179" cellClassName="Pt_FieldWrapper" >
+<Props></Props></PageCell>
+<PageCell id="11374" origId="132648@11374" sectionId="11173" orderNo="1" fieldId="10188" cellClassName="Pt_FieldWrapper" >
+<Props></Props></PageCell>
+<PageCell id="11375" origId="132648@11375" sectionId="11173" orderNo="2" fieldId="10166" cellClassName="Pt_FieldWrapper" >
+<Props></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11972" origId="132648@11972" pageId="10790" orderNo="2" >
+<SectionTitle>Test Section</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11174" origId="132648@11174" pageId="10790" orderNo="3" >
+<SectionTitle>Audit Trail</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11033" origId="132648@11033" pageId="10790" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11127" origId="132648@11127" sectionId="11033" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10791" origId="132648@10791" objDefId="10006" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11050" origId="132648@11050" pageId="10791" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11149" origId="132648@11149" sectionId="11050" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11051" origId="132648@11051" pageId="10791" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11150" origId="132648@11150" sectionId="11051" alignment="1" fieldId="10155" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11231" origId="132648@11231" sectionId="11051" orderNo="1" fieldId="10179" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11258" origId="132648@11258" sectionId="11051" orderNo="2" fieldId="10180" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11052" origId="132648@11052" pageId="10791" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11151" origId="132648@11151" sectionId="11052" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10792" origId="132648@10792" objDefId="10006" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Mileage Calculator</PageName><Props><columns>1</columns><numTabs>2</numTabs><enableTabs>true</enableTabs><tabName0>Mileage Calculator Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11034" origId="132648@11034" pageId="10792" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11128" origId="132648@11128" sectionId="11034" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11157" origId="132648@11157" pageId="10792" orderNo="1" >
+<SectionTitle>Mileage Calculator Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11358" origId="132648@11358" sectionId="11157" fieldId="10179" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11364" origId="132648@11364" sectionId="11157" orderNo="1" fieldId="10188" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11359" origId="132648@11359" sectionId="11157" orderNo="2" fieldId="10166" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11160" origId="132648@11160" pageId="10792" orderNo="2" >
+<SectionTitle>Audit Trail</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>1</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11036" origId="132648@11036" pageId="10792" orderNo="3" >
+<SectionTitle>System Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>2</columns><viewTabNo>1</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11130" origId="132648@11130" sectionId="11036" fieldId="10157" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11131" origId="132648@11131" sectionId="11036" orderNo="1" alignment="1" fieldId="10158" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11132" origId="132648@11132" sectionId="11036" orderNo="2" fieldId="10159" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11133" origId="132648@11133" sectionId="11036" orderNo="3" alignment="1" fieldId="10160" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11134" origId="132648@11134" sectionId="11036" orderNo="4" fieldId="10161" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11037" origId="132648@11037" pageId="10792" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11135" origId="132648@11135" sectionId="11037" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10793" origId="132648@10793" objDefId="10006" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Mileage Calculator</PageName><Props><columns>1</columns><numTabs>2</numTabs><enableTabs>true</enableTabs><tabName0>Mileage Calculator Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11038" origId="132648@11038" pageId="10793" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11136" origId="132648@11136" sectionId="11038" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11175" origId="132648@11175" pageId="10793" orderNo="1" >
+<SectionTitle>Mileage Calculator Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11376" origId="132648@11376" sectionId="11175" fieldId="10179" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11377" origId="132648@11377" sectionId="11175" orderNo="1" fieldId="10188" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11378" origId="132648@11378" sectionId="11175" orderNo="2" fieldId="10166" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11176" origId="132648@11176" pageId="10793" orderNo="2" >
+<SectionTitle>Audit Trail</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>1</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11040" origId="132648@11040" pageId="10793" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11138" origId="132648@11138" sectionId="11040" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10794" origId="132648@10794" objDefId="10006" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Mileage Calculators Selector List</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11140" origId="132648@11140" pageId="10794" >
+<SectionTitle>ADD A NEW DESTINATION</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable></Props><PageCells>
+<PageCell id="11336" origId="132648@11336" sectionId="11140" alignment="2" fieldId="-1" cellClassName="Pt_ScriptControl" >
+<Text>PHA+DQogIDxmb3JtIGlkPSJtaWxlX2Zvcm0iIGFjdGlvbiA9ICJodHRwczovL3d3dy5pbnRhY2N0LmNvbS9pYS9hY2N0L3B0X09iamVjdC5waHRtbCIgIG1ldGhvZCA9ICJwb3N0Ij4NCiAgICA8bGFiZWw+TWlsZXMgPGlucHV0IHR5cGUgPSAidGV4dCIgbmFtZSA9ICJtaWxlcyIvPjwvbGFiZWw+DQogICAgPGxhYmVsPkRlc3RpbmF0aW9uIDxpbnB1dCB0eXBlID0gInRleHQiIG5hbWUgPSAiZGVzdGluYXRpb24iLz48L2xhYmVsPg0KICAgIDxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlID0gIlNhdmUiLz4NCiAgPC9mb3JtPg0KPHA+DQoNCjxzY3JpcHQ+DQp2YXIgdXJsUGFyYW1zOw0KKHdpbmRvdy5vbnBvcHN0YXRlID0gZnVuY3Rpb24gKCkgew0KICAgIHZhciBtYXRjaCwNCiAgICAgICAgcGwgICAgID0vXF4rL2csICANCiAgICAgICAgc2VhcmNoID0gLyhbXiY9XSspPT8oW14mXSopL2csDQogICAgICAgIGRlY29kZSA9IGZ1bmN0aW9uIChzKSB7IHJldHVybiBkZWNvZGVVUklDb21wb25lbnQocy5yZXBsYWNlKHBsLCAiICIpKTsgfSwNCiAgICAgICAgcXVlcnkgID0gd2luZG93LmxvY2F0aW9uLnNlYXJjaC5zdWJzdHJpbmcoMSk7DQoNCiAgICB1cmxQYXJhbXMgPSB7fTsNCiAgICB3aGlsZSAobWF0Y2ggPSBzZWFyY2guZXhlYyhxdWVyeSkpDQogICAgICAgdXJsUGFyYW1zW2RlY29kZShtYXRjaFsxXSldID0gZGVjb2RlKG1hdGNoWzJdKTsNCn0pKCk7DQp2YXIgcGkgPSB1cmxQYXJhbXNbInBhZ2VJZCJdOw0KdmFyIHNyY2lkID0gcGFyc2VGbG9hdChwaSktNDsNCnZhciBkZXN0aWQgPSBwYXJzZUZsb2F0KHBpKS01Ow0KalF1ZXJ5KCIjbWlsZV9mb3JtIikub24oJ3N1Ym1pdCcsW3NyY2lkLGRlc3RpZF0sIGZ1bmN0aW9uIChldmVudCkgew0KICBldmVudC5wcmV2ZW50RGVmYXVsdCgpOw0KICB2YXIgJGZvcm0gPSBqUXVlcnkodGhpcyk7DQogIHZhciBtID0gJGZvcm0uZmluZCgnaW5wdXRbbmFtZT0ibWlsZXMiXScpLnZhbCgpOw0KICB2YXIgZCA9ICRmb3JtLmZpbmQoJ2lucHV0W25hbWU9ImRlc3RpbmF0aW9uIl0nKS52YWwoKTsNCiAgdmFyIHMgPSAneyEjQ1VSUl9TRVNTSU9OIX0nOw0KICB2YXIgbyA9ICczODAxJzsNCiAgdmFyIGEgPSAnb2JqQ3JlYXRlJzsNCiAgdmFyIHNJZCA9IHNyY2lkOw0KICB2YXIgZElkID0gZGVzdGlkOw0KICB2YXIgZGVmSWQgPSAneyEjT0JKX0lELm1pbGVhZ2VfY2FsY3VsYXRvciF9JzsNCiAgdmFyIHVybCA9ICRmb3JtLmF0dHIoJ2FjdGlvbicpOw0KDQogIHZhciBwb3N0aW5nID0galF1ZXJ5LnBvc3QodXJsLCB7bWlsZXM6IG0sDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGVzdGluYXRpb246IGQsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJy5zZXNzJzogcywNCiAJCQkgCSAgJy5vcCc6IG8sDQogCQkJCSAgYWN0OiBhLA0KCQkJCSAgc3JjSWQ6IHNJZCwNCgkJCQkgIGRlc3RJZDogZElkLA0KCQkJCSAgb2JqRGVmSWQ6IGRlZklkfSk7DQoNCiAgcG9zdGluZy5kb25lKGZ1bmN0aW9uICgpIHsNCiAgICBsb2NhdGlvbi5yZWxvYWQoKTsNCiAgfSk7DQp9KTsNCjwvc2NyaXB0Pg==</Text><Props><alignment>2</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11043" origId="132648@11043" pageId="10794" orderNo="1" >
+<SectionTitle>Mileage Calculators Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+<PageCell id="11141" origId="132648@11141" sectionId="11043" alignment="2" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Props><objDefId2>10006</objDefId2><alignment>2</alignment><showQuickCreate>true</showQuickCreate><showNewLink>true</showNewLink><showViewSelector>true</showViewSelector><showCheckBoxes>true</showCheckBoxes><numRows>true</numRows><selListId>-1</selListId></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10795" origId="132648@10795" objDefId="10006" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11044" origId="132648@11044" pageId="10795" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11142" origId="132648@11142" sectionId="11044" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11045" origId="132648@11045" pageId="10795" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11143" origId="132648@11143" sectionId="11045" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11144" origId="132648@11144" sectionId="11045" orderNo="1" alignment="1" fieldId="10156" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11046" origId="132648@11046" pageId="10795" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11145" origId="132648@11145" sectionId="11046" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10796" origId="132648@10796" objDefId="10006" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11047" origId="132648@11047" pageId="10796" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11146" origId="132648@11146" sectionId="11047" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11048" origId="132648@11048" pageId="10796" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11147" origId="132648@11147" sectionId="11048" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11049" origId="132648@11049" pageId="10796" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11148" origId="132648@11148" sectionId="11049" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10797" origId="132648@10797" objDefId="10006" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import Mileage Calculators</PageName><PageSections>
+<PageSection id="11026" origId="132648@11026" pageId="10797" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11119" origId="132648@11119" sectionId="11026" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11027" origId="132648@11027" pageId="10797" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11120" origId="132648@11120" sectionId="11027" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11028" origId="132648@11028" pageId="10797" orderNo="2" >
+<SectionTitle>Map Mileage Calculator Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11121" origId="132648@11121" sectionId="11028" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPk1pbGVhZ2UgQ2FsY3VsYXRvciBGaWVsZHMgPC90ZD48dGQgY2xhc3M9J3Jic19sZWZ0RGF0YUNvbFdpZGUnPiBTcHJlYWRzaGVldCBDb2x1bW5zICZuYnNwOyZuYnNwOyBDb25zdGFudCBWYWx1ZTwvdGQ+PC90cj48L3RhYmxlPg==</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11122" origId="132648@11122" sectionId="11028" orderNo="1" alignment="1" fieldId="10155" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11234" origId="132648@11234" sectionId="11028" orderNo="2" fieldId="10179" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11029" origId="132648@11029" pageId="10797" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11123" origId="132648@11123" sectionId="11029" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11030" origId="132648@11030" pageId="10797" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11124" origId="132648@11124" sectionId="11030" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10798" origId="132648@10798" objDefId="10007" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>Rate Adjustment for Mileage Calculators List</PageName><PageSections>
+<PageSection id="11072" origId="132648@11072" pageId="10798" >
+<SectionTitle>All Rate Adjustment for Mileage Calculators</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11200" origId="132648@11200" sectionId="11072" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIFJhdGUgQWRqdXN0bWVudCBmb3IgTWlsZWFnZSBDYWxjdWxhdG9ycw==</Text><Props><objDefId2>10007</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10799" origId="132648@10799" objDefId="10007" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Rate Adjustment for Mileage Calculator</PageName><Props><columns>1</columns><numTabs>2</numTabs><enableTabs>true</enableTabs><tabName0>Rate Adjustment for Mileage Calculator Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11062" origId="132648@11062" pageId="10799" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11186" origId="132648@11186" sectionId="11062" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11177" origId="132648@11177" pageId="10799" orderNo="1" >
+<SectionTitle>Rate Adjustment for Mileage Calculator Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11379" origId="132648@11379" sectionId="11177" fieldId="10167" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11380" origId="132648@11380" sectionId="11177" orderNo="1" fieldId="10176" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11064" origId="132648@11064" pageId="10799" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11188" origId="132648@11188" sectionId="11064" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10800" origId="132648@10800" objDefId="10007" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><PageSections>
+<PageSection id="11080" origId="132648@11080" pageId="10800" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11209" origId="132648@11209" sectionId="11080" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11081" origId="132648@11081" pageId="10800" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11210" origId="132648@11210" sectionId="11081" alignment="1" fieldId="10167" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11218" origId="132648@11218" sectionId="11081" orderNo="1" fieldId="10176" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11082" origId="132648@11082" pageId="10800" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11211" origId="132648@11211" sectionId="11082" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10801" origId="132648@10801" objDefId="10007" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Rate Adjustment for Mileage Calculator</PageName><Props><columns>1</columns><numTabs>2</numTabs><enableTabs>true</enableTabs><tabName0>Rate Adjustment for Mileage Calculator Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11065" origId="132648@11065" pageId="10801" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11189" origId="132648@11189" sectionId="11065" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11066" origId="132648@11066" pageId="10801" orderNo="1" >
+<SectionTitle>Rate Adjustment for Mileage Calculator Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11190" origId="132648@11190" sectionId="11066" fieldId="10167" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11219" origId="132648@11219" sectionId="11066" orderNo="1" fieldId="10176" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11067" origId="132648@11067" pageId="10801" orderNo="2" >
+<SectionTitle>System Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>2</columns><viewTabNo>1</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11191" origId="132648@11191" sectionId="11067" fieldId="10169" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11192" origId="132648@11192" sectionId="11067" orderNo="1" alignment="1" fieldId="10170" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11193" origId="132648@11193" sectionId="11067" orderNo="2" fieldId="10171" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11194" origId="132648@11194" sectionId="11067" orderNo="3" alignment="1" fieldId="10172" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11195" origId="132648@11195" sectionId="11067" orderNo="4" fieldId="10173" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11068" origId="132648@11068" pageId="10801" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11196" origId="132648@11196" sectionId="11068" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10802" origId="132648@10802" objDefId="10007" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Rate Adjustment for Mileage Calculator</PageName><Props><columns>1</columns><numTabs>2</numTabs><enableTabs>true</enableTabs><tabName0>Rate Adjustment for Mileage Calculator Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11069" origId="132648@11069" pageId="10802" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11197" origId="132648@11197" sectionId="11069" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11178" origId="132648@11178" pageId="10802" orderNo="1" >
+<SectionTitle>Rate Adjustment for Mileage Calculator Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11381" origId="132648@11381" sectionId="11178" fieldId="10167" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11382" origId="132648@11382" sectionId="11178" orderNo="1" fieldId="10176" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11071" origId="132648@11071" pageId="10802" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11199" origId="132648@11199" sectionId="11071" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10803" origId="132648@10803" objDefId="10007" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Rate Adjustment for Mileage Calculators Selector List</PageName><PageSections>
+<PageSection id="11073" origId="132648@11073" pageId="10803" >
+<SectionTitle>Rate Adjustment for Mileage Calculators Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11201" origId="132648@11201" sectionId="11073" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>UmF0ZSBBZGp1c3RtZW50IGZvciBNaWxlYWdlIENhbGN1bGF0b3JzIFNlbGVjdG9y</Text><Props><objDefId2>10007</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10804" origId="132648@10804" objDefId="10007" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11074" origId="132648@11074" pageId="10804" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11202" origId="132648@11202" sectionId="11074" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11075" origId="132648@11075" pageId="10804" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11203" origId="132648@11203" sectionId="11075" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11204" origId="132648@11204" sectionId="11075" orderNo="1" alignment="1" fieldId="10168" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11076" origId="132648@11076" pageId="10804" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11205" origId="132648@11205" sectionId="11076" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10805" origId="132648@10805" objDefId="10007" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11077" origId="132648@11077" pageId="10805" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11206" origId="132648@11206" sectionId="11077" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11078" origId="132648@11078" pageId="10805" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11207" origId="132648@11207" sectionId="11078" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11079" origId="132648@11079" pageId="10805" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11208" origId="132648@11208" sectionId="11079" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10806" origId="132648@10806" objDefId="10007" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import Rate Adjustment for Mileage Calculators</PageName><PageSections>
+<PageSection id="11057" origId="132648@11057" pageId="10806" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11180" origId="132648@11180" sectionId="11057" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11058" origId="132648@11058" pageId="10806" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11181" origId="132648@11181" sectionId="11058" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11059" origId="132648@11059" pageId="10806" orderNo="2" >
+<SectionTitle>Map Rate Adjustment for Mileage Calculator Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11182" origId="132648@11182" sectionId="11059" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPlJhdGUgQWRqdXN0bWVudCBmb3IgTWlsZWFnZSBDYWxjdWxhdG9yIEZpZWxkcyA8L3RkPjx0ZCBjbGFzcz0ncmJzX2xlZnREYXRhQ29sV2lkZSc+IFNwcmVhZHNoZWV0IENvbHVtbnMgJm5ic3A7Jm5ic3A7IENvbnN0YW50IFZhbHVlPC90ZD48L3RyPjwvdGFibGU+</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11183" origId="132648@11183" sectionId="11059" orderNo="1" alignment="1" fieldId="10167" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11221" origId="132648@11221" sectionId="11059" orderNo="2" fieldId="10176" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11060" origId="132648@11060" pageId="10806" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11184" origId="132648@11184" sectionId="11060" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11061" origId="132648@11061" pageId="10806" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11185" origId="132648@11185" sectionId="11061" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10094" origId="125233@10094" objDefId="5032" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Employee Expense Detail</PageName><PageSections>
+<PageSection id="10094" origId="125233@10094" pageId="10094" >
+<SectionTitle>New Employee Expense Detail</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11261" origId="132648@11261" sectionId="10094" fieldId="10181" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10095" origId="125233@10095" objDefId="5032" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Employee Expense Detail</PageName><PageSections>
+<PageSection id="10095" origId="125233@10095" pageId="10095" >
+<SectionTitle>View Employee Expense Detail</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11262" origId="132648@11262" sectionId="10095" fieldId="10181" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11096" origId="132648@11096" pageId="10095" orderNo="1" >
+<SectionTitle>Mileage Calculators</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11264" origId="132648@11264" sectionId="11096" alignment="1" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Text>TWlsZWFnZSBDYWxjdWxhdG9ycw==</Text><Props><objDefId2>10006</objDefId2><relId>10020</relId><showAttachLink>1</showAttachLink><showViewSelector>1</showViewSelector><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10096" origId="125233@10096" objDefId="5032" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Employee Expense Detail</PageName><PageSections>
+<PageSection id="10096" origId="125233@10096" pageId="10096" >
+<SectionTitle>Edit Employee Expense Detail</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11263" origId="132648@11263" sectionId="10096" fieldId="10181" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10097" origId="125233@10097" objDefId="5032" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Employee Expense Details Selector List</PageName><PageSections>
+<PageSection id="10097" origId="125233@10097" pageId="10097" >
+<SectionTitle>Select Employee Expense Detail</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="10025" origId="125233@10025" sectionId="10097" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>RW1wbG95ZWUgRXhwZW5zZSBEZXRhaWxzIFNlbGVjdG9y</Text><Props><objDefId2>5032</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+</WebPages>
+<Portals>
+</Portals>
+<MetaData>
+<PublishedFrom>hornellp-tinroof-fra5007963-copy</PublishedFrom><PublishedBy>ExtUser|Horne LLP|hle</PublishedBy></MetaData>
+</Application>

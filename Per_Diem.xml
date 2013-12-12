@@ -1,0 +1,1062 @@
+<Application id="10014" origId="132648@10014" orderNo="11" isSystem="F" version="1.1" companyNo="132648" >
+<DisplayName>Per Diem</DisplayName><Props><isDeployed>1</isDeployed><menuIds>10076,10081,10086,</menuIds><objDefIds>10023,10024,10022,</objDefIds><stDefIds>eexpensesitem,</stDefIds></Props><DependentDefs>
+</DependentDefs>
+<DataObjectDefs>
+<DataObjectDef id="10023" origId="132648@10023" objDefName="dinning_items" >
+<SingularName>Dining item</SingularName><PluralName>Dining items</PluralName><Props><isDeployed>1</isDeployed><defProcess>0</defProcess><objIcon>mc05</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10750" origId="132648@10750" objDef="10023" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Dining items</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10751" origId="132648@10751" objDef="10023" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10752" origId="132648@10752" objDef="10023" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10753" origId="132648@10753" objDef="10023" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10754" origId="132648@10754" objDef="10023" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10755" origId="132648@10755" objDef="10023" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10756" origId="132648@10756" objDef="10023" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10768" origId="132648@10768" objDef="10023" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL0" fieldName="breakfast" >
+<DisplayLabel>Breakfast</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><formatIndex>1</formatIndex><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10769" origId="132648@10769" objDef="10023" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL1" fieldName="lunch" >
+<DisplayLabel>Lunch</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><formatIndex>1</formatIndex><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10770" origId="132648@10770" objDef="10023" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL2" fieldName="dinner" >
+<DisplayLabel>Dinner</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><formatIndex>1</formatIndex><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10771" origId="132648@10771" objDef="10023" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL3" fieldName="incidentals" >
+<DisplayLabel>Incidentals</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><formatIndex>1</formatIndex><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10772" origId="132648@10772" objDef="10023" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG0" fieldName="Rper_diem" >
+<DisplayLabel>Per Diems</DisplayLabel><Props><relId>10099</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10099" origId="132648@10099" relName="R10099" objDefId1="10022" objDefId2="10023" singularName1="Per Diem" pluralName1="Per Diems" singularName2="Dinning item" pluralName2="Dinning items" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10772</fieldId1><fieldId2>10773</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10233" origId="132648@10233" objDefId="10023" isSystem="T" >
+<ViewName>All Dinning itemss</ViewName><Props><columns>10750,10755,10754</columns><defSortCol>10755</defSortCol><showActions>1</showActions><isSystem>1</isSystem></Props></ListView>
+</ListViews>
+</DataObjectDef>
+<DataObjectDef id="10024" origId="132648@10024" objDefName="location_rate" >
+<SingularName>Location Rate</SingularName><PluralName>Locations Rates</PluralName><Props><isDeployed>1</isDeployed><defProcess>0</defProcess><objIcon>mc81</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10757" origId="132648@10757" objDef="10024" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Location</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10758" origId="132648@10758" objDef="10024" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10759" origId="132648@10759" objDef="10024" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10760" origId="132648@10760" objDef="10024" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10761" origId="132648@10761" objDef="10024" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10762" origId="132648@10762" objDef="10024" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10763" origId="132648@10763" objDef="10024" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10764" origId="132648@10764" objDef="10024" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR0" fieldName="locationstring" >
+<DisplayLabel>Location</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>100</maxLength><size>90</size></Props></DataFieldDef>
+<DataFieldDef id="10766" origId="132648@10766" objDef="10024" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG1" fieldName="Rper_diem" >
+<DisplayLabel>Per Diems</DisplayLabel><Props><relId>10098</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10778" origId="132648@10778" objDef="10024" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL0" fieldName="breakfast_additional" >
+<DisplayLabel>Breakfast additional</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><formatIndex>1</formatIndex><defValue>0</defValue><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10779" origId="132648@10779" objDef="10024" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL1" fieldName="lunch_additional" >
+<DisplayLabel>Lunch additional</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><formatIndex>1</formatIndex><defValue>0</defValue><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10780" origId="132648@10780" objDef="10024" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL2" fieldName="dinner_additional" >
+<DisplayLabel>Dinner additional</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><formatIndex>1</formatIndex><defValue>0</defValue><minValue>0</minValue></Props></DataFieldDef>
+<DataFieldDef id="10785" origId="132648@10785" objDef="10024" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG0" fieldName="REEXPENSESITEM" >
+<DisplayLabel>Employee Expense Details</DisplayLabel><Props><relId>10101</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10098" origId="132648@10098" relName="R10098" objDefId1="10022" objDefId2="10024" singularName1="Per Diem" pluralName1="Per Diems" singularName2="Location Rate" pluralName2="Locations Rates" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10766</fieldId1><fieldId2>10767</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10101" origId="132648@10101" relName="R10101" objDefId1="5032" objDefId2="10024" singularName1="Employee Expense Detail" pluralName1="Employee Expense Details" singularName2="Location Rate" pluralName2="Locations Rates" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10785</fieldId1><fieldId2>10786</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10234" origId="132648@10234" objDefId="10024" isSystem="T" >
+<ViewName>All Locations Rates</ViewName><Props><columns>10757,10762,10761</columns><defSortCol>10762</defSortCol><showActions>1</showActions><isSystem>1</isSystem></Props></ListView>
+</ListViews>
+<Events>
+<Event id="10045" origId="132648@10045" orderNo="1" objDef="10024" configId="Pt_ChangeValueConfig" name="Update Name Record" onWhat="3" changeFieldId="10764" isDeployed="T" >
+<Condition>cmV0dXJuICd7IWxvY2F0aW9uX3JhdGUubG9jYXRpb25zdHJpbmchfSc7</Condition><Props><relId>0</relId><fieldId>10757</fieldId></Props></Event>
+</Events>
+</DataObjectDef>
+<DataObjectDef id="10022" origId="132648@10022" objDefName="per_diem" >
+<SingularName>Per Diem</SingularName><PluralName>Per Diems</PluralName><Props><isDeployed>1</isDeployed><defProcess>0</defProcess><objIcon>mc01</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10734" origId="132648@10734" objDef="10022" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Per Diem</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>100</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10735" origId="132648@10735" objDef="10022" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10738" origId="132648@10738" objDef="10022" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10739" origId="132648@10739" objDef="10022" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10740" origId="132648@10740" objDef="10022" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10741" origId="132648@10741" objDef="10022" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10742" origId="132648@10742" objDef="10022" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10744" origId="132648@10744" objDef="10022" dataClassName="Pt_FieldDate" uiClassName="Pt_DateInput" columnName="DATE1" fieldName="expense_to" >
+<DisplayLabel>Expense To</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength><useCurrDate>1</useCurrDate><shiftCurrDate>1</shiftCurrDate><shiftCurrDate2>0</shiftCurrDate2></Props></DataFieldDef>
+<DataFieldDef id="10745" origId="132648@10745" objDef="10022" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="INTG0" fieldName="breakfast" >
+<DisplayLabel>Breakfast</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10746" origId="132648@10746" objDef="10022" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="INTG1" fieldName="lunch" >
+<DisplayLabel>Lunch</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10747" origId="132648@10747" objDef="10022" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="INTG2" fieldName="dinner" >
+<DisplayLabel>Dinner</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10748" origId="132648@10748" objDef="10022" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="total" >
+<DisplayLabel>Total</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGRpbjEgPSB7IXBlcl9kaWVtLmJyZWFrZmFzdCF9Ow0KdmFyIGRpbjIgPSB7IXBlcl9kaWVtLmx1bmNoIX07DQp2YXIgZGluMyA9IHshcGVyX2RpZW0uZGlubmVyIX07DQp2YXIgZGF5cyA9IHshcGVyX2RpZW0ubnVtYmVyb2ZkYXlzIX07DQp2YXIgYW10ZGluMSA9ICNGVU5DX1NVTS5kaW5uaW5nX2l0ZW1zKCBicmVha2Zhc3QgfCB0cnVlICk7DQp2YXIgYW10ZGluMiA9ICNGVU5DX1NVTS5kaW5uaW5nX2l0ZW1zKCBsdW5jaCB8IHRydWUgKTsNCnZhciBhbXRkaW4zID0gI0ZVTkNfU1VNLmRpbm5pbmdfaXRlbXMoIGRpbm5lciB8IHRydWUgKTsNCnZhciBhbXRkaW40ID0gI0ZVTkNfU1VNLmRpbm5pbmdfaXRlbXMoIGluY2lkZW50YWxzIHwgdHJ1ZSApOw0KdmFyIGJyID0geyFwZXJfZGllbS5icmVha2Zhc3RyYXRlIX07DQp2YXIgbHIgPSB7IXBlcl9kaWVtLmx1bmNocmF0ZSF9Ow0KdmFyIGRyID0geyFwZXJfZGllbS5kaW5uZXJyYXRlIX07DQp2YXIgYW1vdW50MSA9IE1hdGgucm91bmQoZGluMSAqIChhbXRkaW4xICsgYnIpICAqIDEwMCkvMTAwOw0KdmFyIGFtb3VudDIgPSBNYXRoLnJvdW5kKGRpbjIgKiAoYW10ZGluMiArIGxyKSAqIDEwMCkvMTAwOw0KdmFyIGFtb3VudDMgPSBNYXRoLnJvdW5kKGRpbjMgKiAoYW10ZGluMyArIGRyKSAqIDEwMCkvMTAwOw0KdmFyIGFtb3VudDQgPSBNYXRoLnJvdW5kKGRheXMgKiBhbXRkaW40ICogMTAwKS8xMDA7DQoNCmlmICgjRlVOQ19DT1VOVC5kaW5uaW5nX2l0ZW1zKCAxIHwgdHJ1ZSApICE9IDEpIHsNCiAgICByZXR1cm4gIkNoZWNrIHlvdXIgRGlubmluZyBJdGVtcywgdGhlcmUgY2FuIG9ubHkgYmUgb25lIERpbm5pbmcgSXRlbXMgcmVjb3JkLiI7DQogICB9IGVsc2Ugew0KICAgICAgICB2YXIgYW1vdW50ID0gYW1vdW50MSArIGFtb3VudDIgKyBhbW91bnQzICsgYW1vdW50NDsNCiB9DQoNCnJldHVybiArYW1vdW50Ow==</ValScript></DataFieldDef>
+<DataFieldDef id="10749" origId="132648@10749" objDef="10022" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="numberofdays" >
+<DisplayLabel>numberofdays</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGRhdGUxID0gbmV3IERhdGUoInshcGVyX2RpZW0uZXhwZW5zZV9mcm9tIX0iKTsNCnZhciBkYXRlMiA9IG5ldyBEYXRlKCJ7IXBlcl9kaWVtLmV4cGVuc2VfdG8hfSIpOw0KdmFyIHRpbWVEaWZmID0gTWF0aC5hYnMoZGF0ZTIuZ2V0VGltZSgpIC0gZGF0ZTEuZ2V0VGltZSgpKTsNCnZhciBkaWZmRGF5cyA9IE1hdGguY2VpbCh0aW1lRGlmZiAvICgxMDAwICogMzYwMCAqIDI0KSk7IA0KcmV0dXJuICtkaWZmRGF5czs=</ValScript></DataFieldDef>
+<DataFieldDef id="10767" origId="132648@10767" objDef="10022" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG3" fieldName="Rlocation_rate" >
+<DisplayLabel>Location Rate</DisplayLabel><Props><relId>10098</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10773" origId="132648@10773" objDef="10022" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG4" fieldName="Rdinning_items" >
+<DisplayLabel>Dinning item</DisplayLabel><Props><relId>10099</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10775" origId="132648@10775" objDef="10022" dataClassName="Pt_FieldDate" uiClassName="Pt_DateInput" columnName="DATE0" fieldName="expense_from" >
+<DisplayLabel>Expense From</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><useCurrDate>1</useCurrDate><shiftCurrDate>0</shiftCurrDate><shiftCurrDate2>0</shiftCurrDate2></Props></DataFieldDef>
+<DataFieldDef id="10776" origId="132648@10776" objDef="10022" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG5" fieldName="REEXPENSESITEM" >
+<DisplayLabel>Employee Expense Details</DisplayLabel><Props><relId>10100</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10782" origId="132648@10782" objDef="10022" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="breakfastrate" >
+<DisplayLabel>breakfastRate</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10098</relId><relatedId>10778</relatedId></Props></DataFieldDef>
+<DataFieldDef id="10783" origId="132648@10783" objDef="10022" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="lunchrate" >
+<DisplayLabel>LunchRate</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10098</relId><relatedId>10779</relatedId></Props></DataFieldDef>
+<DataFieldDef id="10784" origId="132648@10784" objDef="10022" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="dinnerrate" >
+<DisplayLabel>Dinnerrate</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10098</relId><relatedId>10780</relatedId></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10098" origId="132648@10098" relName="R10098" objDefId1="10022" objDefId2="10024" singularName1="Per Diem" pluralName1="Per Diems" singularName2="Location Rate" pluralName2="Locations Rates" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10766</fieldId1><fieldId2>10767</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10099" origId="132648@10099" relName="R10099" objDefId1="10022" objDefId2="10023" singularName1="Per Diem" pluralName1="Per Diems" singularName2="Dinning item" pluralName2="Dinning items" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10772</fieldId1><fieldId2>10773</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10100" origId="132648@10100" relName="R10100" objDefId1="5032" objDefId2="10022" singularName1="Employee Expense Detail" pluralName1="Employee Expense Details" singularName2="Per Diem" pluralName2="Per Diems" isMultiple1="F" isMultiple2="F" >
+<Props><fieldId1>10776</fieldId1><fieldId2>10777</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10232" origId="132648@10232" objDefId="10022" isSystem="F" >
+<ViewName>All Per Diems</ViewName><Props><joinType>1</joinType><columns>10734,10741,10740,10748,</columns><defSortCol>10741</defSortCol><defSortCol2>0</defSortCol2><defSortCol3>0</defSortCol3><showActions>1</showActions><groupBy>0</groupBy><totalBy>0</totalBy><totalBy2>0</totalBy2><totalBy3>0</totalBy3><totalBy4>0</totalBy4><totalBy5>0</totalBy5><totalBy6>0</totalBy6><totalBy7>0</totalBy7><totalBy8>0</totalBy8></Props></ListView>
+</ListViews>
+<Events>
+<Event id="10046" origId="132648@10046" orderNo="1" objDef="10022" configId="Pt_ChangeValueConfig" name="Update Name Record" onWhat="3" changeFieldId="-1" isDeployed="T" >
+<Condition>cmV0dXJuICckIHshcGVyX2RpZW0udG90YWwhfS0teyFwZXJfZGllbS5uYW1lI3RleHQhfSc7</Condition><Props><relId>0</relId><fieldId>10734</fieldId></Props></Event>
+</Events>
+</DataObjectDef>
+<DataObjectDef  id="5032" origId="132648@5032" objDefName="eexpensesitem" isStandard="true" >
+<customFields>
+<customField><customFieldId>DESCRIPTION_OF_EVENT</customFieldId><type>textarea</type><ownerObject>eexpensesitem</ownerObject><label>Business Purpose of Event</label><dataDescription><textarea><rowCount>5</rowCount></textarea></dataDescription><required>false</required><description>Description of the entertainment event.</description><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>NAMES_OF_ATTENDEE</customFieldId><type>text</type><ownerObject>eexpensesitem</ownerObject><label>Name(s) of Attendee</label><dataDescription><text><length>100</length></text></dataDescription><required>false</required><description>the name of the attendees</description><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>TEST_BOX</customFieldId><type>checkbox</type><ownerObject>eexpensesitem</ownerObject><label>test box</label><dataDescription><checkbox><checked>false</checked></checkbox></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+</customFields>
+<smartLinks>
+<smartLink><smartLinkId>LOCATIONISDEPARTMENT</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.DEPARTMENTNAME!}== {!EEXPENSESITEM.LOCATIONNAME!}</condition><errorMessage>Location has to equal Department</errorMessage><errorType>error</errorType></validate></renderDetails><description>Location has to be equal to the Department</description><active>false</active></smartLink>
+<smartLink><smartLinkId>FORM1099</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.FORM1099!}=='false'</condition><errorMessage>Un-check Form 1099.</errorMessage><errorType>error</errorType></validate></renderDetails><description>Form 1099 can't be apply</description><active>false</active></smartLink>
+<smartLink><smartLinkId>ENTERTAINMENTNEEDS</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.ACCOUNTLABEL!} !== &quot;ENTERTAINMENT&quot; || ({!EEXPENSESITEM.NAMES_OF_ATTENDEE!} !== '' &amp;&amp; {!EEXPENSESITEM.DESCRIPTION_OF_EVENT!} !== '')</condition><errorMessage>NEEDS THE NAME OF ATTENDEES OR THE DESCRIPTION OF THE EVENT.</errorMessage><errorType>error</errorType></validate></renderDetails><description>If entertainment is selected, it needs the name(s) of attendee and the description of the event.</description><active>false</active></smartLink>
+<smartLink><smartLinkId>MILESFORMILEAGECAL</smartLinkId><type>w</type><ownerObject>eexpensesitem</ownerObject><events><event>approve</event></events><renderDetails><workflow><condition>{!EEXPENSESITEM.MILES!}==''</condition><action><apiAction><body>&lt;create&gt;
+  &lt;mileage_calculator&gt;
+   &lt;miles&gt;{!EEXPENSESITEM.MILES!}&lt;/miles&gt;
+  &lt;/mileage_calculator&gt;
+&lt;/create&gt;</body></apiAction></action></workflow></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>CHECKTESTBOX</smartLinkId><type>w</type><ownerObject>eexpensesitem</ownerObject><events><event>approve</event></events><renderDetails><workflow><condition>{!EEXPENSESITEM.ACCOUNTLABEL!} == &quot;MILEAGE&quot;</condition><action><apiAction><body>&lt;update&gt;
+&lt;EEXPENSESITEM&gt;
+&lt;EEXPENSESITM.TEST_BOX&gt;true&lt;/EEXPENSESITEM.TEST_BOX&gt;
+&lt;/EEXPENSESITEM&gt;
+&lt;/update&gt;</body></apiAction></action></workflow></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>MILEAGENEED</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.ACCOUNTLABEL!} !== &quot;MILEAGE&quot; || (data == 'Rmileage_calculator')</condition><errorMessage>There needs to be a Mileage Calculator. {!EEXPENSESITEM.R10020!}</errorMessage><errorType>error</errorType></validate></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>DATE_CANT_POST_EE</smartLinkId><type>v</type><ownerObject>eexpensesitem</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!EEXPENSESITEM.ENTRY_DATE!}&gt;'2013.10.22'</condition><errorMessage>ENTRIES CAN'T BE BEFORE OCT 22 {!EEXPENSESITEM.ENTRY_DATE!}</errorMessage><errorType>error</errorType></validate></renderDetails><description>This is for McAlisters, not to post on days before Oct 22</description><active>false</active></smartLink>
+</smartLinks>
+<DataFieldDefs>
+<DataFieldDef id="10777" origId="132648@10777" objDef="5032" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rper_diem" >
+<DisplayLabel>Per Diems</DisplayLabel><Props><relId>10100</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10786" origId="132648@10786" objDef="5032" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rlocation_rate" >
+<DisplayLabel>Location Rate</DisplayLabel><Props><relId>10101</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10100" origId="132648@10100" relName="R10100" objDefId1="5032" objDefId2="10022" singularName1="Employee Expense Detail" pluralName1="Employee Expense Details" singularName2="Per Diem" pluralName2="Per Diems" isMultiple1="F" isMultiple2="F" >
+<Props><fieldId1>10776</fieldId1><fieldId2>10777</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10101" origId="132648@10101" relName="R10101" objDefId1="5032" objDefId2="10024" singularName1="Employee Expense Detail" pluralName1="Employee Expense Details" singularName2="Location Rate" pluralName2="Locations Rates" isMultiple1="T" isMultiple2="F" >
+<Props><fieldId1>10785</fieldId1><fieldId2>10786</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10025" origId="125233@10025" objDefId="5032" isSystem="F" >
+<ViewName>All Employee Expense Details</ViewName><Props><joinType>1</joinType><columns>999503200000020,999503200000021,999503200000022,999503200000001,10181,</columns><defSortCol>0</defSortCol><defSortCol2>0</defSortCol2><defSortCol3>0</defSortCol3><groupBy>0</groupBy><totalBy>0</totalBy><totalBy2>0</totalBy2><totalBy3>0</totalBy3><totalBy4>0</totalBy4><totalBy5>0</totalBy5><totalBy6>0</totalBy6><totalBy7>0</totalBy7><totalBy8>0</totalBy8></Props></ListView>
+</ListViews>
+<Templates>
+<Template type="doc" id="10005" origId="132648@10005" objDef="5032" name="Create Miles" contentType="text/xml" fileName="MILES FOR MILEAGE CALCULATOR.xml" >
+<RawData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxjcmVhdGU+DQogIDxtaWxlYWdlX2NhbGN1bGF0b3I+DQogICA8bWlsZXM+eyFFRVhQRU5TRVNJVEVNLk1JTEVTIX08L21pbGVzPg0KICA8L21pbGVhZ2VfY2FsY3VsYXRvcj4NCjwvY3JlYXRlPg0K</RawData></Template>
+</Templates>
+</DataObjectDef>
+</DataObjectDefs>
+<Menus>
+<Menu id="10076" origId="132648@10076" objDefId="10022" orderNo="1" parentId="-1" pageType="5" >
+<DisplayName>Per Diems</DisplayName><Menus><Menu id="10077" origId="132648@10077" objDefId="10022" orderNo="1" parentId="10076" pageType="5" >
+<DisplayName>List</DisplayName></Menu>
+<Menu id="10078" origId="132648@10078" objDefId="10022" orderNo="2" parentId="10076" pageType="4" >
+<DisplayName>Add</DisplayName></Menu>
+<Menu id="10079" origId="132648@10079" objDefId="10022" orderNo="3" parentId="10076" pageType="11" >
+<DisplayName>Import</DisplayName><PageURL>pt_import.phtml</PageURL></Menu>
+<Menu id="10080" origId="132648@10080" objDefId="10022" orderNo="4" parentId="10076" pageType="12" >
+<DisplayName>Templates</DisplayName><PageURL>pt_templates.phtml</PageURL></Menu>
+</Menus></Menu>
+<Menu id="10081" origId="132648@10081" objDefId="10023" orderNo="1" pageType="5" >
+<DisplayName>Dining items</DisplayName><Menus><Menu id="10082" origId="132648@10082" objDefId="10023" orderNo="1" parentId="10081" pageType="5" >
+<DisplayName>List</DisplayName></Menu>
+<Menu id="10083" origId="132648@10083" objDefId="10023" orderNo="2" parentId="10081" pageType="4" >
+<DisplayName>Add</DisplayName></Menu>
+<Menu id="10084" origId="132648@10084" objDefId="10023" orderNo="3" parentId="10081" pageType="11" >
+<DisplayName>Import</DisplayName><PageURL>pt_import.phtml</PageURL></Menu>
+<Menu id="10085" origId="132648@10085" objDefId="10023" orderNo="4" parentId="10081" pageType="12" >
+<DisplayName>Templates</DisplayName><PageURL>pt_templates.phtml</PageURL></Menu>
+</Menus></Menu>
+<Menu id="10086" origId="132648@10086" objDefId="10024" orderNo="1" parentId="-1" pageType="5" >
+<DisplayName>Locations Rates</DisplayName><Menus><Menu id="10087" origId="132648@10087" objDefId="10024" orderNo="1" parentId="10086" pageType="5" >
+<DisplayName>List</DisplayName></Menu>
+<Menu id="10088" origId="132648@10088" objDefId="10024" orderNo="2" parentId="10086" pageType="4" >
+<DisplayName>Add</DisplayName></Menu>
+<Menu id="10089" origId="132648@10089" objDefId="10024" orderNo="3" parentId="10086" pageType="11" >
+<DisplayName>Import</DisplayName><PageURL>pt_import.phtml</PageURL></Menu>
+<Menu id="10090" origId="132648@10090" objDefId="10024" orderNo="4" parentId="10086" pageType="12" >
+<DisplayName>Templates</DisplayName><PageURL>pt_templates.phtml</PageURL></Menu>
+</Menus></Menu>
+</Menus>
+<WebPages>
+<WebPage id="11103" origId="132648@11103" objDefId="10023" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>Dinning itemss List</PageName><PageSections>
+<PageSection id="11903" origId="132648@11903" pageId="11103" >
+<SectionTitle>All Dinning itemss</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13165" origId="132648@13165" sectionId="11903" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIERpbm5pbmcgaXRlbXNz</Text><Props><objDefId2>10023</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11104" origId="132648@11104" objDefId="10023" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Dinning items</PageName><PageSections>
+<PageSection id="11893" origId="132648@11893" pageId="11104" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13151" origId="132648@13151" sectionId="11893" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11894" origId="132648@11894" pageId="11104" orderNo="1" >
+<SectionTitle>Dinning items Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>0</viewTabNo></Props><PageCells>
+<PageCell id="13152" origId="132648@13152" sectionId="11894" fieldId="10750" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13228" origId="132648@13228" sectionId="11894" orderNo="1" fieldId="10768" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13233" origId="132648@13233" sectionId="11894" orderNo="2" fieldId="10769" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13238" origId="132648@13238" sectionId="11894" orderNo="3" fieldId="10770" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13243" origId="132648@13243" sectionId="11894" orderNo="4" fieldId="10771" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11895" origId="132648@11895" pageId="11104" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13153" origId="132648@13153" sectionId="11895" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11105" origId="132648@11105" objDefId="10023" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><PageSections>
+<PageSection id="11911" origId="132648@11911" pageId="11105" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13174" origId="132648@13174" sectionId="11911" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11912" origId="132648@11912" pageId="11105" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13175" origId="132648@13175" sectionId="11912" alignment="1" fieldId="10750" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13229" origId="132648@13229" sectionId="11912" orderNo="1" fieldId="10768" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13234" origId="132648@13234" sectionId="11912" orderNo="2" fieldId="10769" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13239" origId="132648@13239" sectionId="11912" orderNo="3" fieldId="10770" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13244" origId="132648@13244" sectionId="11912" orderNo="4" fieldId="10771" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11913" origId="132648@11913" pageId="11105" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13176" origId="132648@13176" sectionId="11913" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11106" origId="132648@11106" objDefId="10023" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Dinning items</PageName><Props><enableTabs>1</enableTabs><numTabs>2</numTabs><tabName0>Dinning items Info</tabName0><tabName1>System Info</tabName1></Props><PageSections>
+<PageSection id="11896" origId="132648@11896" pageId="11106" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13154" origId="132648@13154" sectionId="11896" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11897" origId="132648@11897" pageId="11106" orderNo="1" >
+<SectionTitle>Dinning items Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><isDefault>1</isDefault><viewTabNo>0</viewTabNo></Props><PageCells>
+<PageCell id="13155" origId="132648@13155" sectionId="11897" fieldId="10750" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13230" origId="132648@13230" sectionId="11897" orderNo="1" fieldId="10768" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13235" origId="132648@13235" sectionId="11897" orderNo="2" fieldId="10769" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13240" origId="132648@13240" sectionId="11897" orderNo="3" fieldId="10770" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13245" origId="132648@13245" sectionId="11897" orderNo="4" fieldId="10771" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11898" origId="132648@11898" pageId="11106" orderNo="2" >
+<SectionTitle>System Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>2</columns><isCollapsable>1</isCollapsable><doNotSynch>1</doNotSynch><viewTabNo>1</viewTabNo></Props><PageCells>
+<PageCell id="13156" origId="132648@13156" sectionId="11898" fieldId="10752" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13157" origId="132648@13157" sectionId="11898" orderNo="1" alignment="1" fieldId="10753" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13158" origId="132648@13158" sectionId="11898" orderNo="2" fieldId="10754" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13159" origId="132648@13159" sectionId="11898" orderNo="3" alignment="1" fieldId="10755" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13160" origId="132648@13160" sectionId="11898" orderNo="4" fieldId="10756" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11899" origId="132648@11899" pageId="11106" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13161" origId="132648@13161" sectionId="11899" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11943" origId="132648@11943" pageId="11106" orderNo="4" >
+<SectionTitle>Per Diems</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>0</viewTabNo></Props><PageCells>
+<PageCell id="13252" origId="132648@13252" sectionId="11943" alignment="1" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Text>UGVyIERpZW1z</Text><Props><objDefId2>10022</objDefId2><relId>10099</relId><showAttachLink>1</showAttachLink><showViewSelector>1</showViewSelector><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11107" origId="132648@11107" objDefId="10023" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Dinning items</PageName><PageSections>
+<PageSection id="11900" origId="132648@11900" pageId="11107" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13162" origId="132648@13162" sectionId="11900" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11901" origId="132648@11901" pageId="11107" orderNo="1" >
+<SectionTitle>Dinning items Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>0</viewTabNo></Props><PageCells>
+<PageCell id="13163" origId="132648@13163" sectionId="11901" fieldId="10750" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13231" origId="132648@13231" sectionId="11901" orderNo="1" fieldId="10768" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13236" origId="132648@13236" sectionId="11901" orderNo="2" fieldId="10769" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13241" origId="132648@13241" sectionId="11901" orderNo="3" fieldId="10770" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13246" origId="132648@13246" sectionId="11901" orderNo="4" fieldId="10771" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11902" origId="132648@11902" pageId="11107" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13164" origId="132648@13164" sectionId="11902" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11108" origId="132648@11108" objDefId="10023" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Dinning itemss Selector List</PageName><PageSections>
+<PageSection id="11904" origId="132648@11904" pageId="11108" >
+<SectionTitle>Dinning itemss Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13166" origId="132648@13166" sectionId="11904" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>RGlubmluZyBpdGVtc3MgU2VsZWN0b3I=</Text><Props><objDefId2>10023</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11109" origId="132648@11109" objDefId="10023" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11905" origId="132648@11905" pageId="11109" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13167" origId="132648@13167" sectionId="11905" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11906" origId="132648@11906" pageId="11109" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13168" origId="132648@13168" sectionId="11906" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13169" origId="132648@13169" sectionId="11906" orderNo="1" alignment="1" fieldId="10751" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11907" origId="132648@11907" pageId="11109" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13170" origId="132648@13170" sectionId="11907" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11110" origId="132648@11110" objDefId="10023" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11908" origId="132648@11908" pageId="11110" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13171" origId="132648@13171" sectionId="11908" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11909" origId="132648@11909" pageId="11110" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13172" origId="132648@13172" sectionId="11909" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11910" origId="132648@11910" pageId="11110" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13173" origId="132648@13173" sectionId="11910" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11111" origId="132648@11111" objDefId="10023" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import Dinning itemss</PageName><PageSections>
+<PageSection id="11888" origId="132648@11888" pageId="11111" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13145" origId="132648@13145" sectionId="11888" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11889" origId="132648@11889" pageId="11111" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13146" origId="132648@13146" sectionId="11889" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11890" origId="132648@11890" pageId="11111" orderNo="2" >
+<SectionTitle>Map Dinning items Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13147" origId="132648@13147" sectionId="11890" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPkRpbm5pbmcgaXRlbXMgRmllbGRzIDwvdGQ+PHRkIGNsYXNzPSdyYnNfbGVmdERhdGFDb2xXaWRlJz4gU3ByZWFkc2hlZXQgQ29sdW1ucyAmbmJzcDsmbmJzcDsgQ29uc3RhbnQgVmFsdWU8L3RkPjwvdHI+PC90YWJsZT4=</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13148" origId="132648@13148" sectionId="11890" orderNo="1" alignment="1" fieldId="10750" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13232" origId="132648@13232" sectionId="11890" orderNo="2" fieldId="10768" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13237" origId="132648@13237" sectionId="11890" orderNo="3" fieldId="10769" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13242" origId="132648@13242" sectionId="11890" orderNo="4" fieldId="10770" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13247" origId="132648@13247" sectionId="11890" orderNo="5" fieldId="10771" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11891" origId="132648@11891" pageId="11111" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13149" origId="132648@13149" sectionId="11891" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11892" origId="132648@11892" pageId="11111" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13150" origId="132648@13150" sectionId="11892" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11112" origId="132648@11112" objDefId="10024" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>Locations Rates List</PageName><PageSections>
+<PageSection id="11929" origId="132648@11929" pageId="11112" >
+<SectionTitle>All Locations Rates</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13197" origId="132648@13197" sectionId="11929" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIExvY2F0aW9ucyBSYXRlcw==</Text><Props><objDefId2>10024</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11113" origId="132648@11113" objDefId="10024" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Location Rate</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11919" origId="132648@11919" pageId="11113" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13183" origId="132648@13183" sectionId="11919" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11920" origId="132648@11920" pageId="11113" orderNo="1" >
+<SectionTitle>Location Rate Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="13209" origId="132648@13209" sectionId="11920" fieldId="10764" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13315" origId="132648@13315" sectionId="11920" orderNo="1" fieldId="10778" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13320" origId="132648@13320" sectionId="11920" orderNo="2" fieldId="10779" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13325" origId="132648@13325" sectionId="11920" orderNo="3" fieldId="10780" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11921" origId="132648@11921" pageId="11113" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13185" origId="132648@13185" sectionId="11921" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11114" origId="132648@11114" objDefId="10024" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><PageSections>
+<PageSection id="11937" origId="132648@11937" pageId="11114" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13206" origId="132648@13206" sectionId="11937" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11938" origId="132648@11938" pageId="11114" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13207" origId="132648@13207" sectionId="11938" alignment="1" fieldId="10757" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13210" origId="132648@13210" sectionId="11938" orderNo="1" fieldId="10764" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13316" origId="132648@13316" sectionId="11938" orderNo="2" fieldId="10778" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13321" origId="132648@13321" sectionId="11938" orderNo="3" fieldId="10779" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13326" origId="132648@13326" sectionId="11938" orderNo="4" fieldId="10780" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11939" origId="132648@11939" pageId="11114" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13208" origId="132648@13208" sectionId="11939" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11115" origId="132648@11115" objDefId="10024" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Location Rate</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11922" origId="132648@11922" pageId="11115" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13186" origId="132648@13186" sectionId="11922" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11941" origId="132648@11941" pageId="11115" orderNo="1" >
+<SectionTitle>Location Rate Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="13224" origId="132648@13224" sectionId="11941" fieldId="10764" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13317" origId="132648@13317" sectionId="11941" orderNo="1" fieldId="10778" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13322" origId="132648@13322" sectionId="11941" orderNo="2" fieldId="10779" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13327" origId="132648@13327" sectionId="11941" orderNo="3" fieldId="10780" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11940" origId="132648@11940" pageId="11115" orderNo="2" >
+<SectionTitle>Per Diems</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>0</viewTabNo></Props><PageCells>
+<PageCell id="13223" origId="132648@13223" sectionId="11940" alignment="1" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Text>UGVyIERpZW1z</Text><Props><objDefId2>10022</objDefId2><relId>10098</relId><showAttachLink>1</showAttachLink><showViewSelector>1</showViewSelector><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11924" origId="132648@11924" pageId="11115" orderNo="3" >
+<SectionTitle>System Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>2</columns><isCollapsable>1</isCollapsable><doNotSynch>1</doNotSynch><viewTabNo>1</viewTabNo></Props><PageCells>
+<PageCell id="13188" origId="132648@13188" sectionId="11924" fieldId="10759" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13189" origId="132648@13189" sectionId="11924" orderNo="1" alignment="1" fieldId="10760" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13190" origId="132648@13190" sectionId="11924" orderNo="2" fieldId="10761" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13191" origId="132648@13191" sectionId="11924" orderNo="3" alignment="1" fieldId="10762" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13192" origId="132648@13192" sectionId="11924" orderNo="4" fieldId="10763" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11925" origId="132648@11925" pageId="11115" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13193" origId="132648@13193" sectionId="11925" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11958" origId="132648@11958" pageId="11115" orderNo="5" >
+<SectionTitle>Employee Expense Details</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13352" origId="132648@13352" sectionId="11958" alignment="1" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Text>RW1wbG95ZWUgRXhwZW5zZSBEZXRhaWxz</Text><Props><objDefId2>5032</objDefId2><relId>10101</relId><showAttachLink>1</showAttachLink><showViewSelector>1</showViewSelector><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11116" origId="132648@11116" objDefId="10024" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Location Rate</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11926" origId="132648@11926" pageId="11116" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13194" origId="132648@13194" sectionId="11926" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11942" origId="132648@11942" pageId="11116" orderNo="1" >
+<SectionTitle>Location Rate Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="13226" origId="132648@13226" sectionId="11942" fieldId="10764" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13318" origId="132648@13318" sectionId="11942" orderNo="1" fieldId="10778" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13323" origId="132648@13323" sectionId="11942" orderNo="2" fieldId="10779" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13328" origId="132648@13328" sectionId="11942" orderNo="3" fieldId="10780" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11928" origId="132648@11928" pageId="11116" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13196" origId="132648@13196" sectionId="11928" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11117" origId="132648@11117" objDefId="10024" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Locations Rates Selector List</PageName><PageSections>
+<PageSection id="11930" origId="132648@11930" pageId="11117" >
+<SectionTitle>Locations Rates Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13198" origId="132648@13198" sectionId="11930" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>TG9jYXRpb25zIFJhdGVzIFNlbGVjdG9y</Text><Props><objDefId2>10024</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11118" origId="132648@11118" objDefId="10024" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11931" origId="132648@11931" pageId="11118" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13199" origId="132648@13199" sectionId="11931" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11932" origId="132648@11932" pageId="11118" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13200" origId="132648@13200" sectionId="11932" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13201" origId="132648@13201" sectionId="11932" orderNo="1" alignment="1" fieldId="10758" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11933" origId="132648@11933" pageId="11118" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13202" origId="132648@13202" sectionId="11933" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11119" origId="132648@11119" objDefId="10024" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11934" origId="132648@11934" pageId="11119" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13203" origId="132648@13203" sectionId="11934" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11935" origId="132648@11935" pageId="11119" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13204" origId="132648@13204" sectionId="11935" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11936" origId="132648@11936" pageId="11119" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13205" origId="132648@13205" sectionId="11936" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11120" origId="132648@11120" objDefId="10024" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import Locations Rates</PageName><PageSections>
+<PageSection id="11914" origId="132648@11914" pageId="11120" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13177" origId="132648@13177" sectionId="11914" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11915" origId="132648@11915" pageId="11120" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13178" origId="132648@13178" sectionId="11915" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11916" origId="132648@11916" pageId="11120" orderNo="2" >
+<SectionTitle>Map Location Rate Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13179" origId="132648@13179" sectionId="11916" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPkxvY2F0aW9uIFJhdGUgRmllbGRzIDwvdGQ+PHRkIGNsYXNzPSdyYnNfbGVmdERhdGFDb2xXaWRlJz4gU3ByZWFkc2hlZXQgQ29sdW1ucyAmbmJzcDsmbmJzcDsgQ29uc3RhbnQgVmFsdWU8L3RkPjwvdHI+PC90YWJsZT4=</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13180" origId="132648@13180" sectionId="11916" orderNo="1" alignment="1" fieldId="10757" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13213" origId="132648@13213" sectionId="11916" orderNo="2" fieldId="10764" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13319" origId="132648@13319" sectionId="11916" orderNo="3" fieldId="10778" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13324" origId="132648@13324" sectionId="11916" orderNo="4" fieldId="10779" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13329" origId="132648@13329" sectionId="11916" orderNo="5" fieldId="10780" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11917" origId="132648@11917" pageId="11120" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13181" origId="132648@13181" sectionId="11917" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11918" origId="132648@11918" pageId="11120" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13182" origId="132648@13182" sectionId="11918" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11094" origId="132648@11094" objDefId="10022" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>Per Diems List</PageName><PageSections>
+<PageSection id="11877" origId="132648@11877" pageId="11094" >
+<SectionTitle>All Per Diems</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13092" origId="132648@13092" sectionId="11877" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIFBlciBEaWVtcw==</Text><Props><objDefId2>10022</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11095" origId="132648@11095" objDefId="10022" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Per Diem</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11864" origId="132648@11864" pageId="11095" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13072" origId="132648@13072" sectionId="11864" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11954" origId="132648@11954" pageId="11095" orderNo="1" >
+<SectionTitle>Per Diem Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="13334" origId="132648@13334" sectionId="11954" fieldId="10734" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13335" origId="132648@13335" sectionId="11954" orderNo="1" fieldId="10775" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13336" origId="132648@13336" sectionId="11954" orderNo="2" fieldId="10744" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13337" origId="132648@13337" sectionId="11954" orderNo="3" fieldId="10745" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13338" origId="132648@13338" sectionId="11954" orderNo="4" fieldId="10746" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13339" origId="132648@13339" sectionId="11954" orderNo="5" fieldId="10747" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13340" origId="132648@13340" sectionId="11954" orderNo="6" fieldId="10767" cellClassName="Pt_FieldWrapper" >
+<Props><useStandardPicker>false</useStandardPicker><useRecInScope>false</useRecInScope><alignment>0</alignment></Props></PageCell>
+<PageCell id="13341" origId="132648@13341" sectionId="11954" orderNo="7" fieldId="10748" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13342" origId="132648@13342" sectionId="11954" orderNo="8" fieldId="10776" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11955" origId="132648@11955" pageId="11095" orderNo="2" >
+<SectionTitle>Document Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11867" origId="132648@11867" pageId="11095" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13076" origId="132648@13076" sectionId="11867" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11096" origId="132648@11096" objDefId="10022" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><PageSections>
+<PageSection id="11885" origId="132648@11885" pageId="11096" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13101" origId="132648@13101" sectionId="11885" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11886" origId="132648@11886" pageId="11096" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13102" origId="132648@13102" sectionId="11886" alignment="1" fieldId="10734" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13126" origId="132648@13126" sectionId="11886" orderNo="1" fieldId="10744" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13131" origId="132648@13131" sectionId="11886" orderNo="2" fieldId="10745" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13136" origId="132648@13136" sectionId="11886" orderNo="3" fieldId="10746" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13280" origId="132648@13280" sectionId="11886" orderNo="4" fieldId="10775" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13312" origId="132648@13312" sectionId="11886" orderNo="5" fieldId="10776" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13141" origId="132648@13141" sectionId="11886" orderNo="6" fieldId="10747" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13220" origId="132648@13220" sectionId="11886" orderNo="7" fieldId="10767" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13249" origId="132648@13249" sectionId="11886" orderNo="8" fieldId="10773" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11887" origId="132648@11887" pageId="11096" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13104" origId="132648@13104" sectionId="11887" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11097" origId="132648@11097" objDefId="10022" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Per Diem</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11868" origId="132648@11868" pageId="11097" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13077" origId="132648@13077" sectionId="11868" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11956" origId="132648@11956" pageId="11097" orderNo="1" >
+<SectionTitle>Per Diem Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="13343" origId="132648@13343" sectionId="11956" fieldId="10734" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13344" origId="132648@13344" sectionId="11956" orderNo="1" fieldId="10775" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13345" origId="132648@13345" sectionId="11956" orderNo="2" fieldId="10744" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13346" origId="132648@13346" sectionId="11956" orderNo="3" fieldId="10745" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13347" origId="132648@13347" sectionId="11956" orderNo="4" fieldId="10746" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13348" origId="132648@13348" sectionId="11956" orderNo="5" fieldId="10747" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13349" origId="132648@13349" sectionId="11956" orderNo="6" fieldId="10767" cellClassName="Pt_FieldWrapper" >
+<Props><useStandardPicker>false</useStandardPicker><useRecInScope>false</useRecInScope><alignment>0</alignment></Props></PageCell>
+<PageCell id="13350" origId="132648@13350" sectionId="11956" orderNo="7" fieldId="10748" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13351" origId="132648@13351" sectionId="11956" orderNo="8" fieldId="10776" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11957" origId="132648@11957" pageId="11097" orderNo="2" >
+<SectionTitle>Document Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11871" origId="132648@11871" pageId="11097" orderNo="3" >
+<SectionTitle>System Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>2</columns><viewTabNo>1</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13081" origId="132648@13081" sectionId="11871" fieldId="10738" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13082" origId="132648@13082" sectionId="11871" orderNo="1" alignment="1" fieldId="10739" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13083" origId="132648@13083" sectionId="11871" orderNo="2" fieldId="10740" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13084" origId="132648@13084" sectionId="11871" orderNo="3" alignment="1" fieldId="10741" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13085" origId="132648@13085" sectionId="11871" orderNo="4" fieldId="10742" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11872" origId="132648@11872" pageId="11097" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13086" origId="132648@13086" sectionId="11872" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11098" origId="132648@11098" objDefId="10022" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Per Diem</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11873" origId="132648@11873" pageId="11098" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13087" origId="132648@13087" sectionId="11873" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11952" origId="132648@11952" pageId="11098" orderNo="1" >
+<SectionTitle>Per Diem Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="13303" origId="132648@13303" sectionId="11952" fieldId="10734" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13304" origId="132648@13304" sectionId="11952" orderNo="1" fieldId="10775" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13305" origId="132648@13305" sectionId="11952" orderNo="2" fieldId="10744" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13306" origId="132648@13306" sectionId="11952" orderNo="3" fieldId="10745" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13307" origId="132648@13307" sectionId="11952" orderNo="4" fieldId="10746" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13308" origId="132648@13308" sectionId="11952" orderNo="5" fieldId="10747" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13309" origId="132648@13309" sectionId="11952" orderNo="6" fieldId="10767" cellClassName="Pt_FieldWrapper" >
+<Props><useStandardPicker>false</useStandardPicker><useRecInScope>false</useRecInScope><alignment>0</alignment></Props></PageCell>
+<PageCell id="13310" origId="132648@13310" sectionId="11952" orderNo="7" fieldId="10748" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13314" origId="132648@13314" sectionId="11952" orderNo="8" fieldId="10776" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11953" origId="132648@11953" pageId="11098" orderNo="2" >
+<SectionTitle>Document Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11876" origId="132648@11876" pageId="11098" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="13091" origId="132648@13091" sectionId="11876" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11099" origId="132648@11099" objDefId="10022" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Per Diems Selector List</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11959" origId="132648@11959" pageId="11099" >
+<SectionTitle>Per Diem</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable></Props><PageCells>
+<PageCell id="13353" origId="132648@13353" sectionId="11959" alignment="2" fieldId="-1" cellClassName="Pt_ScriptControl" >
+<Text>PHNjcmlwdCBzcmM9Ii4uL3Jlc291cmNlcy90aGlyZHBhcnR5L2pxdWVyeS9qcXVlcnktMS43LjIubWluLmpzIiBsYW5ndWFnZT0iamF2YXNjcmlwdCI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iLi4vcmVzb3VyY2VzL3RoaXJkcGFydHkvanF1ZXJ5LXVpL2pxdWVyeS11aS5taW4uanMiIGxhbmd1YWdlPSJqYXZhc2NyaXB0Ij48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPSIuLi9yZXNvdXJjZXMvanMvanF1ZXJ5LWRhdGVwaWNrZXItb3ZlcnJpZGUuanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCBzcmM9Ii4uL3Jlc291cmNlcy9qcy9EYXRlVGltZVBpY2tlci5qcyI+PC9zY3JpcHQ+DQo8c2NyaXB0IHNyYz0iLi4vcmVzb3VyY2VzL2pzL2pzX2RhdGVzLmpzIj48L3NjcmlwdD4NCjxzY3JpcHQgc3JjPSIuLi9yZXNvdXJjZXMvanMvanNfYXV0b19kYXRlcy5qcyI+PC9zY3JpcHQ+DQoNCjxsYWJlbD5TaG9ydCBEZXNjcmlwdGlvbjwvbGFiZWw+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7PGlucHV0CXR5cGU9InRleHQiCWlkPSJwZXJkaWVtIgluYW1lPSJwZXJkaWVtIi8+DQoNCjx0YWJsZT4NCgk8dHI+DQoJPHRkPg0KCQk8dGFibGU+PHRib2R5Pjx0cj48dGQ+PGxhYmVsPkV4cGVuc2UgRGF0ZSBGcm9tOiA8L2xhYmVsPjxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJleHBlbnNlX2Zyb20iIGlkPSJleHBlbnNlX2Zyb20iICB0YWJpbmRleD0iMyIgY2xhc3M9Imhhc0RhdGVwaWNrZXIiIGF1dG9jb21wbGV0ZT0ib2ZmIglvbmNoYW5nZT0ibnVtZCgpOyB2YWxpZGF0ZSgpOyI+PGJ1dHRvbiB0eXBlPSJidXR0b24iIGNsYXNzPSJ1aS1kYXRlcGlja2VyLXRyaWdnZXIiPi4uLjwvYnV0dG9uPjxzY3JpcHQ+DQogICAgICAgIAkJCShmdW5jdGlvbiAoKSB7DQogICAgICAgIAkJCSAgICBhdHRhY2hEYXRlUGNpa2VyVG9FbGVtZW50KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdleHBlbnNlX2Zyb20nKSwgZmFsc2UsICcvbWRZJywgJ2V4cGVuc2VfZnJvbScsIGZhbHNlKTsNCiAgICAgICAgCQkJfSgpDQogICAgICAgIAkJCSk7PC9zY3JpcHQ+PC90ZD48dGQ+PGltZyBib3JkZXI9IjAiIGlkPSJleHBlbnNlX2Zyb20iIHNyYz0iLi4vcmVzb3VyY2VzL2ltYWdlcy9wbGF0Zm9ybS9jYWxlbmRhci5naWYiIG9uY2xpY2s9InNob3dIaWRlRGF0ZVBpY2tlcignI2V4cGVuc2VfZnJvbScpOyI+DQo8L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPg0KCQk8L3RkPg0KCQk8dGQ+DQoJCTx0YWJsZT48dGJvZHk+PHRyPjx0ZD48bGFiZWw+RXhwZW5zZSBEYXRlIFRvOiA8L2xhYmVsPjxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJleHBlbnNlX3RvIiBpZD0iZXhwZW5zZV90byIgIHRhYmluZGV4PSIzIiBjbGFzcz0iaGFzRGF0ZXBpY2tlciIgYXV0b2NvbXBsZXRlPSJvZmYiCW9uY2hhbmdlPSJudW1kKCk7IHZhbGlkYXRlKCk7Ij48YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9InVpLWRhdGVwaWNrZXItdHJpZ2dlciI+Li4uPC9idXR0b24+PHNjcmlwdD4NCiAgICAgICAgCQkJKGZ1bmN0aW9uICgpIHsNCiAgICAgICAgCQkJICAgIGF0dGFjaERhdGVQY2lrZXJUb0VsZW1lbnQoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2V4cGVuc2VfdG8nKSwgZmFsc2UsICcvbWRZJywgJ2V4cGVuc2VfdG8nLCBmYWxzZSk7DQogICAgICAgIAkJCX0oKQ0KICAgICAgICAJCQkpOzwvc2NyaXB0PjwvdGQ+PHRkPjxpbWcgYm9yZGVyPSIwIiBpZD0iZXhwZW5zZV90byIgc3JjPSIuLi9yZXNvdXJjZXMvaW1hZ2VzL3BsYXRmb3JtL2NhbGVuZGFyLmdpZiIgb25jbGljaz0ic2hvd0hpZGVEYXRlUGlja2VyKCcjZXhwZW5zZV90bycpOyI+DQo8L3RkPjwvdHI+PC90Ym9keT48L3RhYmxlPg0KCQk8L3RkPg0KCTwvdHI+DQo8L3RhYmxlPg0KPGJyPg0KPHRhYmxlPg0KCTx0cj4NCgkJPGxhYmVsPjxiPkRpbmluZyBJdGVtczwvYj48L2xhYmVsPg0KCTwvdHI+DQoJPGJyPg0KCTx0cj48bGFiZWw+QnJlYWtmYXN0OjwvbGFiZWw+PGlucHV0CXR5cGU9InRleHQiCW5hbWU9ImJyZWFrZmFzdCIJaWQ9ImJyZWFrZmFzdCIvPjwvdHI+DQoJPGJyPg0KCTx0cj48bGFiZWw+THVuY2g6PC9sYWJlbD4mbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDs8aW5wdXQJdHlwZT0idGV4dCIJbmFtZT0ibHVuY2giCWlkPSJsdW5jaCIvPjwvdHI+DQoJPGJyPg0KCTx0cj48bGFiZWw+RGlubmVyOjwvbGFiZWw+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7PGlucHV0CXR5cGU9InRleHQiCW5hbWU9ImRpbm5lciIJaWQ9ImRpbm5lciIvPjwvdHI+DQo8L3RhYmxlPg0KPGJyPg0KPHRhYmxlIGFsaWduPSJjZW50ZXIiCXdpZHRoPSIxMDAlIj48L3RkPjx0ZAlhbGlnbj0iY2VudGVyIj48aW5wdXQgYWxpZ249ImNlbnRlciIgdHlwZT0gInN1Ym1pdCIgaWQgPSAic2F2ZSIgdmFsdWUgPSAiU2F2ZSIgZGlzYWJsZWQgPSAiZGlzYWJsZWQiIG9uY2xpY2sgPSAib25TYXZlQ2xpY2tlZCgpOyIvPjwvdGQ+PC90cj48L3RhYmxlPg0KDQo8c2NyaXB0Pg0KdmFyIG51bWRheSwgbG9jYXRlID0gZmFsc2U7DQoNCmZ1bmN0aW9uIHZhbGlkYXRlKCkgew0KICAgIGlmIChudW1kYXkgPSBmYWxzZSkgew0KICAgICAgICBqcSgnI3NhdmUnKS5hdHRyKCdkaXNhYmxlZCcsICdkaXNhYmxlZCcpOw0KICAgIH0gZWxzZSB7DQogICAgICAgIGpxKCcjc2F2ZScpLnJlbW92ZUF0dHIoJ2Rpc2FibGVkJyk7DQogICAgfQ0KfQ0KDQpmdW5jdGlvbiBudW1kIChudW1kYSkgew0KICAgIHZhciBkYXRlMSA9IG5ldyBEYXRlKGpxKCcjZXhwZW5zZV9mcm9tJykudmFsKCkpOw0KICAgIHZhciBkYXRlMiA9IG5ldyBEYXRlKGpxKCcjZXhwZW5zZV90bycpLnZhbCgpKTsNCiAgICB2YXIgdGltZURpZmYgPSBNYXRoLmFicyhkYXRlMi5nZXRUaW1lKCkgLSBkYXRlMS5nZXRUaW1lKCkpOw0KICAgIHZhciBudW1kYSA9IE1hdGguY2VpbCh0aW1lRGlmZiAvICgxMDAwICogMzYwMCAqIDI0KSk7IA0KICAgIG51bWRheSA9IE1hdGguY2VpbCh0aW1lRGlmZiAvICgxMDAwICogMzYwMCAqIDI0KSk7IA0KCQkJDQogICAgcmV0dXJuIG51bWRhOw0KICANCn0NCg0KanEoJyNleHBlbnNlX3RvJykub24oImNoYW5nZSIsIGZ1bmN0aW9uIChudW1kYSkgew0KICAgIGpxKCcjYnJlYWtmYXN0JykudmFsKG51bWQpOw0KfSk7DQpqcSgnI2V4cGVuc2VfdG8nKS5vbigiY2hhbmdlIiwgZnVuY3Rpb24gKG51bWRhKSB7DQogICAganEoJyNsdW5jaCcpLnZhbChudW1kKTsNCn0pOwkJDQpqcSgnI2V4cGVuc2VfdG8nKS5vbigiY2hhbmdlIiwgZnVuY3Rpb24gKG51bWRhKSB7DQogICAganEoJyNkaW5uZXInKS52YWwobnVtZCk7DQp9KTsNCgkJDQpmdW5jdGlvbiBsb2NhKCkgew0KICAgIHZhciBsbyA9IGpxKCdhW2hyZWZePSJwdF9tYWluLnBodG1sIl0nLCB3aW5kb3cub3BlbmVyLmRvY3VtZW50KS50ZXh0KCk7DQoJDQoJDQogICAgdmFyIHByZXBhcmFtcyA9IHt9Ow0KICAgIHByZXBhcmFtc1siLnNlc3MiXSA9ICd7ISNDVVJSX1NFU1NJT04hfSc7DQogICAgcHJlcGFyYW1zWyIub3AiXSA9IDM4MDE7DQogICAgcHJlcGFyYW1zWyJybmQiXSA9IE1hdGgucmFuZG9tKCk7DQogICAgcHJlcGFyYW1zWyJjbWQiXSA9ICdtYXRjaGVkT2JqZWN0cyc7DQogICAgcHJlcGFyYW1zWyJvYmpEZWZJZCJdID0geyEjT0JKX0lELmxvY2F0aW9uX3JhdGUhfTsNCiAgICBwcmVwYXJhbXNbInNlbGVjdG9yVmlld0lkIl0gPSAwOw0KICAgIHByZXBhcmFtc1sibmFtZSJdID0gJ25hbWUnOw0KICAgIHByZXBhcmFtc1sicXVlcnkiXSA9IGxvOw0KICAgIHZhciBsb2NhdCA9IGpxLmdldCgiaHR0cHM6Ly93d3cuaW50YWNjdC5jb20vaWEvYWNjdC9wdF9BamF4LnBodG1sIiwgcHJlcGFyYW1zLCBmdW5jdGlvbihkYXRhLCBzdGF0dXMsIHhocil7ICAgICANCiAgICAgICAgdmFyIGFycmF5ID0gZGF0YS5zcGxpdCgnL24nKTsNCiAgICAgICAgaWYoYXJyYXkgJiYgYXJyYXkubGVuZ3RoID4gMCkNCiAgICAgICAgew0KICAgICAgICAgICAgbG9jYXRlID0gYXJyYXlbMF07DQoJCQ0KICAgICAgICB9DQogICAgfSwidGV4dCIpIA0KfQkJDQoNCi8qVGhpcyBmdW5jdGlvbiB3YXMgd3JpdHRlbiBieSBTaW1vbiBXaWxsaXNvbiBhbmQgd2FzIGZvdW5kIG9uIHd3dy5odG1sZ29vZGllcy5jb20gKi8NCmZ1bmN0aW9uIGFkZExvYWRFdmVudChmdW5jKSB7DQogICAgdmFyIG9sZG9ubG9hZCA9IHdpbmRvdy5vbmxvYWQ7DQogICAgaWYgKHR5cGVvZiB3aW5kb3cub25sb2FkICE9ICdmdW5jdGlvbicpIHsNCiAgICAgICAgd2luZG93Lm9ubG9hZCA9IGZ1bmM7DQogICAgfSBlbHNlIHsNCiAgICAgICAgd2luZG93Lm9ubG9hZCA9IGZ1bmN0aW9uKCkgew0KICAgICAgICAgICAgaWYgKG9sZG9ubG9hZCkgew0KICAgICAgICAgICAgICAgIG9sZG9ubG9hZCgpOw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgZnVuYygpOw0KICAgICAgICB9DQogICAgfQ0KfQ0KYWRkTG9hZEV2ZW50KGxvY2EpOw0KYWRkTG9hZEV2ZW50KG51bWQpOw0KDQp2YXIgdXJsUGFyYW1zOw0KKHdpbmRvdy5vbnBvcHN0YXRlID0gZnVuY3Rpb24gKCkgew0KICAgIHZhciBtYXRjaCwNCiAgICAgICAgcGwgICAgID0vXF4rL2csICANCiAgICAgICAgc2VhcmNoID0gLyhbXiY9XSspPT8oW14mXSopL2csDQogICAgICAgIGRlY29kZSA9IGZ1bmN0aW9uIChzKSB7IHJldHVybiBkZWNvZGVVUklDb21wb25lbnQocy5yZXBsYWNlKHBsLCAiICIpKTsgfSwNCiAgICAgICAgcXVlcnkgID0gd2luZG93LmxvY2F0aW9uLnNlYXJjaC5zdWJzdHJpbmcoMSk7DQoNCiAgICB1cmxQYXJhbXMgPSB7fTsNCiAgICB3aGlsZSAobWF0Y2ggPSBzZWFyY2guZXhlYyhxdWVyeSkpDQogICAgICAgIHVybFBhcmFtc1tkZWNvZGUobWF0Y2hbMV0pXSA9IGRlY29kZShtYXRjaFsyXSk7DQp9KSgpOw0KdmFyIHBpID0gdXJsUGFyYW1zWyJwYWdlSWQiXTsNCnZhciBzcmNpZCA9IHBhcnNlRmxvYXQocGkpLTQ7DQp2YXIgZGVzdGlkID0gcGFyc2VGbG9hdChwaSktNTsNCg0KZnVuY3Rpb24gb25TYXZlQ2xpY2tlZCgpIHsNCiAgICB2YXIgcGFyYW1zID0ge307DQogICAgcGFyYW1zWyIuc2VzcyJdID0gInshI0NVUlJfU0VTU0lPTiF9IjsNCiAgICBwYXJhbXNbIi5vcCJdID0gIjM4MDEiOw0KICAgIHBhcmFtc1siYWN0Il0gPSAib2JqQ3JlYXRlIjsNCiAgICBwYXJhbXNbInNyY0lkIl0gPSBzcmNpZDsNCiAgICBwYXJhbXNbImRlc3RJZCJdID0gZGVzdGlkOw0KICAgIHBhcmFtc1sib2JqRGVmSWQiXSA9ICJ7ISNPQkpfSUQucGVyX2RpZW0hfSI7DQogICAgcGFyYW1zWyJuYW1lIl0gPSBqcSgiI3BlcmRpZW0iKS52YWwoKTsNCiAgICBwYXJhbXNbImV4cGVuc2VfZnJvbSJdID0ganEoIiNleHBlbnNlX2Zyb20iKS52YWwoKTsNCiAgICBwYXJhbXNbImV4cGVuc2VfdG8iXSA9IGpxKCIjZXhwZW5zZV90byIpLnZhbCgpOw0KICAgIHBhcmFtc1siYnJlYWtmYXN0Il0gPSBqcSgiI2JyZWFrZmFzdCIpLnZhbCgpOw0KICAgIHBhcmFtc1sibHVuY2giXSA9IGpxKCIjbHVuY2giKS52YWwoKTsNCiAgICBwYXJhbXNbImRpbm5lciJdID0ganEoIiNkaW5uZXIiKS52YWwoKTsNCiAgICBwYXJhbXNbInR4dFJsb2NhdGlvbl9yYXRlIl0gPSBqcSgiI2xvIikudmFsKCk7DQogICAgcGFyYW1zWyJSbG9jYXRpb25fcmF0ZSJdID0gbG9jYXRlOyAgICANCiAgICBqcS5wb3N0KCJodHRwczovL3d3dy5pbnRhY2N0LmNvbS9pYS9hY2N0L3B0X09iamVjdC5waHRtbCIsIHBhcmFtcywgZnVuY3Rpb24oZGF0YSkgeyANCiAgICAgICAgZG9jdW1lbnQubG9jYXRpb24ucmVsb2FkKHRydWUpOw0KICAgIH0pOw0KfQ0KDQpqcSgiI3NhdmUiKS5jbGljayhmdW5jdGlvbigpew0KICAgIHZhciBiID0ganEodGhpcyk7DQogICAgYi5hdHRyKCdkaXNhYmxlZCcsICdkaXNhYmxlZCcpOw0KICAgIGIuYXR0cigndmFsdWUnLCAiUGxlYXNlIFdhaXQiKTsNCiAgICBiLnBhcmVudHMoJ2Zvcm0nKS5zdWJtaXQoKTsNCn0pDQoNCg0KPC9zY3JpcHQ+DQo8L2Zvcm0+</Text><Props><alignment>2</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11878" origId="132648@11878" pageId="11099" orderNo="1" >
+<SectionTitle>Per Diems Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+<PageCell id="13093" origId="132648@13093" sectionId="11878" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Props><objDefId2>10022</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11100" origId="132648@11100" objDefId="10022" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11879" origId="132648@11879" pageId="11100" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13094" origId="132648@13094" sectionId="11879" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11880" origId="132648@11880" pageId="11100" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13095" origId="132648@13095" sectionId="11880" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13096" origId="132648@13096" sectionId="11880" orderNo="1" alignment="1" fieldId="10735" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11881" origId="132648@11881" pageId="11100" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13097" origId="132648@13097" sectionId="11881" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11101" origId="132648@11101" objDefId="10022" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11882" origId="132648@11882" pageId="11101" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13098" origId="132648@13098" sectionId="11882" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11883" origId="132648@11883" pageId="11101" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13099" origId="132648@13099" sectionId="11883" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11884" origId="132648@11884" pageId="11101" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13100" origId="132648@13100" sectionId="11884" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11102" origId="132648@11102" objDefId="10022" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import Per Diems</PageName><PageSections>
+<PageSection id="11859" origId="132648@11859" pageId="11102" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13065" origId="132648@13065" sectionId="11859" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11860" origId="132648@11860" pageId="11102" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13066" origId="132648@13066" sectionId="11860" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11861" origId="132648@11861" pageId="11102" orderNo="2" >
+<SectionTitle>Map Per Diem Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13067" origId="132648@13067" sectionId="11861" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPlBlciBEaWVtIEZpZWxkcyA8L3RkPjx0ZCBjbGFzcz0ncmJzX2xlZnREYXRhQ29sV2lkZSc+IFNwcmVhZHNoZWV0IENvbHVtbnMgJm5ic3A7Jm5ic3A7IENvbnN0YW50IFZhbHVlPC90ZD48L3RyPjwvdGFibGU+</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13069" origId="132648@13069" sectionId="11861" orderNo="1" alignment="1" fieldId="10734" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="13129" origId="132648@13129" sectionId="11861" orderNo="2" fieldId="10744" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13283" origId="132648@13283" sectionId="11861" orderNo="3" fieldId="10775" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13134" origId="132648@13134" sectionId="11861" orderNo="4" fieldId="10745" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13139" origId="132648@13139" sectionId="11861" orderNo="5" fieldId="10746" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13144" origId="132648@13144" sectionId="11861" orderNo="6" fieldId="10747" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11862" origId="132648@11862" pageId="11102" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13070" origId="132648@13070" sectionId="11862" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11863" origId="132648@11863" pageId="11102" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13071" origId="132648@13071" sectionId="11863" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10094" origId="125233@10094" objDefId="5032" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Employee Expense Detail</PageName><PageSections>
+<PageSection id="10094" origId="125233@10094" pageId="10094" >
+<SectionTitle>New Employee Expense Detail</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10095" origId="125233@10095" objDefId="5032" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Employee Expense Detail</PageName><PageSections>
+<PageSection id="10095" origId="125233@10095" pageId="10095" >
+<SectionTitle>View Employee Expense Detail</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11096" origId="132648@11096" pageId="10095" orderNo="1" >
+<SectionTitle>Mileage Calculators</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10096" origId="125233@10096" objDefId="5032" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Employee Expense Detail</PageName><PageSections>
+<PageSection id="10096" origId="125233@10096" pageId="10096" >
+<SectionTitle>Edit Employee Expense Detail</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10097" origId="125233@10097" objDefId="5032" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Employee Expense Details Selector List</PageName><PageSections>
+<PageSection id="10097" origId="125233@10097" pageId="10097" >
+<SectionTitle>Select Employee Expense Detail</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="10025" origId="125233@10025" sectionId="10097" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>RW1wbG95ZWUgRXhwZW5zZSBEZXRhaWxzIFNlbGVjdG9y</Text><Props><objDefId2>5032</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+</WebPages>
+<Portals>
+</Portals>
+<MetaData>
+<PublishedFrom>hornellp-tinroof-fra5007963-copy</PublishedFrom><PublishedBy>ExtUser|Horne LLP|hle</PublishedBy></MetaData>
+</Application>

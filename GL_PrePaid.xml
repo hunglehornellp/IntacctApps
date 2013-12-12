@@ -1,0 +1,1281 @@
+<Application id="10006" origId="132648@10006" orderNo="5" isSystem="F" version="1.1" companyNo="132648" >
+<DisplayName>GL PrePaid</DisplayName><Props><isDeployed>1</isDeployed><menuIds>10025,</menuIds><objDefIds>10008,10009,</objDefIds><stDefIds>glaccount,glbatch,glentry,location,department,recurglbatch,</stDefIds></Props><DependentDefs>
+</DependentDefs>
+<DataObjectDefs>
+<DataObjectDef id="10008" origId="132648@10008" objDefName="gl_prepaid" >
+<SingularName>GL PrePaid</SingularName><PluralName>GL PrePaids</PluralName><Props><isAuditable>1</isAuditable><isDeployed>1</isDeployed><defProcess>10006</defProcess><objIcon>mc06</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10194" origId="132648@10194" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Name</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>100</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10195" origId="132648@10195" objDef="10008" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10196" origId="132648@10196" objDef="10008" dataClassName="Pt_FieldInt" uiClassName="Pt_ProcessSelect" columnName="PROCESS_ID" fieldName="process" groupName="WORKFLOW" >
+<DisplayLabel>Workflow Process</DisplayLabel><Props><isRequired>1</isRequired><isAuditable>1</isAuditable><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10197" origId="132648@10197" objDef="10008" dataClassName="Pt_FieldInt" uiClassName="Pt_StatusSelect" columnName="STATUS_ID" fieldName="status" groupName="WORKFLOW" >
+<DisplayLabel>Workflow Status</DisplayLabel><Props><isTemplateField>1</isTemplateField><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10198" origId="132648@10198" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_DummyInput" fieldName="nextStatus" groupName="WORKFLOW" >
+<DisplayLabel>Next Status</DisplayLabel><Props><isReadOnly>1</isReadOnly><maxLength>50</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10199" origId="132648@10199" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_WorkflowActions" fieldName="actions" groupName="WORKFLOW" >
+<DisplayLabel>Workflow Actions</DisplayLabel><Props><isReadOnly>1</isReadOnly><isTableColumn>1</isTableColumn></Props></DataFieldDef>
+<DataFieldDef id="10200" origId="132648@10200" objDef="10008" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10201" origId="132648@10201" objDef="10008" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10202" origId="132648@10202" objDef="10008" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10203" origId="132648@10203" objDef="10008" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10204" origId="132648@10204" objDef="10008" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10212" origId="132648@10212" objDef="10008" dataClassName="Pt_FieldDate" uiClassName="Pt_DateInput" columnName="DATE0" fieldName="expense_date_from" >
+<DisplayLabel>Expense Date From</DisplayLabel><Description>date the recurring begins.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><shiftCurrDate>0</shiftCurrDate><shiftCurrDate2>0</shiftCurrDate2></Props></DataFieldDef>
+<DataFieldDef id="10213" origId="132648@10213" objDef="10008" dataClassName="Pt_FieldDate" uiClassName="Pt_DateInput" columnName="DATE1" fieldName="expense_date_to" >
+<DisplayLabel>Expense Date To</DisplayLabel><Description>date that the recurring ends.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><shiftCurrDate>0</shiftCurrDate><shiftCurrDate2>0</shiftCurrDate2></Props></DataFieldDef>
+<DataFieldDef id="10214" origId="132648@10214" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="numberofmonths" >
+<DisplayLabel>numberofmonths</DisplayLabel><Description>number of months. This is to be use if &#039;months&#039; is selected, and to determine the post amount in the recurring gl.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIG1vbnRoczsNCnZhciBkMSA9IG5ldyBEYXRlICgneyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV9mcm9tIX0nKTsNCnZhciBkMiA9IG5ldyBEYXRlICgneyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV90byF9Jyk7DQogICAgbW9udGhzID0gKGQyLmdldEZ1bGxZZWFyKCkgLSBkMS5nZXRGdWxsWWVhcigpKSAqIDEyOw0KICAgIG1vbnRocyAtPSBkMS5nZXRNb250aCgpOw0KICAgIG1vbnRocyArPSBkMi5nZXRNb250aCgpICsgMTsNCiAgICByZXR1cm4gbW9udGhzIDw9IDAgPyAwIDogbW9udGhzOw==</ValScript></DataFieldDef>
+<DataFieldDef id="10215" origId="132648@10215" objDef="10008" dataClassName="Pt_FieldDouble" uiClassName="Pt_CurrencyInput" columnName="DBL0" fieldName="payment_glentry" >
+<DisplayLabel>Payment_GLentry</DisplayLabel><Description>this is the amount from the glentry, if the account is 130000.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><formatIndex>1</formatIndex></Props></DataFieldDef>
+<DataFieldDef id="10218" origId="132648@10218" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR0" fieldName="gl_posting_description" >
+<DisplayLabel>GL Posting Description</DisplayLabel><Description>Line description, maybe?</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>100</maxLength><size>100</size></Props></DataFieldDef>
+<DataFieldDef id="10219" origId="132648@10219" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="numberofdays" >
+<DisplayLabel>numberofdays</DisplayLabel><Description>if select days as number of payments. This number of days will be use by number of occurrences.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGRhdGUxID0gbmV3IERhdGUoInshZ2xfcHJlcGFpZC5leHBlbnNlX2RhdGVfZnJvbSF9Iik7DQp2YXIgZGF0ZTIgPSBuZXcgRGF0ZSgieyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV90byF9Iik7DQp2YXIgdGltZURpZmYgPSBNYXRoLmFicyhkYXRlMi5nZXRUaW1lKCkgLSBkYXRlMS5nZXRUaW1lKCkpOw0KdmFyIGRpZmZEYXlzID0gTWF0aC5jZWlsKHRpbWVEaWZmIC8gKDEwMDAgKiAzNjAwICogMjQpKTsgDQpyZXR1cm4gK2RpZmZEYXlzOw==</ValScript></DataFieldDef>
+<DataFieldDef id="10220" origId="132648@10220" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="numberofweeks" >
+<DisplayLabel>numberofweeks</DisplayLabel><Description>if select weeks as number of payments. This number of weeks will be use by number of occurrences.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGRhdGUxID0gbmV3IERhdGUoInshZ2xfcHJlcGFpZC5leHBlbnNlX2RhdGVfZnJvbSF9Iik7DQp2YXIgZGF0ZTIgPSBuZXcgRGF0ZSgieyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV90byF9Iik7DQp2YXIgdGltZURpZmYgPSBNYXRoLmFicyhkYXRlMi5nZXRUaW1lKCkgLSBkYXRlMS5nZXRUaW1lKCkpOw0KdmFyIGRpZmZXZWVrcyA9IE1hdGguY2VpbCh0aW1lRGlmZiAvICgxMDAwICogMzYwMCAqIDI0ICogNykpOyANCnJldHVybiBkaWZmV2Vla3MgLSAxOw==</ValScript></DataFieldDef>
+<DataFieldDef id="10221" origId="132648@10221" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="numberofyears" >
+<DisplayLabel>numberofyears</DisplayLabel><Description>if select years as number of payments. This number of years will be use by number of occurrences.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGRhdGUxID0gbmV3IERhdGUoInshZ2xfcHJlcGFpZC5leHBlbnNlX2RhdGVfZnJvbSF9Iik7DQp2YXIgZGF0ZTIgPSBuZXcgRGF0ZSgieyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV90byF9Iik7DQp2YXIgZnJvbVllYXIgPSBkYXRlMS5nZXRGdWxsWWVhcigpOw0KdmFyIHRvWWVhciA9IGRhdGUyLmdldEZ1bGxZZWFyKCk7DQp2YXIgZnJvbU1vbnRoID0gZGF0ZTEuZ2V0TW9udGgoKTsNCnZhciB0b01vbnRoID0gZGF0ZTIuZ2V0TW9udGgoKTsNCnZhciBkaWZmWWVhcnMgPSB0b1llYXIgLSBmcm9tWWVhcjsNCiAgDQogIGlmICh0b01vbnRoIDwgZnJvbU1vbnRoIC0gMSkNCiAgew0KICAgIGRpZmZZZWFycy0tOw0KICB9DQoNCiAgaWYgKGZyb21Nb250aCAtIDEgPT0gdG9Nb250aCAmJiBkYXRlMiA8IGRhdGUxKQ0KICB7DQogICAgZGlmZlllYXJzLS07DQogIH0NCiAgcmV0dXJuICtkaWZmWWVhcnM7</ValScript></DataFieldDef>
+<DataFieldDef id="10222" origId="132648@10222" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="using_type_of_occurrences" >
+<DisplayLabel>using type of occurrences</DisplayLabel><Description>this is to determine the number of occurrences by what type of occurrence was picked, minus one occur. Because, there will already be one entry created prior.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIHR5cGUgPSAieyFnbF9wcmVwYWlkLnBvc3RpbmdyZXBlYXRieSF9IjsNCnZhciBudW0gPSBbXTsNCg0KDQppZiAodHlwZSA9PSAiRGF5cyIpIHsNCiAgICBudW0gPSAieyFnbF9wcmVwYWlkLm51bWJlcm9mZGF5cyF9IjsNCn0gZWxzZSBpZiAodHlwZSA9PSAiV2Vla3MiKSB7DQogICAgbnVtID0gICJ7IWdsX3ByZXBhaWQubnVtYmVyb2Z3ZWVrcyF9IjsNCn0gZWxzZSBpZiAodHlwZSA9PSAiTW9udGhzIikgew0KICAgIG51bSA9ICJ7IWdsX3ByZXBhaWQubnVtYmVyb2Ztb250aHMhfSI7DQp9IGVsc2UgaWYgKHR5cGUgPT0gIlllYXJzIikgew0KICAgIG51bSA9ICJ7IWdsX3ByZXBhaWQubnVtYmVyb2Z5ZWFycyF9IjsNCn0NCnJldHVybiArbnVtOw==</ValScript></DataFieldDef>
+<DataFieldDef id="10223" origId="132648@10223" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="amount_to_be_post" >
+<DisplayLabel>amount to be post</DisplayLabel><Description>this is the amount that will be enter into the recurring gl.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGFtb3VudCA9IHshZ2xfcHJlcGFpZC5wYXltZW50X2dsZW50cnkhfTsNCnZhciBudW0gPSBNYXRoLnJvdW5kKCh7IWdsX3ByZXBhaWQudXNpbmdfdHlwZV9vZl9vY2N1cnJlbmNlcyF9L3shZ2xfcHJlcGFpZC5yZXBlYXRzX2V2ZXJ5IX0pICogMTAwKS8xMDA7DQoNCnZhciBwYXltZW50ID0gTWF0aC5yb3VuZCgoYW1vdW50IC8gbnVtKSAqIDEwMCkvIDEwMDsNCg0KcmV0dXJuICtwYXltZW50Ow==</ValScript></DataFieldDef>
+<DataFieldDef id="10226" origId="132648@10226" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG2" fieldName="RGLACCOUNT" >
+<DisplayLabel>GL Account</DisplayLabel><Props><relId>10023</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10228" origId="132648@10228" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG3" fieldName="Rgl_prepaid_line" >
+<DisplayLabel>GL PrePaid Lines</DisplayLabel><Props><relId>10024</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10230" origId="132648@10230" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG4" fieldName="RLOCATION" >
+<DisplayLabel>Location</DisplayLabel><Props><relId>10025</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10232" origId="132648@10232" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG5" fieldName="RDEPARTMENT" >
+<DisplayLabel>Department</DisplayLabel><Props><relId>10026</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10234" origId="132648@10234" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR1" fieldName="namestring" >
+<DisplayLabel>Name</DisplayLabel><Description>this is use to change the record&#039;s name trigger.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>100</maxLength><size>90</size></Props></DataFieldDef>
+<DataFieldDef id="10235" origId="132648@10235" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="source" >
+<DisplayLabel>Source</DisplayLabel><Description>This is to return the name of the record.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>aWYgKCd7IWdsX3ByZXBhaWQuc291cmNlX3R5cGUhfScgPT0gJ0dMIEFjY291bnQnIHx8ICd7IWdsX3ByZXBhaWQuc291cmNlX3R5cGUhfScgPT0gJ0dMIEFjY291bnRzJykNCnsNCiByZXR1cm4gJ3shZ2xfcHJlcGFpZC5uYW1lc3RyaW5nIX17IWdsX3ByZXBhaWQuc291cmNlX2FjY291bnRfZ3JvdXAhfSc7DQp9DQplbHNlIGlmICgneyFnbF9wcmVwYWlkLnNvdXJjZV90eXBlIX0nID09ICdBY2NvdW50IEdyb3VwJykNCnsNCiByZXR1cm4gJ3shZ2xfcHJlcGFpZC5zb3VyY2VfYWNjb3VudF9ncm91cCF9JzsNCn0NCmVsc2UNCnsNCiByZXR1cm4gJyc7DQp9</ValScript></DataFieldDef>
+<DataFieldDef id="10236" origId="132648@10236" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR2" fieldName="source_account_group" >
+<DisplayLabel>Source Account Group</DisplayLabel><Description>This is to be use in figuring out the &quot;Source&quot;.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>80</maxLength><size>80</size></Props></DataFieldDef>
+<DataFieldDef id="10237" origId="132648@10237" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="source_gl_account_s_" >
+<DisplayLabel>Source GL Account(s)</DisplayLabel><Description>This is to show what GL account is being use.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7ISNMT09QX0JFR0lOLlIxMDAyMyF9eyFSMTAwMjMuQUNDT1VOVE5PI3RleHQhfS0teyFSMTAwMjMuVElUTEUhfVxyXG48YnI+eyEjTE9PUF9FTkQuUjEwMDIzIX0nOw==</ValScript></DataFieldDef>
+<DataFieldDef id="10238" origId="132648@10238" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="source_type" >
+<DisplayLabel>Source Type</DisplayLabel><Description>This is to return the type of GL, it is &quot;GL Account&quot;.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>aWYgKCd7IWdsX3ByZXBhaWQuc291cmNlX2FjY291bnRfZ3JvdXAhfScgIT0gJycpDQp7DQogaWYgKCNGVU5DX0NPVU5ULlIxMDAyMyggMSB8IHRydWUgKSA+PSAxKQ0KIHsNCiAgcmV0dXJuICJFcnJvciI7DQogfQ0KIGVsc2UNCiB7DQogIHJldHVybiAiQWNjb3VudCBHcm91cCI7DQogfQ0KfQ0KZWxzZSBpZiAoI0ZVTkNfQ09VTlQuUjEwMDIzKCAxIHwgdHJ1ZSApID09IDEpDQp7DQogcmV0dXJuICJHTCBBY2NvdW50IjsNCn0NCmVsc2UgaWYgKCNGVU5DX0NPVU5ULlIxMDAyMyggMSB8IHRydWUgKSA+IDEpDQp7DQogcmV0dXJuICJHTCBBY2NvdW50cyI7DQp9DQplbHNlDQp7DQogcmV0dXJuICJFcnJvciI7DQp9</ValScript></DataFieldDef>
+<DataFieldDef id="10239" origId="132648@10239" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="lines_rounded_sum" >
+<DisplayLabel>Lines Rounded Sum</DisplayLabel><Description>This is one of the process to determine what type of the amount to be post. 
+ie. credit or debit.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>YW10ID0gMC4wMDsNCnshI0xPT1BfQkVHSU4uUjEwMDI0IX0NCnR5cGUgPSB7IVIxMDAyNC5nbF9wb3N0aW5nX2Ftb3VudF90eXBlIX07DQppZiAodHlwZSA9PSAtMSkNCnsNCiBhbXQgPSBhbXQgLSB7IVIxMDAyNC5nbF9wb3N0aW5nX2Ftb3VudF9yb3VuZGVkIX07DQp9DQplbHNlDQp7DQogYW10ID0gYW10ICsgeyFSMTAwMjQuZ2xfcG9zdGluZ19hbW91bnRfcm91bmRlZCF9Ow0KfQ0KeyEjTE9PUF9FTkQuUjEwMDI0IX0NCnJldHVybiBhbXQ7</ValScript></DataFieldDef>
+<DataFieldDef id="10240" origId="132648@10240" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="lines_sum" >
+<DisplayLabel>Lines Sum</DisplayLabel><Description>this is to determine that the lines of credit and debit add up to balance each other.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>bGluZXNTdW0gPSAwLjAwOw0KeyEjTE9PUF9CRUdJTi5SMTAwMjQhfQ0KbGluZXNTdW0gPSBsaW5lc1N1bSArIHshUjEwMDI0LmdsX3Bvc3RpbmdfYW1vdW50IX07DQp7ISNMT09QX0VORC5SMTAwMjQhfQ0KcmV0dXJuIGxpbmVzU3VtOw==</ValScript></DataFieldDef>
+<DataFieldDef id="10241" origId="132648@10241" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR3" fieldName="gl_posting_journal" >
+<DisplayLabel>GL Posting Journal</DisplayLabel><Description>GL posting journal?</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>20</maxLength><size>20</size></Props></DataFieldDef>
+<DataFieldDef id="10263" origId="132648@10263" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG1" fieldName="RRECURGLBATCH" >
+<DisplayLabel>Recurring Journal Entry</DisplayLabel><Props><relId>10030</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10368" origId="132648@10368" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="source_location_string" >
+<DisplayLabel>Source Location</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyNS5MT0NBVElPTklEI3RleHQhfS0teyFSMTAwMjUuTkFNRSF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10369" origId="132648@10369" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="source_department" >
+<DisplayLabel>Source Department</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyNi5ERVBBUlRNRU5USUQjdGV4dCF9LS17IVIxMDAyNi5USVRMRSF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10372" origId="132648@10372" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="for_line_1" >
+<DisplayLabel>for line 1</DisplayLabel><Description>this is to get the text number with multiple records and post it into GL PrePaid Line via xml.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGFpZCA9ICd7IWdsX3ByZXBhaWQuUkdMQUNDT1VOVCF9JzsNCnZhciBwYWlkID0gYWlkLnNwbGl0KCIsIik7DQpyZXR1cm4gcGFpZFswXTs=</ValScript></DataFieldDef>
+<DataFieldDef id="10373" origId="132648@10373" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="for_line_2" >
+<DisplayLabel>for line 2</DisplayLabel><Description>this is to get the text number with multiple records and post it into GL PrePaid Line via xml.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGFpZCA9ICd7IWdsX3ByZXBhaWQuUkdMQUNDT1VOVCF9JzsNCnZhciBwYWlkID0gYWlkLnNwbGl0KCIsIik7DQpyZXR1cm4gcGFpZFsxXTs=</ValScript></DataFieldDef>
+<DataFieldDef id="10377" origId="132648@10377" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG6" fieldName="RGLENTRY" >
+<DisplayLabel>GL Entries</DisplayLabel><Props><relId>10038</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10380" origId="132648@10380" objDef="10008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG7" fieldName="RGLBATCH" >
+<DisplayLabel>GL Batch</DisplayLabel><Props><relId>10039</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10381" origId="132648@10381" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR4" fieldName="tr_type" >
+<DisplayLabel>TR_TYPE</DisplayLabel><Description>this is to determine the transaction type from GL entry.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>4</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10382" origId="132648@10382" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="amount_to_be_post_different" >
+<DisplayLabel>amount to be post different</DisplayLabel><Description>this is to calculate the different between the first entry to be post.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIGFtb3VudFBvc3RDYWwgPSB7IWdsX3ByZXBhaWQuYW1vdW50X3RvX2JlX3Bvc3QhfTsNCnZhciBudW0gPSBNYXRoLnJvdW5kKCh7IWdsX3ByZXBhaWQudXNpbmdfdHlwZV9vZl9vY2N1cnJlbmNlcyF9L3shZ2xfcHJlcGFpZC5yZXBlYXRzX2V2ZXJ5IX0pICogMTAwKS8xMDA7DQp2YXIgZ2xfcGF5cyA9IHshZ2xfcHJlcGFpZC5wYXltZW50X2dsZW50cnkhfTsNCnZhciBhbW91bnRkaWYgPSBbXTsNCnZhciBkaWYgPSBbXTsNCnZhciBjYWwgPSBhbW91bnRQb3N0Q2FsICogbnVtOw0KDQppZiAoZ2xfcGF5cyA8IGNhbCkgew0KICAgIGRpZiA9IGdsX3BheXMgLSBjYWw7DQogICAgYW1vdW50ZGlmID0gYW1vdW50UG9zdENhbCArIGRpZjsNCn0gZWxzZSBpZiAoZ2xfcGF5cyA+IGNhbCkgew0KICAgIGRpZiA9IGdsX3BheXMgLSBjYWw7DQogICAgYW1vdW50ZGlmID0gYW1vdW50UG9zdENhbCArIGRpZjsNCn0gZWxzZSB7DQogICAgYW1vdW50ZGlmID0gYW1vdW50UG9zdENhbDsNCn0NCnJldHVybiArTWF0aC5yb3VuZChhbW91bnRkaWYqMTAwKS8xMDA7</ValScript></DataFieldDef>
+<DataFieldDef id="10383" origId="132648@10383" objDef="10008" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="the_next_journal_start_date" >
+<DisplayLabel>The next Journal Start Date</DisplayLabel><Description>this is the start of new date after the first journal has been posted.</Description><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>6</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIHR5cGUgPSAneyFnbF9wcmVwYWlkLnBvc3RpbmdyZXBlYXRieSF9JzsNCnZhciBkYXRlID0gbmV3IERhdGUoeyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV9mcm9tI21zIX0pOw0KdmFyIGRhdGUxID0gbmV3IERhdGUoKTsNCiAgICANCmlmICh0eXBlID09ICJEYXlzIikgew0KICAgIGRhdGUxLnNldERhdGUoZGF0ZS5nZXREYXRlKCkrMSk7DQp9IGVsc2UgaWYgKHR5cGUgPT0gIldlZWtzIikgew0KICAgIGRhdGUxLnNldERhdGUoZGF0ZS5nZXREYXRlKCkrNyk7DQp9IGVsc2UgaWYgKHR5cGUgPT0gIk1vbnRocyIpIHsNCiAgICBkYXRlMS5zZXRNb250aChkYXRlLmdldE1vbnRoKCkrMSk7DQp9IGVsc2UgaWYgKHR5cGUgPT0gIlllYXJzIikgew0KICAgIGRhdGUxLnNldEZ1bGxZZWFyKGRhdGUuZ2V0RnVsbFllYXIoKSsxKTsNCn0NCnJldHVybiArZGF0ZTE7</ValScript></DataFieldDef>
+<DataFieldDef id="10595" origId="132648@10595" objDef="10008" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="INTG8" fieldName="repeats_every" >
+<DisplayLabel>repeats every</DisplayLabel><Description>This is to post the repeat every so often. It is limited to only 7, so users needs to know that is the highest they can go.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>0</maxLength><defValue>1</defValue><minValue>1</minValue><maxValue>7</maxValue></Props></DataFieldDef>
+<DataFieldDef id="10596" origId="132648@10596" objDef="10008" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR5" fieldName="postingrepeatby" >
+<DisplayLabel>Posting Repeat by</DisplayLabel><Description>this is to pick what type of posting by.</Description><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>6</maxLength><defValue>Weeks</defValue></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10023" origId="132648@10023" relName="R10023" objDefId1="5001" objDefId2="10008" singularName1="GL Account" pluralName1="GL Accounts" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="T" isMultiple2="F" >
+</RelationshipDef>
+<RelationshipDef id="10024" origId="132648@10024" relName="R10024" objDefId1="10008" objDefId2="10009" singularName1="GL PrePaid" pluralName1="GL PrePaids" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><orphan2>1</orphan2></Props></RelationshipDef>
+<RelationshipDef id="10025" origId="132648@10025" relName="R10025" objDefId1="5003" objDefId2="10008" singularName1="Location" pluralName1="Locations" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10230</fieldId1><fieldId2>10231</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10026" origId="132648@10026" relName="R10026" objDefId1="5002" objDefId2="10008" singularName1="Department" pluralName1="Departments" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10232</fieldId1><fieldId2>10233</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10030" origId="132648@10030" relName="R10030" objDefId1="6008" objDefId2="10008" singularName1="Recurring Journal Entry" pluralName1="Recurring Journal Entries" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="T" isMultiple2="F" >
+</RelationshipDef>
+<RelationshipDef id="10038" origId="132648@10038" relName="R10038" objDefId1="5041" objDefId2="10008" singularName1="GL Entry" pluralName1="GL Entries" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="F" >
+<Props><fieldId1>10377</fieldId1><fieldId2>10378</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10039" origId="132648@10039" relName="R10039" objDefId1="5101" objDefId2="10008" singularName1="GL Batch" pluralName1="GL Batches" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10379</fieldId1><fieldId2>10380</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10182" origId="132648@10182" objDefId="10008" isSystem="F" >
+<ViewName>All GL PrePaids</ViewName><Props><joinType>1</joinType><columns>10194,10234,10223,10197,10199,</columns><defSortCol>10201</defSortCol><defSortCol2>0</defSortCol2><defSortCol3>0</defSortCol3><showActions>1</showActions><groupBy>10200</groupBy><totalBy>0</totalBy><totalBy2>0</totalBy2><totalBy3>0</totalBy3><totalBy4>0</totalBy4><totalBy5>0</totalBy5><totalBy6>0</totalBy6><totalBy7>0</totalBy7><totalBy8>0</totalBy8></Props></ListView>
+</ListViews>
+<Processes>
+<Process id="10006" origId="132648@10006" objDefId="10008" defStatusId="10013" >
+<DisplayName>Default</DisplayName><Workflow>
+<Node  s="10014" a='10009'/>
+<Node  s="10013" a='10009'/>
+</Workflow>
+</Process>
+</Processes>
+<Actions>
+<Action id="10009" origId="132648@10009" objDefId="10008" actionType="S" orderNo="1" pageId="10825" nextStatusId="10014" isGroup="T" >
+<DisplayName>Post Recurring GL</DisplayName><Props><useButton>1</useButton><formula>bGluZVN1bSA9ICNGVU5DX1NVTS5SMTAwMjQoIHBlcmNlbnQgfCB0cnVlICk7DQpsaW5lQ291bnQgPSAjRlVOQ19DT1VOVC5SMTAwMjQoIDEgfCB0cnVlICk7DQpsaW5lUm91bmRlZCA9IHshZ2xfcHJlcGFpZC5saW5lc19yb3VuZGVkX3N1bSF9Ow0KDQppZiAobGluZVN1bSA9PSAwICYmIGxpbmVDb3VudCA+PSAyICYmIGxpbmVSb3VuZGVkID09IDApDQp7DQogcmV0dXJuICcnOw0KfQ0KZWxzZSBpZiAobGluZVN1bSAhPSAwKQ0Kew0KIHJldHVybiAiVGhlIEFsbG9jYXRpb24ncyBMaW5lIFBlcmNlbnRhZ2VzIGRvIG5vdCBiYWxhbmNlLiI7DQp9DQplbHNlIGlmIChsaW5lQ291bnQgPCAyKQ0Kew0KIHJldHVybiAiVGhlIEFsbG9jYXRpb24gRW50cnkgbmVlZHMgMiBvciBtb3JlIExpbmVzLiI7DQp9DQplbHNlDQp7DQogcmV0dXJuICJUaGUgQWxsb2NhdGlvbiBFbnRyeSBkb2VzIG5vdCBiYWxhbmNlLCBjaGVjayB5b3UgUm91bmRpbmcgUGx1Zy4iOw0KfQ==</formula></Props></Action>
+</Actions>
+<Statuses>
+<Status id="10013" origId="132648@10013" objDefId="10008" >
+<DisplayName>Created</DisplayName><SystemName>created</SystemName></Status>
+<Status id="10014" origId="132648@10014" objDefId="10008" orderNo="1" >
+<DisplayName>Posted</DisplayName><SystemName>posted</SystemName></Status>
+</Statuses>
+<Templates>
+<Template type="doc" id="10007" origId="132648@10007" objDef="10008" name="Intacct API - Post GL PrePaid Recurring Entries" contentType="text/xml" fileName="GL PrePaid Batch recurring entires Line v2.3.xml" >
+<RawData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxjcmVhdGU+DQogICA8UkVDVVJHTEJBVENIPg0KICAgIDxCQVRDSF9USVRMRT5HTCBBbGxvY2F0aW9uczogeyFnbF9wcmVwYWlkLmdsX3Bvc3RpbmdfZGVzY3JpcHRpb24hfSwgT2ZmIFNldGluZyBhbW91bnQ8L0JBVENIX1RJVExFPg0KICAgIDxSRUNPUkROTz48L1JFQ09SRE5PPg0KICAgIDxUUkFOU0FDVElPTk5PPjwvVFJBTlNBQ1RJT05OTz4NCiAgICA8QVVUT1JFUEVBVElOVEVSVkFMPjwvQVVUT1JFUEVBVElOVEVSVkFMPgkJDQogICAgPERFU0NSSVBUSU9OPnshZ2xfcHJlcGFpZC5nbF9wb3N0aW5nX2Rlc2NyaXB0aW9uIX0sIE9mZiBTZXRpbmcgYW1vdW50PC9ERVNDUklQVElPTj4NCiAgICA8UkVGRVJFTkNFTk8+PC9SRUZFUkVOQ0VOTz4NCiAgICA8Sk9VUk5BTD57IWdsX3ByZXBhaWQuZ2xfcG9zdGluZ19qb3VybmFsIX08L0pPVVJOQUw+DQogICAgPEpPVVJOQUxLRVk+PC9KT1VSTkFMS0VZPg0KICAgIDxXSEVOQ1JFQVRFRD57IWdsX3ByZXBhaWQuZXhwZW5zZV9kYXRlX2Zyb20hfTwvV0hFTkNSRUFURUQ+DQogICAgPFNUQVRVUz5hY3RpdmU8L1NUQVRVUz4NCiAgICA8U1RBVElTVElDQUw+ZmFsc2U8L1NUQVRJU1RJQ0FMPg0KICAgIDxTVEFSVERBVEVKRT57IWdsX3ByZXBhaWQuZXhwZW5zZV9kYXRlX2Zyb20jdXNlcmZvcm1hdCF9PC9TVEFSVERBVEVKRT4NCiAgICA8RU5ESU5HSkU+TnVtYmVyIG9mIE9jY3VycmVuY2VzPC9FTkRJTkdKRT4NCiAgICA8T0NDVVJKRT4xPC9PQ0NVUkpFPg0KICAgIDxFTkREQVRFSkU+eyFnbF9wcmVwYWlkLmV4cGVuc2VfZGF0ZV9mcm9tI3VzZXJmb3JtYXQhfTwvRU5EREFURUpFPg0KICAgIDxSRVBFQVRJTlRFUlZBTEpFPjE8L1JFUEVBVElOVEVSVkFMSkU+DQogICAgPFJFUEVBVEpFPk5vbmU8L1JFUEVBVEpFPiANCiAgICA8Sk9VUk5BTFNZTUJPTD48L0pPVVJOQUxTWU1CT0w+DQogICAgPEpPVVJOQUxUSVRMRT57IWdsX3ByZXBhaWQuZ2xfcG9zdGluZ19qb3VybmFsIX08L0pPVVJOQUxUSVRMRT4NCiAgICA8SkVTQ0hFRFVMRUtFWT48L0pFU0NIRURVTEVLRVk+DQogICAgPEpFU0NIRURVTEVOQU1FPjwvSkVTQ0hFRFVMRU5BTUU+DQogICAgPE9DQ1VSUkVWSkU+MTwvT0NDVVJSRVZKRT4NCiAgICA8RU9NSkU+ZmFsc2U8L0VPTUpFPg0KICAgIDxKRUVYRUNDT1VOVD48L0pFRVhFQ0NPVU5UPg0KICAgIDxKRU5FWFRFWEVDREFURT48L0pFTkVYVEVYRUNEQVRFPg0KICAgIDxKRU9QRVJBVElPTk5BTUU+PC9KRU9QRVJBVElPTk5BTUU+DQogICAgPEVNQUlMSkU+PC9FTUFJTEpFPg0KICAgIDxFT01SRVZKRT5mYWxzZTwvRU9NUkVWSkU+DQogICAgPElTTUFOVUFMUE9TVD5mYWxzZTwvSVNNQU5VQUxQT1NUPg0KICAgIDxSZ2xfcHJlcGFpZD57IWdsX3ByZXBhaWQuaWQhfTwvUmdsX3ByZXBhaWQ+DQogICAgIDxFTlRSSUVTPg0KCQl7ISNMT09QX0JFR0lOLlIxMDAyNCMxMzI2NDhAMTAxODMhfQ0KIAk8cmVjdXJnbGVudHJ5Pg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPFJFQ09SRE5PPnshZ2xfcHJlcGFpZC5nbF9wb3N0aW5nX3JlZmVyZW5jZV9udW1iZXIhfTwvUkVDT1JETk8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8UkVDVVJHTEJBVENITk8+PC9SRUNVUkdMQkFUQ0hOTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMT0NBVElPTktFWT48L0xPQ0FUSU9OS0VZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExPQ0FUSU9OPnshUjEwMDI0LmxvY2F0aW9uX2lkIX08L0xPQ0FUSU9OPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExPQ0FUSU9OTkFNRT48L0xPQ0FUSU9OTkFNRT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxERVBUS0VZPjwvREVQVEtFWT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxERVBBUlRNRU5UPnshUjEwMDI0LmRlcGFydG1lbnRfaWQhfTwvREVQQVJUTUVOVD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxERVBBUlRNRU5UTkFNRT48L0RFUEFSVE1FTlROQU1FPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEFDQ09VTlRLRVk+PC9BQ0NPVU5US0VZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEFDQ09VTlROTz57IVIxMDAyNC5nbF9hY2NvdW50X251bWJlciF9PC9BQ0NPVU5UTk8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QUNDT1VOVFRJVExFPjwvQUNDT1VOVFRJVExFPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERPQ1VNRU5UPjwvRE9DVU1FTlQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TElORV9OTz48L0xJTkVfTk8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8VFJfVFlQRT57IVIxMDAyNC5nbF9wb3N0aW5nX2Ftb3VudF90eXBlIX08L1RSX1RZUEU+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QU1PVU5UPnshUjEwMDI0LmdsX3Bvc3RpbmdfZGlmZmVyZW50X2Ftb3VudF9yb3VuZGVkIX08L0FNT1VOVD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxNRU1PPnshUjEwMDI0LmpvdXJuYWxfZW50cnlfbGluZV9kZXNjcmlwdGlvbiF9LCBPZmYgU2V0aW5nIGFtb3VudDwvTUVNTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxVU0VSTk8+PC9VU0VSTk8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8V0hFTkNSRUFURUQ+PC9XSEVOQ1JFQVRFRD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxVU0VSTkFNRT48L1VTRVJOQU1FPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEFMTE9DQVRJT05LRVk+PC9BTExPQ0FUSU9OS0VZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEFMTE9DQVRJT04+PC9BTExPQ0FUSU9OPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPFVOSVRTPjwvVU5JVFM+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QkFTRUNVUlI+VVNEPC9CQVNFQ1VSUj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDVVJSRU5DWT5VU0Q8L0NVUlJFTkNZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPFRSWF9BTU9VTlQ+PC9UUlhfQU1PVU5UPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEVYQ0hfUkFURV9EQVRFPjwvRVhDSF9SQVRFX0RBVEU+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RVhDSF9SQVRFX1RZUEVfSUQ+PC9FWENIX1JBVEVfVFlQRV9JRD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxFWENIQU5HRV9SQVRFPjwvRVhDSEFOR0VfUkFURT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxUUkFOU0FDVElPTk5PPjwvVFJBTlNBQ1RJT05OTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxCQVNFTE9DQVRJT04+PC9CQVNFTE9DQVRJT04+DQogICAgPC9yZWN1cmdsZW50cnk+DQoJCXshI0xPT1BfRU5ELlIxMDAyNCF9DQogICAgPC9FTlRSSUVTPg0KICA8L1JFQ1VSR0xCQVRDSD4NCiAgPFJFQ1VSR0xCQVRDSD4NCiAgICA8QkFUQ0hfVElUTEU+R0wgQWxsb2NhdGlvbnM6IHshZ2xfcHJlcGFpZC5nbF9wb3N0aW5nX2Rlc2NyaXB0aW9uIX08L0JBVENIX1RJVExFPg0KICAgIDxSRUNPUkROTz48L1JFQ09SRE5PPg0KICAgIDxUUkFOU0FDVElPTk5PPjwvVFJBTlNBQ1RJT05OTz4NCiAgICA8QVVUT1JFUEVBVElOVEVSVkFMPjwvQVVUT1JFUEVBVElOVEVSVkFMPgkJDQogICAgPERFU0NSSVBUSU9OPnshZ2xfcHJlcGFpZC5nbF9wb3N0aW5nX2Rlc2NyaXB0aW9uIX08L0RFU0NSSVBUSU9OPg0KICAgIDxSRUZFUkVOQ0VOTz48L1JFRkVSRU5DRU5PPg0KICAgIDxKT1VSTkFMPnshZ2xfcHJlcGFpZC5nbF9wb3N0aW5nX2pvdXJuYWwhfTwvSk9VUk5BTD4NCiAgICA8Sk9VUk5BTEtFWT48L0pPVVJOQUxLRVk+DQogICAgPFdIRU5DUkVBVEVEPnshZ2xfcHJlcGFpZC5leHBlbnNlX2RhdGVfZnJvbSF9PC9XSEVOQ1JFQVRFRD4NCiAgICA8U1RBVFVTPmFjdGl2ZTwvU1RBVFVTPg0KICAgIDxTVEFUSVNUSUNBTD5mYWxzZTwvU1RBVElTVElDQUw+DQogICAgPFNUQVJUREFURUpFPnshZ2xfcHJlcGFpZC50aGVfbmV4dF9qb3VybmFsX3N0YXJ0X2RhdGUhfTwvU1RBUlREQVRFSkU+DQogICAgPEVORElOR0pFPkVuZCBEYXRlPC9FTkRJTkdKRT4NCiAgICA8T0NDVVJKRT48L09DQ1VSSkU+DQogICAgPEVORERBVEVKRT57IWdsX3ByZXBhaWQuZXhwZW5zZV9kYXRlX3RvI3VzZXJmb3JtYXQhfTwvRU5EREFURUpFPg0KICAgIDxSRVBFQVRJTlRFUlZBTEpFPnshZ2xfcHJlcGFpZC5yZXBlYXRzX2V2ZXJ5IX08L1JFUEVBVElOVEVSVkFMSkU+DQogICAgPFJFUEVBVEpFPnshZ2xfcHJlcGFpZC5wb3N0aW5ncmVwZWF0YnkhfTwvUkVQRUFUSkU+IA0KICAgIDxKT1VSTkFMU1lNQk9MPjwvSk9VUk5BTFNZTUJPTD4NCiAgICA8Sk9VUk5BTFRJVExFPnshZ2xfcHJlcGFpZC5nbF9wb3N0aW5nX2pvdXJuYWwhfTwvSk9VUk5BTFRJVExFPg0KICAgIDxKRVNDSEVEVUxFS0VZPjwvSkVTQ0hFRFVMRUtFWT4NCiAgICA8SkVTQ0hFRFVMRU5BTUU+PC9KRVNDSEVEVUxFTkFNRT4NCiAgICA8T0NDVVJSRVZKRT57IWdsX3ByZXBhaWQudXNpbmdfdHlwZV9vZl9vY2N1cnJlbmNlcyF9PC9PQ0NVUlJFVkpFPg0KICAgIDxFT01KRT5mYWxzZTwvRU9NSkU+DQogICAgPEpFRVhFQ0NPVU5UPjwvSkVFWEVDQ09VTlQ+DQogICAgPEpFTkVYVEVYRUNEQVRFPjwvSkVORVhURVhFQ0RBVEU+DQogICAgPEpFT1BFUkFUSU9OTkFNRT48L0pFT1BFUkFUSU9OTkFNRT4NCiAgICA8RU1BSUxKRT48L0VNQUlMSkU+DQogICAgPEVPTVJFVkpFPmZhbHNlPC9FT01SRVZKRT4NCiAgICA8SVNNQU5VQUxQT1NUPmZhbHNlPC9JU01BTlVBTFBPU1Q+DQogICAgPFJnbF9wcmVwYWlkPnshZ2xfcHJlcGFpZC5pZCF9PC9SZ2xfcHJlcGFpZD4NCiAgICA8RU5UUklFUz4NCgkJeyEjTE9PUF9CRUdJTi5SMTAwMjQjMTMyNjQ4QDEwMTgzIX0NCiAJCTxyZWN1cmdsZW50cnk+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8UkVDT1JETk8+eyFnbF9wcmVwYWlkLmdsX3Bvc3RpbmdfcmVmZXJlbmNlX251bWJlciF9PC9SRUNPUkROTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxSRUNVUkdMQkFUQ0hOTz48L1JFQ1VSR0xCQVRDSE5PPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPExPQ0FUSU9OS0VZPjwvTE9DQVRJT05LRVk+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TE9DQVRJT04+eyFSMTAwMjQubG9jYXRpb25faWQhfTwvTE9DQVRJT04+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TE9DQVRJT05OQU1FPjwvTE9DQVRJT05OQU1FPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERFUFRLRVk+PC9ERVBUS0VZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERFUEFSVE1FTlQ+eyFSMTAwMjQuZGVwYXJ0bWVudF9pZCF9PC9ERVBBUlRNRU5UPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERFUEFSVE1FTlROQU1FPjwvREVQQVJUTUVOVE5BTUU+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QUNDT1VOVEtFWT48L0FDQ09VTlRLRVk+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QUNDT1VOVE5PPnshUjEwMDI0LmdsX2FjY291bnRfbnVtYmVyIX08L0FDQ09VTlROTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxBQ0NPVU5UVElUTEU+PC9BQ0NPVU5UVElUTEU+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RE9DVU1FTlQ+PC9ET0NVTUVOVD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxMSU5FX05PPjwvTElORV9OTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxUUl9UWVBFPnshUjEwMDI0LmdsX3Bvc3RpbmdfYW1vdW50X3R5cGUhfTwvVFJfVFlQRT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxBTU9VTlQ+eyFSMTAwMjQuZ2xfcG9zdGluZ19hbW91bnRfcm91bmRlZCF9PC9BTU9VTlQ+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8TUVNTz57IVIxMDAyNC5qb3VybmFsX2VudHJ5X2xpbmVfZGVzY3JpcHRpb24hfTwvTUVNTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxVU0VSTk8+PC9VU0VSTk8+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8V0hFTkNSRUFURUQ+PC9XSEVOQ1JFQVRFRD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxVU0VSTkFNRT48L1VTRVJOQU1FPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEFMTE9DQVRJT05LRVk+PC9BTExPQ0FUSU9OS0VZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEFMTE9DQVRJT04+PC9BTExPQ0FUSU9OPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPFVOSVRTPjwvVU5JVFM+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QkFTRUNVUlI+VVNEPC9CQVNFQ1VSUj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDVVJSRU5DWT5VU0Q8L0NVUlJFTkNZPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPFRSWF9BTU9VTlQ+PC9UUlhfQU1PVU5UPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEVYQ0hfUkFURV9EQVRFPjwvRVhDSF9SQVRFX0RBVEU+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RVhDSF9SQVRFX1RZUEVfSUQ+PC9FWENIX1JBVEVfVFlQRV9JRD4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxFWENIQU5HRV9SQVRFPjwvRVhDSEFOR0VfUkFURT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxUUkFOU0FDVElPTk5PPjwvVFJBTlNBQ1RJT05OTz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxCQVNFTE9DQVRJT04+PC9CQVNFTE9DQVRJT04+DQogICAgPC9yZWN1cmdsZW50cnk+DQoJCXshI0xPT1BfRU5ELlIxMDAyNCF9DQogICAgPC9FTlRSSUVTPg0KICA8L1JFQ1VSR0xCQVRDSD4NCjwvY3JlYXRlPg0K</RawData></Template>
+<Template type="doc" id="10013" origId="132648@10013" objDef="10008" name="Intacct API - GL PrePaid Lines Posting." contentType="text/xml" fileName="GL PrePaid Lines (2).xml" >
+<RawData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxjcmVhdGU+DQoJPGdsX3ByZXBhaWRfbGluZT4NCgkJPFJnbF9wcmVwYWlkPnshZ2xfcHJlcGFpZC5pZCF9PC9SZ2xfcHJlcGFpZD4NCgkJPGxpbmVfc29ydD4xPC9saW5lX3NvcnQ+DQoJCTxSR0xBQ0NPVU5UPnshZ2xfcHJlcGFpZC5mb3JfbGluZV8xIX08L1JHTEFDQ09VTlQ+DQoJCTxwZXJjZW50Pi0xMDA8L3BlcmNlbnQ+DQoJCTxqb3VybmFsX2VudHJ5X2xpbmVfZGVzY3JpcHRpb24+eyFnbF9wcmVwYWlkLmdsX3Bvc3RpbmdfZGVzY3JpcHRpb24hfTwvam91cm5hbF9lbnRyeV9saW5lX2Rlc2NyaXB0aW9uPg0KCQk8cm91bmRpbmdfcGx1Zz50cnVlPC9yb3VuZGluZ19wbHVnPg0KCTwvZ2xfcHJlcGFpZF9saW5lPg0KCTxnbF9wcmVwYWlkX2xpbmU+DQoJCTxSZ2xfcHJlcGFpZD57IWdsX3ByZXBhaWQuaWQhfTwvUmdsX3ByZXBhaWQ+DQoJCTxsaW5lX3NvcnQ+MjwvbGluZV9zb3J0Pg0KCQk8UkdMQUNDT1VOVD57IWdsX3ByZXBhaWQuZm9yX2xpbmVfMiF9PC9SR0xBQ0NPVU5UPg0KCQk8cGVyY2VudD4xMDA8L3BlcmNlbnQ+DQoJCTxqb3VybmFsX2VudHJ5X2xpbmVfZGVzY3JpcHRpb24+eyFnbF9wcmVwYWlkLmdsX3Bvc3RpbmdfZGVzY3JpcHRpb24hfTwvam91cm5hbF9lbnRyeV9saW5lX2Rlc2NyaXB0aW9uPg0KCQk8cm91bmRpbmdfcGx1Zz5mYWxzZTwvcm91bmRpbmdfcGx1Zz4NCgk8L2dsX3ByZXBhaWRfbGluZT4NCjwvY3JlYXRlPg0K</RawData></Template>
+</Templates>
+<Events>
+<Event id="10015" origId="132648@10015" orderNo="1" objDef="10008" configId="Pt_ChangeValueConfig" name="Update Name Record" onWhat="3" changeFieldId="10234" isDeployed="T" >
+<Condition>cmV0dXJuICd7IWdsX3ByZXBhaWQubmFtZXN0cmluZyF9Jzs=</Condition><Props><relId>0</relId><fieldId>10194</fieldId></Props></Event>
+<Event id="10023" origId="132648@10023" orderNo="2" objDef="10008" configId="Pt_IntacctAPIConfig" name="Posting GL PrePaid Lines" onWhat="3" templateId="10013" changeFieldId="10234" isDeployed="T" >
+</Event>
+<Event id="10016" origId="132648@10016" orderNo="3" objDef="10008" configId="Pt_IntacctAPIConfig" name="Intacct API - Post GL PrePaid Recurring Entries" onWhat="1" templateId="10007" changeFieldId="10197" isDeployed="T" >
+<Condition>dmFyIGxpbmUgPSAneyEjTE9PUF9CRUdJTi5SMTAwMjQhfXshUjEwMDI0LmxpbmVfc29ydCF9eyEjTE9PUF9FTkQuUjEwMDI0IX0nOw0KdmFyIGxpbmVzb3J0ID0gbGluZS5zcGxpdCgiIik7DQoNCmlmIChsaW5lc29ydFsxXSA9PSAyKQ0Kew0KIHJldHVybiB0cnVlOw0KfQ0KZWxzZQ0Kew0KIHJldHVybiBmYWxzZTsNCn0=</Condition></Event>
+</Events>
+</DataObjectDef>
+<DataObjectDef id="10009" origId="132648@10009" objDefName="gl_prepaid_line" >
+<SingularName>GL PrePaid Line</SingularName><PluralName>GL PrePaid Lines</PluralName><Props><isAuditable>1</isAuditable><isDeployed>1</isDeployed><defProcess>0</defProcess><objIcon>mc07</objIcon></Props><DataFieldDefs>
+<DataFieldDef id="10205" origId="132648@10205" objDef="10009" dataClassName="Pt_FieldString" uiClassName="Pt_ObjectLink" columnName="OBJ_NAME" fieldName="name" groupName="OBJNAME" >
+<DisplayLabel>Line Sort</DisplayLabel><Props><isSystem>1</isSystem><isTextIndex>1</isTextIndex><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><maxLength>100</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10206" origId="132648@10206" objDef="10009" dataClassName="Pt_FieldComment" uiClassName="Pt_CommentsArea" fieldName="comment" groupName="COMMENT" >
+<DisplayLabel>Comments</DisplayLabel><Props><isSystem>1</isSystem><rows>10</rows><cols>60</cols></Props></DataFieldDef>
+<DataFieldDef id="10207" origId="132648@10207" objDef="10009" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="CREATED_BY" fieldName="createdBy" groupName="STANDARD" >
+<DisplayLabel>Created By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10208" origId="132648@10208" objDef="10009" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="CREATED_AT" fieldName="createdAt" groupName="STANDARD" >
+<DisplayLabel>Created At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10209" origId="132648@10209" objDef="10009" dataClassName="Pt_FieldInt" uiClassName="Pt_UserLink" columnName="UPDATED_BY" fieldName="updatedBy" groupName="STANDARD" >
+<DisplayLabel>Updated By</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10210" origId="132648@10210" objDef="10009" dataClassName="Pt_FieldDateTime" uiClassName="Pt_DateTimeInput" columnName="UPDATED_AT" fieldName="updatedAt" groupName="STANDARD" >
+<DisplayLabel>Updated At</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10211" origId="132648@10211" objDef="10009" dataClassName="Pt_FieldInt" uiClassName="Pt_IntInput" columnName="RECORD#" fieldName="id" groupName="STANDARD" >
+<DisplayLabel>ID</DisplayLabel><Props><isSystem>1</isSystem><isReadOnly>1</isReadOnly><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10229" origId="132648@10229" objDef="10009" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG0" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaid</DisplayLabel><Props><relId>10024</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10242" origId="132648@10242" objDef="10009" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG1" fieldName="RGLACCOUNT" >
+<DisplayLabel>GL Account</DisplayLabel><Props><relId>10027</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10244" origId="132648@10244" objDef="10009" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG2" fieldName="RLOCATION" >
+<DisplayLabel>Location</DisplayLabel><Props><relId>10028</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10246" origId="132648@10246" objDef="10009" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" columnName="INTG3" fieldName="RDEPARTMENT" >
+<DisplayLabel>Department</DisplayLabel><Props><relId>10029</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10248" origId="132648@10248" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="department" >
+<DisplayLabel>Department</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyOS5ERVBBUlRNRU5USUQjdGV4dCF9LS17IVIxMDAyOS5USVRMRSF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10249" origId="132648@10249" objDef="10009" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="gl_account" >
+<DisplayLabel>GL Account</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10027</relId><relatedId>999500100000002</relatedId></Props></DataFieldDef>
+<DataFieldDef id="10250" origId="132648@10250" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_accountTitleString" >
+<DisplayLabel>GL Account</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyNy5BQ0NPVU5UTk8jdGV4dCF9LS17IVIxMDAyNy5USVRMRSF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10251" origId="132648@10251" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_account_number" >
+<DisplayLabel>GL Account Number</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>1</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyNy5BQ0NPVU5UTk8jdGV4dCF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10252" origId="132648@10252" objDef="10009" dataClassName="Pt_FieldDouble" uiClassName="Pt_PercentInput" columnName="DBL0" fieldName="percent" >
+<DisplayLabel>Percent</DisplayLabel><Props><isRequired>1</isRequired><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isAuditable>1</isAuditable><isTextIndex>1</isTextIndex><maxLength>0</maxLength><decimalPlaces>4</decimalPlaces></Props></DataFieldDef>
+<DataFieldDef id="10253" origId="132648@10253" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="percent_formula" >
+<DisplayLabel>Percent Formula</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>dmFyIHByY3QgPSBNYXRoLmFicyh7IWdsX3ByZXBhaWRfbGluZS5wZXJjZW50IX0pOw0KdmFyIHByY3Rmb3JtID0gMDsNCg0KaWYgKHByY3QgPCAxMDApIHsNCg0KcmV0dXJuIHByY3Q7DQoNCn0NCg0KZWxzZSB7DQoNCnJldHVybiBwcmN0Zm9ybTsNCg0KfQ==</ValScript></DataFieldDef>
+<DataFieldDef id="10254" origId="132648@10254" objDef="10009" dataClassName="Pt_FieldBoolean" uiClassName="Pt_CheckBox" columnName="INTG4" fieldName="rounding_plug" >
+<DisplayLabel>Rounding Plug</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isAuditable>1</isAuditable><maxLength>0</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10255" origId="132648@10255" objDef="10009" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR0" fieldName="line_sort" >
+<DisplayLabel>Line Sort</DisplayLabel><Props><isRequired>1</isRequired><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isAuditable>1</isAuditable><isTextIndex>1</isTextIndex><maxLength>10</maxLength><size>100</size></Props></DataFieldDef>
+<DataFieldDef id="10256" origId="132648@10256" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="locationString" >
+<DisplayLabel>Location</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyOC5MT0NBVElPTklEI3RleHQhfS0teyFSMTAwMjguTkFNRSF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10257" origId="132648@10257" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="location_id" >
+<DisplayLabel>Location ID</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyOC5MT0NBVElPTklEI3RleHQhfSc7</ValScript></DataFieldDef>
+<DataFieldDef id="10258" origId="132648@10258" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_amount" >
+<DisplayLabel>GL Posting Amount</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cHJjdCA9IHshZ2xfcHJlcGFpZF9saW5lLnBlcmNlbnQhfTsNCnByY3QgPSBwcmN0IC8gMTAwOw0KDQoNCnBBbXQgPSAiIjsNCg0KcEFtdCA9IE1hdGgucm91bmQocEFtdCpNYXRoLnBvdygxMCwyKSkvTWF0aC5wb3coMTAsMik7DQpkaWZmID0geyFSMTAwMjQuYW1vdW50X3RvX2JlX3Bvc3QhfTsNCg0KDQoNCnBBbXQgPSBkaWZmICogcHJjdDsNCg0KDQoNCnJldHVybiBwQW10Ow==</ValScript></DataFieldDef>
+<DataFieldDef id="10259" origId="132648@10259" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_amount_abs" >
+<DisplayLabel>GL Posting Amount Abs</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>YW10ID0geyFnbF9wcmVwYWlkX2xpbmUuZ2xfcG9zdGluZ19hbW91bnQhfTsNCmFtdCA9IE1hdGguYWJzKGFtdCk7DQphbXQgPSBNYXRoLnJvdW5kKGFtdCpNYXRoLnBvdygxMCwyKSkvTWF0aC5wb3coMTAsMik7DQoNCnJldHVybiBhbXQ7</ValScript></DataFieldDef>
+<DataFieldDef id="10260" origId="132648@10260" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_amount_rounded" >
+<DisplayLabel>GL Posting Amount Rounded</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>aWYgKCd7IWdsX3ByZXBhaWRfbGluZS5yb3VuZGluZ19wbHVnIX0nID09ICcxJykNCnsNCiBpZiAoeyFSMTAwMjQubGluZXNfc3VtIX0gIT09IDApDQogew0KICBpZiAoeyFnbF9wcmVwYWlkX2xpbmUuZ2xfcG9zdGluZ19hbW91bnRfYWJzIX0gPiAwKSB7DQogICBwQW10ID0geyFnbF9wcmVwYWlkX2xpbmUuZ2xfcG9zdGluZ19hbW91bnRfYWJzIX0gLSB7IVIxMDAyNC5saW5lc19zdW0hfTsNCiAgfQ0KICBlbHNlIHsNCiAgIHBBbXQgPSB7IWdsX3ByZXBhaWRfbGluZS5nbF9wb3N0aW5nX2Ftb3VudF9hYnMhfSArIHshUjEwMDI0LmxpbmVzX3N1bSF9Ow0KICB9DQogIHBBbXQgPSBNYXRoLmFicyhNYXRoLnJvdW5kKHBBbXQqTWF0aC5wb3coMTAsMikpL01hdGgucG93KDEwLDIpKTsNCiAgcmV0dXJuIHBBbXQ7DQogfQ0KIGVsc2UNCiB7DQogIHJldHVybiB7IWdsX3ByZXBhaWRfbGluZS5nbF9wb3N0aW5nX2Ftb3VudF9hYnMhfTsNCiB9DQp9DQplbHNlDQp7DQogcmV0dXJuIHshZ2xfcHJlcGFpZF9saW5lLmdsX3Bvc3RpbmdfYW1vdW50X2FicyF9Ow0KfQ==</ValScript></DataFieldDef>
+<DataFieldDef id="10261" origId="132648@10261" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_amount_type" >
+<DisplayLabel>GL Posting Amount Type</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>3</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>YW10ID0geyFnbF9wcmVwYWlkX2xpbmUuZ2xfcG9zdGluZ19hbW91bnQhfTsNCg0KaWYgKGFtdCA8IDApDQp7DQogcmV0dXJuICItMSI7DQp9DQplbHNlIGlmIChhbXQgPiAwKQ0Kew0KIHJldHVybiAiMSI7DQp9DQplbHNlIChhbXQgPSAwKQ0Kew0KcmV0dXJuIGZhbHNlOw0KfQ==</ValScript></DataFieldDef>
+<DataFieldDef id="10262" origId="132648@10262" objDef="10009" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR1" fieldName="journal_entry_line_description" >
+<DisplayLabel>Journal Entry Line Description</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>100</maxLength><size>90</size></Props></DataFieldDef>
+<DataFieldDef id="10367" origId="132648@10367" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="department_id" >
+<DisplayLabel>Department ID</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>4</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cmV0dXJuICd7IVIxMDAyOS5ERVBBUlRNRU5USUQjdGV4dCF9Jzs=</ValScript></DataFieldDef>
+<DataFieldDef id="10370" origId="132648@10370" objDef="10009" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="relating_location" >
+<DisplayLabel>Relating Location</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10024</relId><relatedId>10230</relatedId></Props></DataFieldDef>
+<DataFieldDef id="10371" origId="132648@10371" objDef="10009" dataClassName="Pt_FieldRelated" uiClassName="Pt_RelatedField" fieldName="relating_department" >
+<DisplayLabel>Relating Department</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><relId>10024</relId><relatedId>10232</relatedId></Props></DataFieldDef>
+<DataFieldDef id="10375" origId="132648@10375" objDef="10009" dataClassName="Pt_FieldString" uiClassName="Pt_TextInput" columnName="STR2" fieldName="gl_account_line" >
+<DisplayLabel>GL Account Line</DisplayLabel><Props><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isTextIndex>1</isTextIndex><maxLength>12</maxLength></Props></DataFieldDef>
+<DataFieldDef id="10376" origId="132648@10376" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_IntegrationLink" fieldName="get_account_id" >
+<DisplayLabel>Get Account ID</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><linkTempl>https://www.intacct.com/ia/acct/pt_Ajax.phtml?.sess={!#CURR_SESSION!}&amp;.op=3801&amp;rnd=&amp;cmd=matchedObjects&amp;objDefId=5001&amp;selectorViewId=0&amp;name=name&amp;query={!gl_prepaid_line.gl_account_line!}</linkTempl></Props></DataFieldDef>
+<DataFieldDef id="10384" origId="132648@10384" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_different_amount" >
+<DisplayLabel>GL Posting  Different Amount</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>cHJjdCA9IHshZ2xfcHJlcGFpZF9saW5lLnBlcmNlbnQhfTsNCnByY3QgPSBwcmN0IC8gMTAwOw0KDQoNCnBBbXQgPSAiIjsNCg0KcEFtdCA9IE1hdGgucm91bmQocEFtdCpNYXRoLnBvdygxMCwyKSkvTWF0aC5wb3coMTAsMik7DQpkaWZmID0geyFSMTAwMjQuYW1vdW50X3RvX2JlX3Bvc3RfZGlmZmVyZW50IX07DQoNCg0KDQpwQW10ID0gZGlmZiAqIHByY3Q7DQoNCg0KDQpyZXR1cm4gcEFtdDs=</ValScript></DataFieldDef>
+<DataFieldDef id="10385" origId="132648@10385" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_different_amount_abs" >
+<DisplayLabel>GL Posting Different Amount Abs</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>YW10ID0geyFnbF9wcmVwYWlkX2xpbmUuZ2xfcG9zdGluZ19kaWZmZXJlbnRfYW1vdW50IX07DQphbXQgPSBNYXRoLmFicyhhbXQpOw0KYW10ID0gTWF0aC5yb3VuZChhbXQqTWF0aC5wb3coMTAsMikpL01hdGgucG93KDEwLDIpOw0KDQpyZXR1cm4gYW10Ow==</ValScript></DataFieldDef>
+<DataFieldDef id="10386" origId="132648@10386" objDef="10009" dataClassName="Pt_FieldDummy" uiClassName="Pt_FormulaField" fieldName="gl_posting_different_amount_rounded" >
+<DisplayLabel>GL Posting Different Amount Rounded</DisplayLabel><Props><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField><isReadOnly>1</isReadOnly><maxLength>0</maxLength><returnType>2</returnType><formatIndex>1</formatIndex><decimalPlaces>0</decimalPlaces></Props><ValScript>aWYgKCd7IWdsX3ByZXBhaWRfbGluZS5yb3VuZGluZ19wbHVnIX0nID09ICcxJykNCnsNCiBpZiAoeyFSMTAwMjQubGluZXNfc3VtIX0gIT09IDApDQogew0KICBpZiAoeyFnbF9wcmVwYWlkX2xpbmUuZ2xfcG9zdGluZ19kaWZmZXJlbnRfYW1vdW50X2FicyF9ID4gMCkgew0KICAgcEFtdCA9IHshZ2xfcHJlcGFpZF9saW5lLmdsX3Bvc3RpbmdfZGlmZmVyZW50X2Ftb3VudF9hYnMhfSAtIHshUjEwMDI0LmxpbmVzX3N1bSF9Ow0KICB9DQogIGVsc2Ugew0KICAgcEFtdCA9IHshZ2xfcHJlcGFpZF9saW5lLmdsX3Bvc3RpbmdfZGlmZmVyZW50X2Ftb3VudF9hYnMhfSArIHshUjEwMDI0LmxpbmVzX3N1bSF9Ow0KICB9DQogIHBBbXQgPSBNYXRoLmFicyhNYXRoLnJvdW5kKHBBbXQqTWF0aC5wb3coMTAsMikpL01hdGgucG93KDEwLDIpKTsNCiAgcmV0dXJuIHBBbXQ7DQogfQ0KIGVsc2UNCiB7DQogIHJldHVybiB7IWdsX3ByZXBhaWRfbGluZS5nbF9wb3N0aW5nX2RpZmZlcmVudF9hbW91bnRfYWJzIX07DQogfQ0KfQ0KZWxzZQ0Kew0KIHJldHVybiB7IWdsX3ByZXBhaWRfbGluZS5nbF9wb3N0aW5nX2RpZmZlcmVudF9hbW91bnRfYWJzIX07DQp9</ValScript></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10024" origId="132648@10024" relName="R10024" objDefId1="10008" objDefId2="10009" singularName1="GL PrePaid" pluralName1="GL PrePaids" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><orphan2>1</orphan2></Props></RelationshipDef>
+<RelationshipDef id="10027" origId="132648@10027" relName="R10027" objDefId1="5001" objDefId2="10009" singularName1="GL Account" pluralName1="GL Accounts" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10242</fieldId1><fieldId2>10243</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10028" origId="132648@10028" relName="R10028" objDefId1="5003" objDefId2="10009" singularName1="Location" pluralName1="Locations" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10244</fieldId1><fieldId2>10245</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10029" origId="132648@10029" relName="R10029" objDefId1="5002" objDefId2="10009" singularName1="Department" pluralName1="Departments" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10246</fieldId1><fieldId2>10247</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+<ListView id="10183" origId="132648@10183" objDefId="10009" isSystem="F" >
+<ViewName>All GL PrePaid Lines</ViewName><Props><joinType>1</joinType><columns>10205,10250,10256,10252,10262,10254,</columns><defSortCol>10205</defSortCol><defSortAsc>1</defSortAsc><defSortCol2>0</defSortCol2><defSortCol3>0</defSortCol3><showActions>1</showActions><groupBy>10229</groupBy><totalBy>0</totalBy><totalBy2>0</totalBy2><totalBy3>0</totalBy3><totalBy4>0</totalBy4><totalBy5>0</totalBy5><totalBy6>0</totalBy6><totalBy7>0</totalBy7><totalBy8>0</totalBy8></Props></ListView>
+</ListViews>
+<Events>
+<Event id="10014" origId="132648@10014" orderNo="1" objDef="10009" configId="Pt_ChangeValueConfig" name="Update Name Record" onWhat="3" changeFieldId="10255" isDeployed="T" >
+<Condition>cmV0dXJuICd7IWdsX3ByZXBhaWRfbGluZS5saW5lX3NvcnQhfSc7</Condition><Props><relId>0</relId><fieldId>10205</fieldId></Props></Event>
+<Event id="10024" origId="132648@10024" orderNo="2" objDef="10009" configId="Pt_ChangeValueConfig" name="Updating Location" onWhat="3" changeFieldId="10205" isDeployed="T" >
+<Condition>cmV0dXJuICd7IWdsX3ByZXBhaWRfbGluZS5yZWxhdGluZ19sb2NhdGlvbiF9Jzs=</Condition><Props><relId>0</relId><fieldId>10244</fieldId></Props></Event>
+<Event id="10025" origId="132648@10025" orderNo="3" objDef="10009" configId="Pt_ChangeValueConfig" name="Updating Department" onWhat="3" changeFieldId="10205" isDeployed="T" >
+<Condition>cmV0dXJuICd7IWdsX3ByZXBhaWRfbGluZS5yZWxhdGluZ19kZXBhcnRtZW50IX0nOw==</Condition><Props><relId>0</relId><fieldId>10246</fieldId></Props></Event>
+</Events>
+</DataObjectDef>
+<DataObjectDef  id="5001" origId="132648@5001" objDefName="glaccount" isStandard="true" >
+<DataFieldDefs>
+<DataFieldDef id="10227" origId="132648@10227" objDef="5001" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaid</DisplayLabel><Props><relId>10023</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10243" origId="132648@10243" objDef="5001" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid_line" >
+<DisplayLabel>GL PrePaid Lines</DisplayLabel><Props><relId>10027</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10023" origId="132648@10023" relName="R10023" objDefId1="5001" objDefId2="10008" singularName1="GL Account" pluralName1="GL Accounts" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="T" isMultiple2="F" >
+</RelationshipDef>
+<RelationshipDef id="10027" origId="132648@10027" relName="R10027" objDefId1="5001" objDefId2="10009" singularName1="GL Account" pluralName1="GL Accounts" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10242</fieldId1><fieldId2>10243</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+</ListViews>
+</DataObjectDef>
+<DataObjectDef  id="5101" origId="132648@5101" objDefName="glbatch" isStandard="true" >
+<smartLinks>
+<smartLink><smartLinkId>GL_PREPAID</smartLinkId><type>w</type><ownerObject>glbatch</ownerObject><events><event>add</event><event>set</event></events><renderDetails><workflow><condition>({!GLENTRY.ACCOUNTNO!} &lt; '130000'|| {!GLENTRY.ACCOUNTNO!} &gt; '139999') || ({!GLENTRY.EXPENSE_DATE_FROM!} &amp;&amp;{!GLENTRY.EXPENSE_DATE_TO!}!='')</condition><action><apiAction><body>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;create&gt;
+&lt;gl_prepaid&gt;
+&lt;namestring&gt;GL-{!GLENTRY.RECORDNO!}&lt;/namestring&gt;
+&lt;expense_date_from&gt;{!GLENTRY.EXPENSE_DATE_FROM!}&lt;/expense_date_from&gt;
+&lt;expense_date_to&gt;{!GLENTRY.EXPENSE_DATE_TO!}&lt;/expense_date_to&gt;
+&lt;payment_glentry&gt;{!GLENTRY.AMOUNT!}&lt;/payment_glentry&gt;
+&lt;gl_posting_description&gt;{!GLENTRY.DESCRIPTION!}&lt;/gl_posting_description&gt;
+&lt;posting_repeat_by&gt;{!GLENTRY. POSTING_REPEAT_BY#value!}&lt;/posting_repeat_by&gt;
+&lt;gl_posting_journal&gt;RE&lt;/gl_posting_journal&gt;
+&lt;RLOCATION&gt;</body></apiAction></action></workflow></renderDetails><active>false</active></smartLink>
+</smartLinks>
+<DataFieldDefs>
+<DataFieldDef id="10379" origId="132648@10379" objDef="5101" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaids</DisplayLabel><Props><relId>10039</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10039" origId="132648@10039" relName="R10039" objDefId1="5101" objDefId2="10008" singularName1="GL Batch" pluralName1="GL Batches" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10379</fieldId1><fieldId2>10380</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+</ListViews>
+</DataObjectDef>
+<DataObjectDef  id="5041" origId="132648@5041" objDefName="glentry" isStandard="true" >
+<customFields>
+<customField><customFieldId>EXPENSE_DATE_FROM</customFieldId><type>date</type><ownerObject>glentry</ownerObject><label>Expense Date From</label><dataDescription><date><defaultToday>false</defaultToday></date></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>EXPENSE_DATE_TO</customFieldId><type>date</type><ownerObject>glentry</ownerObject><label>Expense Date To</label><dataDescription><date><defaultToday>false</defaultToday></date></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>GL_PREPAID_JOURNAL</customFieldId><type>text</type><ownerObject>glentry</ownerObject><label>GL PrePaid Journal</label><dataDescription><text><length>20</length></text></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>GL_PREPAID_OFF_SETTING_ACCOUNT</customFieldId><type>text</type><ownerObject>glentry</ownerObject><label>GL PrePaid Off Setting Account</label><dataDescription><text><length>100</length></text></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>POSTING_REPEAT_BY</customFieldId><type>picklist</type><ownerObject>glentry</ownerObject><label>Posting Repeat By</label><dataDescription><picklist><pickValues><pickValue>Days</pickValue><pickValue>Weeks</pickValue><pickValue>Months</pickValue><pickValue>Years</pickValue></pickValues><defaultValue>Days</defaultValue></picklist></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+<customField><customFieldId>REPEATS_EVERY</customFieldId><type>text</type><ownerObject>glentry</ownerObject><label>Repeats Every</label><dataDescription><text><length>3</length></text></dataDescription><required>false</required><hidden>false</hidden><active>false</active></customField>
+</customFields>
+<smartLinks>
+<smartLink><smartLinkId>LOCATIONISDEPARTMENT</smartLinkId><type>v</type><ownerObject>glentry</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!GLENTRY.DEPARTMENT!} == {!GLENTRY.LOCATION!}</condition><errorMessage>Location has to equal Department</errorMessage><errorType>error</errorType></validate></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>DATES</smartLinkId><type>v</type><ownerObject>glentry</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>({!GLENTRY.ACCOUNTNO!} &lt; '130000'|| {!GLENTRY.ACCOUNTNO!} &gt; '139999') || ({!GLENTRY.EXPENSE_DATE_FROM!} &amp;&amp;{!GLENTRY.EXPENSE_DATE_TO!}!='') || ({!GLENTRY.TR_TYPE!}!='1')</condition><errorMessage>Expense Date From and Expense Date To are needed.{!GLENTRY.EXPENSE_DATE_FROM!} , {!GLENTRY.EXPENSE_DATE_TO!},
+({!GLENTRY.TRX_AMOUNT!}</errorMessage><errorType>error</errorType></validate></renderDetails><active>false</active></smartLink>
+<smartLink><smartLinkId>DATE_CANT_POST</smartLinkId><type>v</type><ownerObject>glentry</ownerObject><events><event>add</event><event>set</event></events><renderDetails><validate><condition>{!GLENTRY.ENTRY_DATE!} &gt;'2013.10.22'</condition><errorMessage>ENTRIES CAN'T BE BEFORE OCT 22
+{!GLENTRY.ENTRY_DATE!}</errorMessage><errorType>error</errorType></validate></renderDetails><description>This is for McAlisters, not to post on days before Oct 22</description><active>false</active></smartLink>
+</smartLinks>
+<DataFieldDefs>
+<DataFieldDef id="10378" origId="132648@10378" objDef="5041" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaids</DisplayLabel><Props><relId>10038</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10038" origId="132648@10038" relName="R10038" objDefId1="5041" objDefId2="10008" singularName1="GL Entry" pluralName1="GL Entries" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="F" >
+<Props><fieldId1>10377</fieldId1><fieldId2>10378</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+</ListViews>
+<Templates>
+<Template type="doc" id="10014" origId="132648@10014" objDef="5041" name="Intacct API - Post GL PrePaid" contentType="text/xml" fileName="Creating GL PrePaid from GL Entry.xml" >
+<RawData>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxjcmVhdGU+DQo8Z2xfcHJlcGFpZD4NCjxuYW1lc3RyaW5nPkdMLXshR0xFTlRSWS5SRUNPUkROTyF9PC9uYW1lc3RyaW5nPg0KPGV4cGVuc2VfZGF0ZV9mcm9tPnshR0xFTlRSWS5FWFBFTlNFX0RBVEVfRlJPTSF9PC9leHBlbnNlX2RhdGVfZnJvbT4NCjxleHBlbnNlX2RhdGVfdG8+eyFHTEVOVFJZLkVYUEVOU0VfREFURV9UTyF9PC9leHBlbnNlX2RhdGVfdG8+DQo8cGF5bWVudF9nbGVudHJ5PnshR0xFTlRSWS5BTU9VTlQhfTwvcGF5bWVudF9nbGVudHJ5Pg0KPGdsX3Bvc3RpbmdfZGVzY3JpcHRpb24+eyFHTEVOVFJZLkRFU0NSSVBUSU9OIX08L2dsX3Bvc3RpbmdfZGVzY3JpcHRpb24+DQo8cG9zdGluZ19yZXBlYXRfYnk+eyFHTEVOVFJZLiBQT1NUSU5HX1JFUEVBVF9CWSN2YWx1ZSF9PC9wb3N0aW5nX3JlcGVhdF9ieT4NCjxnbF9wb3N0aW5nX2pvdXJuYWw+UkU8L2dsX3Bvc3Rpbmdfam91cm5hbD4NCjxSTE9DQVRJT04+eyFHTEVOVFJZLkxPQ0FUSU9OIX08L1JMT0NBVElPTj4NCjxSREVQQVJUTUVOVD57IUdMRU5UUlkuREVQQVJUTUVOVCF9PC9SREVQQVJUTUVOVD4NCjx0cl90eXBlPnshR0xFTlRSWS5UUl9UWVBFIX08L3RyX3R5cGU+DQo8L2dsX3ByZXBhaWQ+DQo8L2NyZWF0ZT4NCg==</RawData></Template>
+</Templates>
+</DataObjectDef>
+<DataObjectDef  id="5003" origId="132648@5003" objDefName="location" isStandard="true" >
+<DataFieldDefs>
+<DataFieldDef id="10231" origId="132648@10231" objDef="5003" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaids</DisplayLabel><Props><relId>10025</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10245" origId="132648@10245" objDef="5003" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid_line" >
+<DisplayLabel>GL PrePaid Lines</DisplayLabel><Props><relId>10028</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10025" origId="132648@10025" relName="R10025" objDefId1="5003" objDefId2="10008" singularName1="Location" pluralName1="Locations" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10230</fieldId1><fieldId2>10231</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10028" origId="132648@10028" relName="R10028" objDefId1="5003" objDefId2="10009" singularName1="Location" pluralName1="Locations" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10244</fieldId1><fieldId2>10245</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+</ListViews>
+</DataObjectDef>
+<DataObjectDef  id="5002" origId="132648@5002" objDefName="department" isStandard="true" >
+<DataFieldDefs>
+<DataFieldDef id="10233" origId="132648@10233" objDef="5002" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaids</DisplayLabel><Props><relId>10026</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+<DataFieldDef id="10247" origId="132648@10247" objDef="5002" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid_line" >
+<DisplayLabel>GL PrePaid Lines</DisplayLabel><Props><relId>10029</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10026" origId="132648@10026" relName="R10026" objDefId1="5002" objDefId2="10008" singularName1="Department" pluralName1="Departments" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10232</fieldId1><fieldId2>10233</fieldId2></Props></RelationshipDef>
+<RelationshipDef id="10029" origId="132648@10029" relName="R10029" objDefId1="5002" objDefId2="10009" singularName1="Department" pluralName1="Departments" singularName2="GL PrePaid Line" pluralName2="GL PrePaid Lines" isMultiple1="F" isMultiple2="T" >
+<Props><fieldId1>10246</fieldId1><fieldId2>10247</fieldId2></Props></RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+</ListViews>
+</DataObjectDef>
+<DataObjectDef  id="6008" origId="132648@6008" objDefName="recurglbatch" isStandard="true" >
+<DataFieldDefs>
+<DataFieldDef id="10264" origId="132648@10264" objDef="6008" dataClassName="Pt_FieldRelationship" uiClassName="Pt_Relationship" fieldName="Rgl_prepaid" >
+<DisplayLabel>GL PrePaids</DisplayLabel><Props><relId>10030</relId><isSearchable>1</isSearchable><isTableColumn>1</isTableColumn><isTemplateField>1</isTemplateField></Props></DataFieldDef>
+</DataFieldDefs>
+<RelationshipDefs>
+<RelationshipDef id="10030" origId="132648@10030" relName="R10030" objDefId1="6008" objDefId2="10008" singularName1="Recurring Journal Entry" pluralName1="Recurring Journal Entries" singularName2="GL PrePaid" pluralName2="GL PrePaids" isMultiple1="T" isMultiple2="F" >
+</RelationshipDef>
+</RelationshipDefs>
+<ListViews>
+</ListViews>
+</DataObjectDef>
+</DataObjectDefs>
+<Menus>
+<Menu id="10025" origId="132648@10025" objDefId="10008" orderNo="1" parentId="-1" pageType="5" >
+<DisplayName>GL PrePaids</DisplayName><Menus><Menu id="10026" origId="132648@10026" objDefId="10008" orderNo="1" parentId="10025" pageType="5" >
+<DisplayName>List</DisplayName></Menu>
+<Menu id="10027" origId="132648@10027" objDefId="10008" orderNo="2" parentId="10025" pageType="4" >
+<DisplayName>Add</DisplayName></Menu>
+<Menu id="10028" origId="132648@10028" objDefId="10008" orderNo="3" parentId="10025" pageType="11" >
+<DisplayName>Import</DisplayName><PageURL>pt_import.phtml</PageURL></Menu>
+<Menu id="10029" origId="132648@10029" objDefId="10008" orderNo="4" parentId="10025" pageType="12" >
+<DisplayName>Templates</DisplayName><PageURL>pt_templates.phtml</PageURL></Menu>
+</Menus></Menu>
+</Menus>
+<WebPages>
+<WebPage id="10807" origId="132648@10807" objDefId="10008" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>GL PrePaids List</PageName><PageSections>
+<PageSection id="11202" origId="132648@11202" pageId="10807" >
+<SectionTitle>All GL PrePaids</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11420" origId="132648@11420" sectionId="11202" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIEdMIFByZVBhaWRz</Text><Props><objDefId2>10008</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10808" origId="132648@10808" objDefId="10008" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New GL PrePaid</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11187" origId="132648@11187" pageId="10808" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11400" origId="132648@11400" sectionId="11187" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11376" origId="132648@11376" pageId="10808" orderNo="1" >
+<SectionTitle>GL PrePaid Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="12061" origId="132648@12061" sectionId="11376" alignment="2" fieldId="10234" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>2</alignment></Props></PageCell>
+<PageCell id="12062" origId="132648@12062" sectionId="11376" orderNo="1" fieldId="10212" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12063" origId="132648@12063" sectionId="11376" orderNo="2" fieldId="10213" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12064" origId="132648@12064" sectionId="11376" orderNo="3" fieldId="10215" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12065" origId="132648@12065" sectionId="11376" orderNo="4" fieldId="10218" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12831" origId="132648@12831" sectionId="11376" orderNo="5" fieldId="10596" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12826" origId="132648@12826" sectionId="11376" orderNo="6" fieldId="10595" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12068" origId="132648@12068" sectionId="11376" orderNo="7" fieldId="10230" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12069" origId="132648@12069" sectionId="11376" orderNo="8" fieldId="10232" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="13354" origId="132648@13354" sectionId="11376" orderNo="9" fieldId="10237" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12072" origId="132648@12072" sectionId="11376" orderNo="10" fieldId="10226" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12073" origId="132648@12073" sectionId="11376" orderNo="11" fieldId="10241" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12070" origId="132648@12070" sectionId="11376" orderNo="12" fieldId="10197" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12071" origId="132648@12071" sectionId="11376" orderNo="13" fieldId="10199" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11190" origId="132648@11190" pageId="10808" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11403" origId="132648@11403" sectionId="11190" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10809" origId="132648@10809" objDefId="10008" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><PageSections>
+<PageSection id="11210" origId="132648@11210" pageId="10809" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11429" origId="132648@11429" sectionId="11210" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11211" origId="132648@11211" pageId="10809" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11430" origId="132648@11430" sectionId="11211" alignment="1" fieldId="10194" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11431" origId="132648@11431" sectionId="11211" orderNo="1" alignment="1" fieldId="10196" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11432" origId="132648@11432" sectionId="11211" orderNo="2" alignment="1" fieldId="10197" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11468" origId="132648@11468" sectionId="11211" orderNo="3" fieldId="10212" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11473" origId="132648@11473" sectionId="11211" orderNo="4" fieldId="10213" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11478" origId="132648@11478" sectionId="11211" orderNo="5" fieldId="10215" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11488" origId="132648@11488" sectionId="11211" orderNo="6" fieldId="10218" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11505" origId="132648@11505" sectionId="11211" orderNo="7" fieldId="10230" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11515" origId="132648@11515" sectionId="11211" orderNo="8" fieldId="10234" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11510" origId="132648@11510" sectionId="11211" orderNo="9" fieldId="10232" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11520" origId="132648@11520" sectionId="11211" orderNo="10" fieldId="10236" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11525" origId="132648@11525" sectionId="11211" orderNo="11" fieldId="10241" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11650" origId="132648@11650" sectionId="11211" orderNo="12" fieldId="10263" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12102" origId="132648@12102" sectionId="11211" orderNo="13" fieldId="10377" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12109" origId="132648@12109" sectionId="11211" orderNo="14" fieldId="10380" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12115" origId="132648@12115" sectionId="11211" orderNo="15" fieldId="10381" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12827" origId="132648@12827" sectionId="11211" orderNo="16" fieldId="10595" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12832" origId="132648@12832" sectionId="11211" orderNo="17" fieldId="10596" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11212" origId="132648@11212" pageId="10809" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11433" origId="132648@11433" sectionId="11212" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10810" origId="132648@10810" objDefId="10008" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View GL PrePaid</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11191" origId="132648@11191" pageId="10810" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11404" origId="132648@11404" sectionId="11191" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11629" origId="132648@11629" pageId="10810" orderNo="1" >
+<SectionTitle>GL PrePaid Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="12790" origId="132648@12790" sectionId="11629" alignment="2" fieldId="10234" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>2</alignment></Props></PageCell>
+<PageCell id="12791" origId="132648@12791" sectionId="11629" orderNo="1" fieldId="10212" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12792" origId="132648@12792" sectionId="11629" orderNo="2" fieldId="10213" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12793" origId="132648@12793" sectionId="11629" orderNo="3" fieldId="10215" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12794" origId="132648@12794" sectionId="11629" orderNo="4" fieldId="10218" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12828" origId="132648@12828" sectionId="11629" orderNo="5" fieldId="10595" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12798" origId="132648@12798" sectionId="11629" orderNo="6" fieldId="10230" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12799" origId="132648@12799" sectionId="11629" orderNo="7" fieldId="10232" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12802" origId="132648@12802" sectionId="11629" orderNo="8" fieldId="10226" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12803" origId="132648@12803" sectionId="11629" orderNo="9" fieldId="10241" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12800" origId="132648@12800" sectionId="11629" orderNo="10" fieldId="10197" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12801" origId="132648@12801" sectionId="11629" orderNo="11" fieldId="10199" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12833" origId="132648@12833" sectionId="11629" orderNo="12" fieldId="10596" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11631" origId="132648@11631" pageId="10810" orderNo="2" >
+<SectionTitle>GL PrePaid Lines</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable></Props><PageCells>
+<PageCell id="12825" origId="132648@12825" sectionId="11631" alignment="2" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Props><objDefId2>10009</objDefId2><relId>10024</relId><alignment>2</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11195" origId="132648@11195" pageId="10810" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11413" origId="132648@11413" sectionId="11195" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10811" origId="132648@10811" objDefId="10008" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit GL PrePaid</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11196" origId="132648@11196" pageId="10811" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11414" origId="132648@11414" sectionId="11196" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11630" origId="132648@11630" pageId="10811" orderNo="1" >
+<SectionTitle>GL PrePaid Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="12807" origId="132648@12807" sectionId="11630" alignment="2" fieldId="10234" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>2</alignment></Props></PageCell>
+<PageCell id="12808" origId="132648@12808" sectionId="11630" orderNo="1" fieldId="10212" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12809" origId="132648@12809" sectionId="11630" orderNo="2" fieldId="10213" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12810" origId="132648@12810" sectionId="11630" orderNo="3" fieldId="10215" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12811" origId="132648@12811" sectionId="11630" orderNo="4" fieldId="10218" cellClassName="Pt_FieldWrapper" >
+<Props><isRequired>false</isRequired><alignment>0</alignment></Props></PageCell>
+<PageCell id="12814" origId="132648@12814" sectionId="11630" orderNo="5" fieldId="10236" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12815" origId="132648@12815" sectionId="11630" orderNo="6" fieldId="10230" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12816" origId="132648@12816" sectionId="11630" orderNo="7" fieldId="10232" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12817" origId="132648@12817" sectionId="11630" orderNo="8" fieldId="10197" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12818" origId="132648@12818" sectionId="11630" orderNo="9" fieldId="10199" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12819" origId="132648@12819" sectionId="11630" orderNo="10" fieldId="10226" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12820" origId="132648@12820" sectionId="11630" orderNo="11" fieldId="10241" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12821" origId="132648@12821" sectionId="11630" orderNo="12" fieldId="10377" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12822" origId="132648@12822" sectionId="11630" orderNo="13" fieldId="10380" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12823" origId="132648@12823" sectionId="11630" orderNo="14" fieldId="10381" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12834" origId="132648@12834" sectionId="11630" orderNo="15" fieldId="10596" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12829" origId="132648@12829" sectionId="11630" orderNo="16" fieldId="10595" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11199" origId="132648@11199" pageId="10811" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11417" origId="132648@11417" sectionId="11199" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10812" origId="132648@10812" objDefId="10008" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>GL PrePaids Selector List</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11442" origId="132648@11442" pageId="10812" >
+<SectionTitle>GL PrePaids</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable></Props><PageCells>
+<PageCell id="12270" origId="132648@12270" sectionId="11442" alignment="2" fieldId="-1" cellClassName="Pt_ScriptControl" >
+<Text>PGxhYmVsPlRpdGxlPC9sYWJlbD48aW5wdXQgdHlwZSA9ICJ0ZXh0IiBpZD0idGl0bGUiIG5hbWUgPSAidGl0bGUiLz4NCjxpbnB1dCB0eXBlID0gInN1Ym1pdCIgaWQgPSAic2F2ZSIgdmFsdWUgPSAiU2F2ZSIgZGlzYWJsZWQgPSAiZGlzYWJsZWQiIG9uY2xpY2sgPSAib25TYXZlQ2xpY2tlZCgpOyIvPg0KDQo8c2NyaXB0Pg0KdmFyIGxvY2F0ZSwgZGVwYXJ0LCBhY2NvdW4sIG9zYWNjb3VuID0gZmFsc2U7DQoNCmZ1bmN0aW9uIHZhbGlkYXRlKCkgew0KICAgICAgICBpZiAobG9jYXRlLCBkZXBhcnQsIGFjY291biwgb3NhY2NvdW4gPSBmYWxzZSkgew0KICAgICAgICAgICAganEoJyNzYXZlJykuYXR0cignZGlzYWJsZWQnLCAnZGlzYWJsZWQnKTsgDQogICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICBqcSgnI3NhdmUnKS5yZW1vdmVBdHRyKCdkaXNhYmxlZCcpOyANCiAgICAgICAgfQ0KICAgIH0NCg0KDQpmdW5jdGlvbiBsb2NhKCkgew0KICAgIHZhciBsbyA9IGpxKCdpbnB1dFtuYW1lJD0iTE9DQVRJT04iXScsIHdpbmRvdy5vcGVuZXIuZG9jdW1lbnQpLnZhbCgpOw0KCXZhciBsb2MgPSBsby5zcGxpdCgiLS0iKTsNCgkNCgl2YXIgcHJlcGFyYW1zID0ge307DQoJcHJlcGFyYW1zWyIuc2VzcyJdID0gJ3shI0NVUlJfU0VTU0lPTiF9JzsNCglwcmVwYXJhbXNbIi5vcCJdID0gMzgwMTsNCglwcmVwYXJhbXNbInJuZCJdID0gTWF0aC5yYW5kb20oKTsNCglwcmVwYXJhbXNbImNtZCJdID0gJ21hdGNoZWRPYmplY3RzJzsNCglwcmVwYXJhbXNbIm9iakRlZklkIl0gPSB7ISNPQkpfSUQuTE9DQVRJT04hfTsNCglwcmVwYXJhbXNbInNlbGVjdG9yVmlld0lkIl0gPSAwOw0KCXByZXBhcmFtc1sibmFtZSJdID0gJ25hbWUnOw0KCXByZXBhcmFtc1sicXVlcnkiXSA9IGxvY1swXTsNCiAgICAgIHZhciBsb2NhdCA9IGpxLmdldCgiaHR0cHM6Ly93d3cuaW50YWNjdC5jb20vaWEvYWNjdC9wdF9BamF4LnBodG1sIiwgcHJlcGFyYW1zLCBmdW5jdGlvbihkYXRhLCBzdGF0dXMsIHhocil7ICAgICANCiAgICAgICAgdmFyIGFycmF5ID0gZGF0YS5zcGxpdCgnL24nKTsNCgkJaWYoYXJyYXkgJiYgYXJyYXkubGVuZ3RoID4gMCkNCgkJew0KCQkJbG9jYXRlID0gYXJyYXlbMF07DQoJCX0NCgkJfSwidGV4dCIpDQp9DQoNCmZ1bmN0aW9uIGRlcGEoKSB7DQogICAgdmFyIGRlID0ganEoJ2lucHV0W25hbWUkPSJERVBBUlRNRU5UIl0nLCB3aW5kb3cub3BlbmVyLmRvY3VtZW50KS52YWwoKTsNCgl2YXIgZGVwID0gZGUuc3BsaXQoIi0tIik7DQoJDQogICAgdmFyIHByZXBhcmFtcyA9IHt9Ow0KCXByZXBhcmFtc1siLnNlc3MiXSA9ICd7ISNDVVJSX1NFU1NJT04hfSc7DQoJcHJlcGFyYW1zWyIub3AiXSA9IDM4MDE7DQoJcHJlcGFyYW1zWyJybmQiXSA9IE1hdGgucmFuZG9tKCk7DQoJcHJlcGFyYW1zWyJjbWQiXSA9ICdtYXRjaGVkT2JqZWN0cyc7DQoJcHJlcGFyYW1zWyJvYmpEZWZJZCJdID0geyEjT0JKX0lELkRFUEFSVE1FTlQhfTsNCglwcmVwYXJhbXNbInNlbGVjdG9yVmlld0lkIl0gPSAwOw0KCXByZXBhcmFtc1sibmFtZSJdID0gJ25hbWUnOw0KCXByZXBhcmFtc1sicXVlcnkiXSA9IGRlcFswXTsNCiAgICAgIHZhciBkZXBhciA9IGpxLmdldCgiaHR0cHM6Ly93d3cuaW50YWNjdC5jb20vaWEvYWNjdC9wdF9BamF4LnBodG1sIiwgcHJlcGFyYW1zLCBmdW5jdGlvbihkYXRhLCBzdGF0dXMsIHhocil7DQogICAgICAgIHZhciBhcnJheSA9IGRhdGEuc3BsaXQoJy9uJyk7DQogICAgICAgIAlpZihhcnJheSAmJiBhcnJheS5sZW5ndGggPiAwKQ0KICAgICAgICAJew0KICAgICAgICAgICAgICAgICAgICAgICBkZXBhcnQgPSBhcnJheVswXTsNCiAgICAgICAgCX0NCgkJfSwidGV4dCIpDQp9DQoNCmZ1bmN0aW9uIGFjY28oKSB7DQogICAgdmFyIGFjID0ganEoJ2lucHV0W25hbWUkPSJBQ0NPVU5UTk8iXScsIHdpbmRvdy5vcGVuZXIuZG9jdW1lbnQpLnZhbCgpOw0KCXZhciBhY2MgPSBhYy5zcGxpdCgiLS0iKTsNCgkNCgl2YXIgcHJlcGFyYW1zID0ge307DQoJcHJlcGFyYW1zWyIuc2VzcyJdID0gJ3shI0NVUlJfU0VTU0lPTiF9JzsNCglwcmVwYXJhbXNbIi5vcCJdID0gMzgwMTsNCglwcmVwYXJhbXNbInJuZCJdID0gTWF0aC5yYW5kb20oKTsNCglwcmVwYXJhbXNbImNtZCJdID0gJ21hdGNoZWRPYmplY3RzJzsNCglwcmVwYXJhbXNbIm9iakRlZklkIl0gPSB7ISNPQkpfSUQuR0xBQ0NPVU5UIX07DQoJcHJlcGFyYW1zWyJzZWxlY3RvclZpZXdJZCJdID0gMDsNCglwcmVwYXJhbXNbIm5hbWUiXSA9ICduYW1lJzsNCglwcmVwYXJhbXNbInF1ZXJ5Il0gPSBhY2NbMF07DQogICAgICB2YXIgYWNjb3UgPSBqcS5nZXQoImh0dHBzOi8vd3d3LmludGFjY3QuY29tL2lhL2FjY3QvcHRfQWpheC5waHRtbCIsIHByZXBhcmFtcywgZnVuY3Rpb24oZGF0YSwgc3RhdHVzLCB4aHIpew0KICAgICAgICB2YXIgYXJyYXkgPSBkYXRhLnNwbGl0KCcvbicpOw0KICAgICAgICBpZihhcnJheSAmJiBhcnJheS5sZW5ndGggPiAwKQ0KCQl7DQoJCQlhY2NvdW4gPSBhcnJheVswXTsNCgkJfQ0KICAgICAgICAgIH0sInRleHQiKQ0KfQ0KDQpmdW5jdGlvbiBvc2FjY28oKSB7DQogICAgdmFyIG9zYWMgPSBqcSgnaW5wdXRbbmFtZSQ9Ik9GRl9TRVRUSU5HX0FDQ09VTlQiXScsIHdpbmRvdy5vcGVuZXIuZG9jdW1lbnQpLnZhbCgpOw0KCXZhciBvc2FjYyA9IG9zYWMuc3BsaXQoIi0tIik7DQoJDQoJdmFyIHByZXBhcmFtcyA9IHt9Ow0KCXByZXBhcmFtc1siLnNlc3MiXSA9ICd7ISNDVVJSX1NFU1NJT04hfSc7DQoJcHJlcGFyYW1zWyIub3AiXSA9IDM4MDE7DQoJcHJlcGFyYW1zWyJybmQiXSA9IE1hdGgucmFuZG9tKCk7DQoJcHJlcGFyYW1zWyJjbWQiXSA9ICdtYXRjaGVkT2JqZWN0cyc7DQoJcHJlcGFyYW1zWyJvYmpEZWZJZCJdID0geyEjT0JKX0lELkdMQUNDT1VOVCF9Ow0KCXByZXBhcmFtc1sic2VsZWN0b3JWaWV3SWQiXSA9IDA7DQoJcHJlcGFyYW1zWyJuYW1lIl0gPSAnbmFtZSc7DQoJcHJlcGFyYW1zWyJxdWVyeSJdID0gb3NhY2NbMF07DQogICAgICB2YXIgb3NhY2NvdSA9IGpxLmdldCgiaHR0cHM6Ly93d3cuaW50YWNjdC5jb20vaWEvYWNjdC9wdF9BamF4LnBodG1sIiwgcHJlcGFyYW1zLCBmdW5jdGlvbihkYXRhLCBzdGF0dXMsIHhocil7DQogICAgICAgIHZhciBhcnJheSA9IGRhdGEuc3BsaXQoJy9uJyk7DQogICAgICAgIGlmKGFycmF5ICYmIGFycmF5Lmxlbmd0aCA+IDApDQoJCXsNCgkJCW9zYWNjb3VuID0gYXJyYXlbMF07DQoJCX0NCiAgICAgICAgICB9LCJ0ZXh0IikNCn0NCi8qVGhpcyBmdW5jdGlvbiB3YXMgd3JpdHRlbiBieSBTaW1vbiBXaWxsaXNvbiBhbmQgd2FzIGZvdW5kIG9uIHd3dy5odG1sZ29vZGllcy5jb20gKi8NCmZ1bmN0aW9uIGFkZExvYWRFdmVudChmdW5jKSB7DQogIHZhciBvbGRvbmxvYWQgPSB3aW5kb3cub25sb2FkOw0KICBpZiAodHlwZW9mIHdpbmRvdy5vbmxvYWQgIT0gJ2Z1bmN0aW9uJykgew0KICAgIHdpbmRvdy5vbmxvYWQgPSBmdW5jOw0KICB9IGVsc2Ugew0KICAgIHdpbmRvdy5vbmxvYWQgPSBmdW5jdGlvbigpIHsNCiAgICAgIGlmIChvbGRvbmxvYWQpIHsNCiAgICAgICAgb2xkb25sb2FkKCk7DQogICAgICB9DQogICAgICBmdW5jKCk7DQogICAgfQ0KICB9DQp9DQphZGRMb2FkRXZlbnQobG9jYSk7DQphZGRMb2FkRXZlbnQoZGVwYSk7DQphZGRMb2FkRXZlbnQoYWNjbyk7DQphZGRMb2FkRXZlbnQob3NhY2NvKTsNCmFkZExvYWRFdmVudCh2YWxpZGF0ZSk7DQoNCg0KdmFyIHVybFBhcmFtczsNCih3aW5kb3cub25wb3BzdGF0ZSA9IGZ1bmN0aW9uICgpIHsNCiAgICB2YXIgbWF0Y2gsDQogICAgICAgIHBsICAgICA9L1xeKy9nLCAgDQogICAgICAgIHNlYXJjaCA9IC8oW14mPV0rKT0/KFteJl0qKS9nLA0KICAgICAgICBkZWNvZGUgPSBmdW5jdGlvbiAocykgeyByZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KHMucmVwbGFjZShwbCwgIiAiKSk7IH0sDQogICAgICAgIHF1ZXJ5ICA9IHdpbmRvdy5sb2NhdGlvbi5zZWFyY2guc3Vic3RyaW5nKDEpOw0KDQogICAgdXJsUGFyYW1zID0ge307DQogICAgd2hpbGUgKG1hdGNoID0gc2VhcmNoLmV4ZWMocXVlcnkpKQ0KICAgICAgIHVybFBhcmFtc1tkZWNvZGUobWF0Y2hbMV0pXSA9IGRlY29kZShtYXRjaFsyXSk7DQp9KSgpOw0KdmFyIHBpID0gdXJsUGFyYW1zWyJwYWdlSWQiXTsNCnZhciBzcmNpZCA9IHBhcnNlRmxvYXQocGkpLTQ7DQp2YXIgZGVzdGlkID0gcGFyc2VGbG9hdChwaSktNTsNCg0KZnVuY3Rpb24gb25TYXZlQ2xpY2tlZCgpIHsNCiAgIHZhciBwYXJhbXMgPSB7fTsNCiAgIHBhcmFtc1siLnNlc3MiXSA9ICJ7ISNDVVJSX1NFU1NJT04hfSI7DQogICBwYXJhbXNbIi5vcCJdID0gIjM4MDEiOw0KICAgcGFyYW1zWyJhY3QiXSA9ICJvYmpDcmVhdGUiOw0KICAgcGFyYW1zWyJzcmNJZCJdID0gc3JjaWQ7DQogICBwYXJhbXNbImRlc3RJZCJdID0gZGVzdGlkOw0KICAgcGFyYW1zWyJvYmpEZWZJZCJdID0gInshI09CSl9JRC5nbF9wcmVwYWlkIX0iOw0KICAgcGFyYW1zWyJuYW1lc3RyaW5nIl0gPSBqcSgiI3RpdGxlIikudmFsKCk7DQogICBwYXJhbXNbImV4cGVuc2VfZGF0ZV9mcm9tIl0gPSBqcSgnaW5wdXRbbmFtZSQ9IkVYUEVOU0VfREFURV9GUk9NIl0nLCB3aW5kb3cub3BlbmVyLmRvY3VtZW50KS52YWwoKTsNCiAgIHBhcmFtc1siZXhwZW5zZV9kYXRlX3RvIl0gPSBqcSgnaW5wdXRbbmFtZSQ9IkVYUEVOU0VfREFURV9UTyJdJywgd2luZG93Lm9wZW5lci5kb2N1bWVudCkudmFsKCk7DQogICBwYXJhbXNbInBheW1lbnRfZ2xlbnRyeSJdID0ganEoJ2lucHV0W25hbWUkPSJERUJJVCJdJywgd2luZG93Lm9wZW5lci5kb2N1bWVudCkudmFsKCk7DQogICBwYXJhbXNbImdsX3Bvc3RpbmdfZGVzY3JpcHRpb24iXSA9IGpxKCd0ZXh0YXJlYVtuYW1lJD0iREVTQ1JJUFRJT04iXScsIHdpbmRvdy5vcGVuZXIuZG9jdW1lbnQpLnZhbCgpOw0KICAgcGFyYW1zWyJwb3N0aW5ncmVwZWF0YnkiXSA9IGpxKCdpbnB1dFtuYW1lJD0iUE9TVElOR19SRVBFQVRfQlkiXScsIHdpbmRvdy5vcGVuZXIuZG9jdW1lbnQpLnZhbCgpOw0KICAgcGFyYW1zWyJyZXBlYXRzX2V2ZXJ5Il0gPSBqcSgnaW5wdXRbbmFtZSQ9IlJFUEVBVFNfRVZFUlkiXScsIHdpbmRvdy5vcGVuZXIuZG9jdW1lbnQpLnZhbCgpOw0KICAgcGFyYW1zWyJSTE9DQVRJT04iXSA9IGxvY2F0ZTsNCiAgIHBhcmFtc1siUkRFUEFSVE1FTlQiXSA9IGRlcGFydDsNCiAgIHBhcmFtc1siUkdMQUNDT1VOVCJdID0gW2FjY291biwgb3NhY2NvdW5dOyANCiAgIHBhcmFtc1siZ2xfcG9zdGluZ19qb3VybmFsIl0gPSBqcSgnaW5wdXRbbmFtZSQ9IkdMX1BSRVBBSURfSk9VUk5BTCJdJywgd2luZG93Lm9wZW5lci5kb2N1bWVudCkudmFsKCk7ICAgDQogICBqcS5wb3N0KCJodHRwczovL3d3dy5pbnRhY2N0LmNvbS9pYS9hY2N0L3B0X09iamVjdC5waHRtbCIsIHBhcmFtcywgZnVuY3Rpb24oZGF0YSkgeyANCiAgICAgIGRvY3VtZW50LmxvY2F0aW9uLnJlbG9hZCh0cnVlKTsNCiAgIH0pOw0KfQ0KDQpqcSgiI3NhdmUiKS5jbGljayhmdW5jdGlvbigpew0KICAgICAgICB2YXIgYiA9IGpxKHRoaXMpOw0KCSBiLmF0dHIoJ2Rpc2FibGVkJywgJ2Rpc2FibGVkJyk7DQogICAgICAgICBiLmF0dHIoJ3ZhbHVlJywgIlBsZWFzZSBXYWl0Iik7DQoJIGIucGFyZW50cygnZm9ybScpLnN1Ym1pdCgpOw0KfSkNCjwvc2NyaXB0Pg0K</Text><Props><alignment>2</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11203" origId="132648@11203" pageId="10812" orderNo="1" >
+<SectionTitle>GL PrePaids Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+<PageCell id="11421" origId="132648@11421" sectionId="11203" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Props><objDefId2>10008</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10813" origId="132648@10813" objDefId="10008" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11204" origId="132648@11204" pageId="10813" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11422" origId="132648@11422" sectionId="11204" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11205" origId="132648@11205" pageId="10813" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11423" origId="132648@11423" sectionId="11205" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11424" origId="132648@11424" sectionId="11205" orderNo="1" alignment="1" fieldId="10195" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11206" origId="132648@11206" pageId="10813" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11425" origId="132648@11425" sectionId="11206" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10814" origId="132648@10814" objDefId="10008" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11207" origId="132648@11207" pageId="10814" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11426" origId="132648@11426" sectionId="11207" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11208" origId="132648@11208" pageId="10814" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11427" origId="132648@11427" sectionId="11208" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11209" origId="132648@11209" pageId="10814" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11428" origId="132648@11428" sectionId="11209" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10815" origId="132648@10815" objDefId="10008" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import GL PrePaids</PageName><PageSections>
+<PageSection id="11182" origId="132648@11182" pageId="10815" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11392" origId="132648@11392" sectionId="11182" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11183" origId="132648@11183" pageId="10815" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11393" origId="132648@11393" sectionId="11183" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11184" origId="132648@11184" pageId="10815" orderNo="2" >
+<SectionTitle>Map GL PrePaid Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11394" origId="132648@11394" sectionId="11184" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPkdMIFByZVBhaWQgRmllbGRzIDwvdGQ+PHRkIGNsYXNzPSdyYnNfbGVmdERhdGFDb2xXaWRlJz4gU3ByZWFkc2hlZXQgQ29sdW1ucyAmbmJzcDsmbmJzcDsgQ29uc3RhbnQgVmFsdWU8L3RkPjwvdHI+PC90YWJsZT4=</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11395" origId="132648@11395" sectionId="11184" orderNo="1" alignment="1" fieldId="10194" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11396" origId="132648@11396" sectionId="11184" orderNo="2" alignment="1" fieldId="10196" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11397" origId="132648@11397" sectionId="11184" orderNo="3" alignment="1" fieldId="10197" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11471" origId="132648@11471" sectionId="11184" orderNo="4" fieldId="10212" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11476" origId="132648@11476" sectionId="11184" orderNo="5" fieldId="10213" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11481" origId="132648@11481" sectionId="11184" orderNo="6" fieldId="10215" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11491" origId="132648@11491" sectionId="11184" orderNo="7" fieldId="10218" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11518" origId="132648@11518" sectionId="11184" orderNo="8" fieldId="10234" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11523" origId="132648@11523" sectionId="11184" orderNo="9" fieldId="10236" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11528" origId="132648@11528" sectionId="11184" orderNo="10" fieldId="10241" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12118" origId="132648@12118" sectionId="11184" orderNo="11" fieldId="10381" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12830" origId="132648@12830" sectionId="11184" orderNo="12" fieldId="10595" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12835" origId="132648@12835" sectionId="11184" orderNo="13" fieldId="10596" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11185" origId="132648@11185" pageId="10815" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11398" origId="132648@11398" sectionId="11185" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11186" origId="132648@11186" pageId="10815" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11399" origId="132648@11399" sectionId="11186" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10825" origId="132648@10825" objDefId="10008" pageType="7" isBaseVersion="F" isPortal="F" >
+<PageName>Post Recurring GL Entries</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11249" origId="132648@11249" pageId="10825" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11568" origId="132648@11568" sectionId="11249" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11250" origId="132648@11250" pageId="10825" orderNo="1" >
+<SectionTitle>Allocation Details</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11569" origId="132648@11569" sectionId="11250" alignment="2" fieldId="10235" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="11570" origId="132648@11570" sectionId="11250" orderNo="1" alignment="2" fieldId="10238" cellClassName="Pt_FieldWrapper" >
+<Props><isReadOnly>true</isReadOnly><alignment>2</alignment></Props></PageCell>
+<PageCell id="11571" origId="132648@11571" sectionId="11250" orderNo="2" alignment="2" fieldId="10223" cellClassName="Pt_FieldWrapper" >
+<Props><isReadOnly>true</isReadOnly><alignment>2</alignment></Props></PageCell>
+<PageCell id="11572" origId="132648@11572" sectionId="11250" orderNo="3" alignment="2" fieldId="10212" cellClassName="Pt_FieldWrapper" >
+<Props><isReadOnly>true</isReadOnly><alignment>2</alignment></Props></PageCell>
+<PageCell id="11573" origId="132648@11573" sectionId="11250" orderNo="4" alignment="2" fieldId="10213" cellClassName="Pt_FieldWrapper" >
+<Props><isReadOnly>true</isReadOnly><alignment>2</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11251" origId="132648@11251" pageId="10825" orderNo="2" >
+<SectionTitle>Confirm Inputs</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+<PageCell id="11574" origId="132648@11574" sectionId="11251" alignment="2" fieldId="10241" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment><isRequired>true</isRequired></Props></PageCell>
+<PageCell id="11575" origId="132648@11575" sectionId="11251" orderNo="1" alignment="2" fieldId="10218" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment><isRequired>true</isRequired></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11252" origId="132648@11252" pageId="10825" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11576" origId="132648@11576" sectionId="11252" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10816" origId="132648@10816" objDefId="10009" pageType="5" isBaseVersion="T" isPortal="F" >
+<PageName>GL PrePaid Lines List</PageName><PageSections>
+<PageSection id="11229" origId="132648@11229" pageId="10816" >
+<SectionTitle>All GL PrePaid Lines</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11455" origId="132648@11455" sectionId="11229" alignment="1" fieldId="-1" cellClassName="Pt_PageableList" >
+<Text>QWxsIEdMIFByZVBhaWQgTGluZXM=</Text><Props><objDefId2>10009</objDefId2><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showViewSelector>1</showViewSelector><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10817" origId="132648@10817" objDefId="10009" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New GL PrePaid Line</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11218" origId="132648@11218" pageId="10817" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11440" origId="132648@11440" sectionId="11218" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11261" origId="132648@11261" pageId="10817" orderNo="1" >
+<SectionTitle>GL PrePaid Line Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11632" origId="132648@11632" sectionId="11261" alignment="2" fieldId="10229" cellClassName="Pt_FieldWrapper" >
+<Props><useRecInScope>false</useRecInScope><hideSelector>true</hideSelector><alignment>2</alignment></Props></PageCell>
+<PageCell id="11633" origId="132648@11633" sectionId="11261" orderNo="1" alignment="2" fieldId="10255" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="12021" origId="132648@12021" sectionId="11261" orderNo="2" alignment="2" fieldId="10242" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="11635" origId="132648@11635" sectionId="11261" orderNo="3" fieldId="10244" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11636" origId="132648@11636" sectionId="11261" orderNo="4" fieldId="10246" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11637" origId="132648@11637" sectionId="11261" orderNo="5" fieldId="10252" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11638" origId="132648@11638" sectionId="11261" orderNo="6" fieldId="10262" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11639" origId="132648@11639" sectionId="11261" orderNo="7" fieldId="10254" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11957" origId="132648@11957" sectionId="11261" orderNo="8" fieldId="10375" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11220" origId="132648@11220" pageId="10817" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11442" origId="132648@11442" sectionId="11220" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10818" origId="132648@10818" objDefId="10009" pageType="18" isBaseVersion="T" isPortal="F" >
+<PageName>Quick Create</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11237" origId="132648@11237" pageId="10818" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11464" origId="132648@11464" sectionId="11237" alignment="1" fieldId="-1" cellClassName="Pt_QuickCreateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11238" origId="132648@11238" pageId="10818" orderNo="1" >
+<SectionTitle>Quick Create</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="11500" origId="132648@11500" sectionId="11238" fieldId="10229" cellClassName="Pt_FieldWrapper" >
+<Props><hideSelector>true</hideSelector><alignment>0</alignment></Props></PageCell>
+<PageCell id="11558" origId="132648@11558" sectionId="11238" orderNo="1" fieldId="10255" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11530" origId="132648@11530" sectionId="11238" orderNo="2" fieldId="10242" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11535" origId="132648@11535" sectionId="11238" orderNo="3" fieldId="10244" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11540" origId="132648@11540" sectionId="11238" orderNo="4" fieldId="10246" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11548" origId="132648@11548" sectionId="11238" orderNo="5" fieldId="10252" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11564" origId="132648@11564" sectionId="11238" orderNo="6" fieldId="10262" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11553" origId="132648@11553" sectionId="11238" orderNo="7" fieldId="10254" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11958" origId="132648@11958" sectionId="11238" orderNo="8" fieldId="10375" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11239" origId="132648@11239" pageId="10818" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11466" origId="132648@11466" sectionId="11239" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10819" origId="132648@10819" objDefId="10009" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View GL PrePaid Line</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11221" origId="132648@11221" pageId="10819" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11443" origId="132648@11443" sectionId="11221" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11374" origId="132648@11374" pageId="10819" orderNo="1" >
+<SectionTitle>GL PrePaid Line Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="12042" origId="132648@12042" sectionId="11374" alignment="2" fieldId="10229" cellClassName="Pt_FieldWrapper" >
+<Props><useRecInScope>false</useRecInScope><hideSelector>true</hideSelector><alignment>2</alignment></Props></PageCell>
+<PageCell id="12043" origId="132648@12043" sectionId="11374" orderNo="1" alignment="2" fieldId="10255" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="12044" origId="132648@12044" sectionId="11374" orderNo="2" alignment="2" fieldId="10242" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="12045" origId="132648@12045" sectionId="11374" orderNo="3" fieldId="10244" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12046" origId="132648@12046" sectionId="11374" orderNo="4" fieldId="10246" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12047" origId="132648@12047" sectionId="11374" orderNo="5" fieldId="10252" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12048" origId="132648@12048" sectionId="11374" orderNo="6" fieldId="10262" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12049" origId="132648@12049" sectionId="11374" orderNo="7" fieldId="10254" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12050" origId="132648@12050" sectionId="11374" orderNo="8" fieldId="10375" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11223" origId="132648@11223" pageId="10819" orderNo="2" >
+<SectionTitle>System Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>2</columns><viewTabNo>1</viewTabNo><pageColNo>0</pageColNo><isCollapsable>1</isCollapsable><doNotSynch>1</doNotSynch></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11224" origId="132648@11224" pageId="10819" orderNo="3" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11450" origId="132648@11450" sectionId="11224" alignment="1" fieldId="-1" cellClassName="Pt_ObjectViewEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10820" origId="132648@10820" objDefId="10009" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit GL PrePaid Line</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>false</enableTabs></Props><PageSections>
+<PageSection id="11225" origId="132648@11225" pageId="10820" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11451" origId="132648@11451" sectionId="11225" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11375" origId="132648@11375" pageId="10820" orderNo="1" >
+<SectionTitle>GL PrePaid Line Information</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+<PageCell id="12051" origId="132648@12051" sectionId="11375" alignment="2" fieldId="10229" cellClassName="Pt_FieldWrapper" >
+<Props><useRecInScope>false</useRecInScope><hideSelector>true</hideSelector><alignment>2</alignment></Props></PageCell>
+<PageCell id="12052" origId="132648@12052" sectionId="11375" orderNo="1" alignment="2" fieldId="10255" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="12053" origId="132648@12053" sectionId="11375" orderNo="2" alignment="2" fieldId="10242" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>2</alignment></Props></PageCell>
+<PageCell id="12054" origId="132648@12054" sectionId="11375" orderNo="3" fieldId="10244" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12055" origId="132648@12055" sectionId="11375" orderNo="4" fieldId="10246" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12056" origId="132648@12056" sectionId="11375" orderNo="5" fieldId="10252" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12057" origId="132648@12057" sectionId="11375" orderNo="6" fieldId="10262" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12058" origId="132648@12058" sectionId="11375" orderNo="7" fieldId="10254" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="12059" origId="132648@12059" sectionId="11375" orderNo="8" fieldId="10375" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11227" origId="132648@11227" pageId="10820" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo><pageColNo>0</pageColNo><doNotSynch>1</doNotSynch></Props><PageCells>
+<PageCell id="11453" origId="132648@11453" sectionId="11227" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10821" origId="132648@10821" objDefId="10009" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>GL PrePaid Lines Selector List</PageName><PageSections>
+<PageSection id="11230" origId="132648@11230" pageId="10821" >
+<SectionTitle>GL PrePaid Lines Selector</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11456" origId="132648@11456" sectionId="11230" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>R0wgUHJlUGFpZCBMaW5lcyBTZWxlY3Rvcg==</Text><Props><objDefId2>10009</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10822" origId="132648@10822" objDefId="10009" pageType="7" isBaseVersion="T" isPortal="F" >
+<PageName>Status Change</PageName><PageSections>
+<PageSection id="11231" origId="132648@11231" pageId="10822" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11457" origId="132648@11457" sectionId="11231" alignment="1" fieldId="-1" cellClassName="Pt_StatusFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11232" origId="132648@11232" pageId="10822" orderNo="1" >
+<SectionTitle>Confirm Status Change</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11458" origId="132648@11458" sectionId="11232" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>Q2hhbmdlIFdvcmtmbG93IFN0YXR1cyB0byA8Yj57ISNTRVNTSU9OLm5leHRTdGF0dXMhfTwvYj4gPw==</Text><Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11459" origId="132648@11459" sectionId="11232" orderNo="1" alignment="1" fieldId="10206" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11233" origId="132648@11233" pageId="10822" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11460" origId="132648@11460" sectionId="11233" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10823" origId="132648@10823" objDefId="10009" pageType="17" isBaseVersion="T" isPortal="F" >
+<PageName>Mass Update</PageName><PageSections>
+<PageSection id="11234" origId="132648@11234" pageId="10823" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11461" origId="132648@11461" sectionId="11234" alignment="1" fieldId="-1" cellClassName="Pt_MassUpdateFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11235" origId="132648@11235" pageId="10823" orderNo="1" >
+<SectionTitle>Mass Update</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11462" origId="132648@11462" sectionId="11235" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>TWFzcyBVcGRhdGUgcGFnZXMgYWxsb3cgeW91IHRvIGNoYW5nZSBmaWVsZCB2YWx1ZXMgZm9yIG11bHRpcGxlIHJlY29yZHMgc2ltdWx0YW5lb3VzbHkuIEFueSBmaWVsZHMgbGVmdCBibGFuayB3aWxsIG5vdCBiZSB1cGRhdGVkLiBZb3Ugb3IgeW91ciBhZG1pbmlzdHJhdG9yIGNhbiBlZGl0IHRoaXMgcGFnZSB0byBhZGQgb3IgcmVtb3ZlIGZpZWxkcyB5b3Ugd2FudCB0byBiZSBhYmxlIHRvIHVwZGF0ZSBmcm9tIHRoaXMgcGFnZS4=</Text><Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11236" origId="132648@11236" pageId="10823" orderNo="2" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11463" origId="132648@11463" sectionId="11236" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10824" origId="132648@10824" objDefId="10009" pageType="11" isBaseVersion="T" isPortal="F" >
+<PageName>Import GL PrePaid Lines</PageName><PageSections>
+<PageSection id="11213" origId="132648@11213" pageId="10824" >
+<SectionTitle>Page Begin</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11434" origId="132648@11434" sectionId="11213" alignment="1" fieldId="-1" cellClassName="Pt_ImportFormBegin" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11214" origId="132648@11214" pageId="10824" orderNo="1" >
+<SectionTitle>Select Saved Map</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11435" origId="132648@11435" sectionId="11214" alignment="1" fieldId="-1" cellClassName="Pt_ImportMapSelector" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11215" origId="132648@11215" pageId="10824" orderNo="2" >
+<SectionTitle>Map GL PrePaid Line Fields to Import File Columns</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11436" origId="132648@11436" sectionId="11215" alignment="1" fieldId="-1" cellClassName="Pt_TemplateHTML" >
+<Text>PHRhYmxlIGNsYXNzPSdyYnNfY29tcG9uZW50Q29udGVudFRhYmxlJyBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA+PHRyIGhlaWdodD0nMjAnPjx0ZCBjbGFzcz0ncmJzX3JpZ2h0TGFiZWwnPkdMIFByZVBhaWQgTGluZSBGaWVsZHMgPC90ZD48dGQgY2xhc3M9J3Jic19sZWZ0RGF0YUNvbFdpZGUnPiBTcHJlYWRzaGVldCBDb2x1bW5zICZuYnNwOyZuYnNwOyBDb25zdGFudCBWYWx1ZTwvdGQ+PC90cj48L3RhYmxlPg==</Text><Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11437" origId="132648@11437" sectionId="11215" orderNo="1" alignment="1" fieldId="10205" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>1</alignment></Props></PageCell>
+<PageCell id="11551" origId="132648@11551" sectionId="11215" orderNo="2" fieldId="10252" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11556" origId="132648@11556" sectionId="11215" orderNo="3" fieldId="10254" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11561" origId="132648@11561" sectionId="11215" orderNo="4" fieldId="10255" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11567" origId="132648@11567" sectionId="11215" orderNo="5" fieldId="10262" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+<PageCell id="11961" origId="132648@11961" sectionId="11215" orderNo="6" fieldId="10375" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11216" origId="132648@11216" pageId="10824" orderNo="3" >
+<SectionTitle>Notify Email Address When Import Is Complete</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11438" origId="132648@11438" sectionId="11216" alignment="1" fieldId="-1" cellClassName="Pt_ImportNotify" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+<PageSection id="11217" origId="132648@11217" pageId="10824" orderNo="4" >
+<SectionTitle>Page End</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><doNotSynch>1</doNotSynch><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11439" origId="132648@11439" sectionId="11217" alignment="1" fieldId="-1" cellClassName="Pt_ObjectFormEnd" >
+<Props><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11152" origId="125233@10122" objDefId="5001" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New GL Account</PageName><PageSections>
+<PageSection id="12032" origId="125233@10122" pageId="11152" >
+<SectionTitle>New GL Account</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11153" origId="125233@10123" objDefId="5001" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View GL Account</PageName><PageSections>
+<PageSection id="12033" origId="125233@10123" pageId="11153" >
+<SectionTitle>View GL Account</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="12034" origId="132648@11242" pageId="11153" orderNo="1" >
+<SectionTitle>GL PrePaids</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="12035" origId="132648@11246" pageId="11153" orderNo="2" >
+<SectionTitle>GL PrePaid Lines</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11154" origId="125233@10124" objDefId="5001" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit GL Account</PageName><PageSections>
+<PageSection id="12036" origId="125233@10124" pageId="11154" >
+<SectionTitle>Edit GL Account</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11155" origId="125233@10125" objDefId="5001" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>GL Accounts Selector List</PageName><PageSections>
+<PageSection id="12037" origId="125233@10125" pageId="11155" >
+<SectionTitle>Select GL Account</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13523" origId="125233@10032" sectionId="12037" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>R0wgQWNjb3VudHMgU2VsZWN0b3I=</Text><Props><objDefId2>5001</objDefId2><alignment>1</alignment><selListId>0</selListId><viewPageId>0</viewPageId></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10126" origId="125233@10126" objDefId="5101" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New GL Batch</PageName><Props><columns>1</columns><numTabs>0</numTabs><enableTabs>true</enableTabs></Props><PageSections>
+<PageSection id="10126" origId="125233@10126" pageId="10126" >
+<SectionTitle>New GL Batch</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo><isDefault>1</isDefault></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11443" origId="132648@11443" pageId="10126" orderNo="1" >
+<SectionTitle>New Section</SectionTitle><Props><borderStyle>2</borderStyle><columns>1</columns><viewTabNo>0</viewTabNo><pageColNo>0</pageColNo></Props><PageCells>
+<PageCell id="12271" origId="132648@12271" sectionId="11443" alignment="2" fieldId="-1" cellClassName="Pt_ScriptControl" >
+<Text>PHA+DQo8aWQgPSIjdW5kZXJmaW5lZCIgYWN0aW9uID0gImh0dHBzOi8vd3d3LmludGFjY3QuY29tL2lhL2FjY3QvcHRfc2VsZWN0b3IucGh0bWw/LnNlc3M9eyEjQ1VSUl9TRVNTSU9OIX0mLm9wPTM4MDEmYWN0PWNsZWFuJnBhZ2VJZD0xMDgxMiZ2aWV3UGFnZUlkPTEwODEwJnNlbGVjdG9yVmlld0lkPS0xJmlucHV0TmFtZT1fb2JqX19FTlRSSUVTX19SZ2xfcHJlcGFpZCZtdWx0aVNlbD1mYWxzZSIgb25jbGljayA9IlZhbGlkYXRlQWNjdCgpIiBtZXRob2QgPSAicG9zdCI+DQo8cD4NCg0KPHNjcmlwdD4NCmZ1bmN0aW9uIFZhbGlkYXRlQWNjdCh2YWwpIHsNCi8qIHRoaXMgaXMgYW4gYXR0ZW1wdCB0byBwb3N0IHRoZSBkYXRhIHBhcmFtZXRlcnMgaW50byB0aGUgc2VsZWN0b3IgcGFnZSBpZiB0aGUgYWNjb3VudCBpcyAxMzAwMDAgLSAxMzk5OTkgYW5kIG9uY2xpY2sgb2YgbG9va3VwKi8NCgl2YXIgYWNjdCA9IHshR0xFTlRSWS5BQ0NPVU5UTk8hfTsNCglpZihhY2N0IDwgJzEzMDAwMCcgfHwgYWNjdCA+ICcxMzk5OTknKSB7DQoJcmV0dXJuO30NCgl2YXIgJGZvcm0gPSBqUXVlcnkodGhpcyk7DQoJdmFyIGV4ZnJvID0gJGZvcm0uZmluZCgnaW5wdXRbbmFtZT0iRVhQRU5TRV9EQVRFX0ZST00iXScpLnZhbCgpOw0KICAJdmFyIGV4dG8gPSAkZm9ybS5maW5kKCdpbnB1dFtuYW1lPSJFWFBFTlNFX0RBVEVfVE8iXScpLnZhbCgpOw0KICAJdmFyIHBheWdsID0gJGZvcm0uZmluZCgnaW5wdXRbbmFtZT0iREVCSVQiXScpLnZhbCgpOw0KICAJdmFyIGdscG9zdGQgPSAkZm9ybS5maW5kKCdpbnB1dFtuYW1lPSJERVNDUklQVElPTiJdJykudmFsKCk7DQogIAl2YXIgcG9zdHIgPSAkZm9ybS5maW5kKCdpbnB1dFtuYW1lPSJQT1NUSU5HX1JFUEVBVF9CWSJdJykudmFsKCk7DQogIAl2YXIgbG8gPSAkZm9ybS5maW5kKCdpbnB1dFtuYW1lPSJMT0NBVElPTiJdJykudmFsKCk7DQogIAl2YXIgZGUgPSAkZm9ybS5maW5kKCdpbnB1dFtuYW1lPSJERVBBUlRNRU5UIl0nKS52YWwoKTsNCiAgCXZhciBnbHBvc3RqID0gJGZvcm0uZmluZCgnaW5wdXRbbmFtZT0iZ2xfcG9zdGluZ19qb3VybmFsIl0nKS52YWwoKTsNCiAgCXZhciB1cmwgPSAkI3VuZGVyZmluZWQuYXR0cignYWN0aW9uJyk7DQoNCgl2YXIgcG9zdGluZyA9IGpRdWVyeS5wb3N0KHVybCwge2dscG9zdGo6IGdsX3Bvc3Rpbmdfam91cm5hbCwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAJZGU6IFJERVBBUlRNRU5ULA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAlsbzogUkxPQ0FUSU9OLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAlwb3N0cjogcG9zdGluZ19yZXBlYXRfYnksDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCWdscG9zdGQ6IGdsX3Bvc3RpbmdfZGVzY3JpcHRpb24sDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCXBheWdsOiBwYXltZW50X2dsZW50cnksDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCWV4dG86IGV4cGVuc2VfZGF0ZV90bywNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAJZXhmcm86IGV4cGVuc2VfZGF0ZV9mb3JtfSk7DQoNCglwb3N0aW5nLmRvbmUoZnVuY3Rpb24gVmFsaWRhdGVBY2N0KHZhbCkpOw0KCX07DQoNCiAgCQ0KPC9zY3JpcHQ+</Text><Props><alignment>2</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10127" origId="125233@10127" objDefId="5101" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View GL Batch</PageName><PageSections>
+<PageSection id="10127" origId="125233@10127" pageId="10127" >
+<SectionTitle>View GL Batch</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11382" origId="132648@11382" pageId="10127" orderNo="1" >
+<SectionTitle>GL PrePaids</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="12112" origId="132648@12112" sectionId="11382" alignment="1" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Text>R0wgUHJlUGFpZHM=</Text><Props><objDefId2>10008</objDefId2><relId>10039</relId><showAttachLink>1</showAttachLink><showViewSelector>1</showViewSelector><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10128" origId="125233@10128" objDefId="5101" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit GL Batch</PageName><PageSections>
+<PageSection id="10128" origId="125233@10128" pageId="10128" >
+<SectionTitle>Edit GL Batch</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10129" origId="125233@10129" objDefId="5101" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>GL Batchs Selector List</PageName><PageSections>
+<PageSection id="10129" origId="125233@10129" pageId="10129" >
+<SectionTitle>Select GL Batch</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="10033" origId="125233@10033" sectionId="10129" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>R0wgQmF0Y2hzIFNlbGVjdG9y</Text><Props><objDefId2>5101</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10130" origId="125233@10130" objDefId="5041" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New GL Entry</PageName><PageSections>
+<PageSection id="10130" origId="125233@10130" pageId="10130" >
+<SectionTitle>New GL Entry</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="12105" origId="132648@12105" sectionId="10130" fieldId="10378" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10131" origId="125233@10131" objDefId="5041" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View GL Entry</PageName><PageSections>
+<PageSection id="10131" origId="125233@10131" pageId="10131" >
+<SectionTitle>View GL Entry</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="12106" origId="132648@12106" sectionId="10131" fieldId="10378" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10132" origId="125233@10132" objDefId="5041" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit GL Entry</PageName><PageSections>
+<PageSection id="10132" origId="125233@10132" pageId="10132" >
+<SectionTitle>Edit GL Entry</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="12107" origId="132648@12107" sectionId="10132" fieldId="10378" cellClassName="Pt_FieldWrapper" >
+<Props><alignment>0</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10133" origId="125233@10133" objDefId="5041" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>GL Entrys Selector List</PageName><PageSections>
+<PageSection id="10133" origId="125233@10133" pageId="10133" >
+<SectionTitle>Select GL Entry</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="10034" origId="125233@10034" sectionId="10133" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>R0wgRW50cnlzIFNlbGVjdG9y</Text><Props><objDefId2>5041</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11156" origId="125233@10146" objDefId="5003" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Location</PageName><PageSections>
+<PageSection id="12038" origId="125233@10146" pageId="11156" >
+<SectionTitle>New Location</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11157" origId="125233@10147" objDefId="5003" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Location</PageName><PageSections>
+<PageSection id="12039" origId="125233@10147" pageId="11157" >
+<SectionTitle>View Location</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="12040" origId="132648@11244" pageId="11157" orderNo="1" >
+<SectionTitle>GL PrePaids</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="12041" origId="132648@11247" pageId="11157" orderNo="2" >
+<SectionTitle>GL PrePaid Lines</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11158" origId="125233@10148" objDefId="5003" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Location</PageName><PageSections>
+<PageSection id="12042" origId="125233@10148" pageId="11158" >
+<SectionTitle>Edit Location</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11159" origId="125233@10149" objDefId="5003" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Locations Selector List</PageName><PageSections>
+<PageSection id="12043" origId="125233@10149" pageId="11159" >
+<SectionTitle>Select Location</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13524" origId="125233@10038" sectionId="12043" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>TG9jYXRpb25zIFNlbGVjdG9y</Text><Props><objDefId2>5003</objDefId2><alignment>1</alignment><selListId>0</selListId><viewPageId>0</viewPageId></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11160" origId="125233@10086" objDefId="5002" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Department</PageName><PageSections>
+<PageSection id="12044" origId="125233@10086" pageId="11160" >
+<SectionTitle>New Department</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11161" origId="125233@10087" objDefId="5002" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Department</PageName><PageSections>
+<PageSection id="12045" origId="125233@10087" pageId="11161" >
+<SectionTitle>View Department</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="12046" origId="132648@11245" pageId="11161" orderNo="1" >
+<SectionTitle>GL PrePaids</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="12047" origId="132648@11248" pageId="11161" orderNo="2" >
+<SectionTitle>GL PrePaid Lines</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11162" origId="125233@10088" objDefId="5002" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Department</PageName><PageSections>
+<PageSection id="12048" origId="125233@10088" pageId="11162" >
+<SectionTitle>Edit Department</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="11163" origId="125233@10089" objDefId="5002" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Departments Selector List</PageName><PageSections>
+<PageSection id="12049" origId="125233@10089" pageId="11163" >
+<SectionTitle>Select Department</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="13525" origId="125233@10023" sectionId="12049" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>RGVwYXJ0bWVudHMgU2VsZWN0b3I=</Text><Props><objDefId2>5002</objDefId2><alignment>1</alignment><selListId>0</selListId><viewPageId>0</viewPageId></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10374" origId="125233@10374" objDefId="6008" pageType="4" isBaseVersion="T" isPortal="F" >
+<PageName>New Recurring Journal Entries</PageName><PageSections>
+<PageSection id="10374" origId="125233@10374" pageId="10374" >
+<SectionTitle>New Recurring Journal Entries</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10375" origId="125233@10375" objDefId="6008" pageType="2" isBaseVersion="T" isPortal="F" >
+<PageName>View Recurring Journal Entries</PageName><PageSections>
+<PageSection id="10375" origId="125233@10375" pageId="10375" >
+<SectionTitle>View Recurring Journal Entries</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+<PageSection id="11263" origId="132648@11263" pageId="10375" orderNo="1" >
+<SectionTitle>GL PrePaids</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><isCollapsable>1</isCollapsable><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="11653" origId="132648@11653" sectionId="11263" alignment="1" fieldId="-1" cellClassName="Pt_RelatedList" >
+<Text>R0wgUHJlUGFpZHM=</Text><Props><objDefId2>10008</objDefId2><relId>10030</relId><showAttachLink>1</showAttachLink><showViewSelector>1</showViewSelector><showNewLink>1</showNewLink><showQuickCreate>1</showQuickCreate><showCheckBoxes>1</showCheckBoxes><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10376" origId="125233@10376" objDefId="6008" pageType="3" isBaseVersion="T" isPortal="F" >
+<PageName>Edit Recurring Journal Entries</PageName><PageSections>
+<PageSection id="10376" origId="125233@10376" pageId="10376" >
+<SectionTitle>Edit Recurring Journal Entries</SectionTitle><Props><borderStyle>1</borderStyle><columns>1</columns><isDefault>1</isDefault><viewTabNo>-1</viewTabNo></Props><PageCells>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+<WebPage id="10377" origId="125233@10377" objDefId="6008" pageType="8" isBaseVersion="T" isPortal="F" >
+<PageName>Recurring Journal Entriess Selector List</PageName><PageSections>
+<PageSection id="10377" origId="125233@10377" pageId="10377" >
+<SectionTitle>Select Recurring Journal Entries</SectionTitle><Props><borderStyle>3</borderStyle><columns>1</columns><viewTabNo>-1</viewTabNo></Props><PageCells>
+<PageCell id="10095" origId="125233@10095" sectionId="10377" alignment="1" fieldId="-1" cellClassName="Pt_SelectorList" >
+<Text>UmVjdXJyaW5nIEpvdXJuYWwgRW50cmllc3MgU2VsZWN0b3I=</Text><Props><objDefId2>6008</objDefId2><alignment>1</alignment></Props></PageCell>
+</PageCells>
+</PageSection>
+</PageSections>
+</WebPage>
+</WebPages>
+<Portals>
+</Portals>
+<MetaData>
+<PublishedFrom>hornellp-tinroof-fra5007963-copy</PublishedFrom><PublishedBy>ExtUser|Horne LLP|hle</PublishedBy></MetaData>
+</Application>
